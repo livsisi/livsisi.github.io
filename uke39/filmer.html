@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>filmer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900" rel="stylesheet">
+    <style>
+        html{
+            font-size: 15px;
+        }
+        body{
+            font-family: 'Georgia', sans-serif;
+            color: #222;
+            font-weight: 300;
+        }
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 12px;
+        }
+        @media (max-width: 1200px) {
+            main{
+                grid-template-columns: 1fr;
+            }
+        }
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        thead {
+            background-color: #f9f9f9;
+            border-top: 4px solid cornflowerblue;
+            text-transform: uppercase;
+            font-size: .785rem;
+        }
+        tbody tr:nth-child(even){
+            background-color:#f9f9f9;
+
+        }
+        th:last-child, td:last-child{
+            border: none;
+        }
+
+        th, td {
+            padding: .5rem .625rem;
+            text-align: left;
+            border-right: 1px solid #ddd;
+        }
+        tr{
+            border-bottom: 1px solid #ddd;
+        }
+        h1{
+            color: hotpink;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nv>Her ligger menyen e.l.</nv>
+</header>
+
+<main>
+
+    <article>
+        <h1>Drama</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tittel</th>
+                <th>Utgivelser</th>
+                <th>Ressiør</th>
+                <th>Aldersgrense</th>
+                <th>Varighet</th>
+                <th>Medvirkere</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Titanic</td>
+                <td>1997</td>
+                <td>James Cameron</td>
+                <td>11år</td>
+                <td>3t 15min</td>
+                <td>Leonardo DiCaprio, Kate Winet</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Grease</td>
+                <td>1978</td>
+                <td>Allan Carr</td>
+                <td>11år</td>
+                <td>1t 50min</td>
+                <td>John Travlta, Olivia Newton- John</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>La la land</td>
+                <td>2017</td>
+                <td>Damien Chazelle</td>
+                <td>Alle</td>
+                <td>2t 8min</td>
+                <td>Ryan Gosling, Emma Stone</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Dear John</td>
+                <td>2010</td>
+                <td>Lasse Halltrom</td>
+                <td>11år</td>
+                <td>1t 43min</td>
+                <td>Channing Tatum, Amanda Seyfied</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h1>Komedie</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tittel</th>
+                <th>Utgivelser</th>
+                <th>Ressiør</th>
+                <th>Aldersgrense</th>
+                <th>Varighet</th>
+                <th>Medvirkere</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mamma mia</td>
+                <td>2008</td>
+                <td>Catherine Johnn</td>
+                <td>11år</td>
+                <td>1t 479min</td>
+                <td>Merly Srteep,Amanda Selyfried</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Mr Bean</td>
+                <td>2007</td>
+                <td>Steve Bendelack</td>
+                <td>Alle</td>
+                <td>1t 30min</td>
+                <td>Rowan Atkinson</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hangover</td>
+                <td>2009</td>
+                <td>Todd Philips</td>
+                <td>15år</td>
+                <td>1t 48min</td>
+                <td>Brandly Cooper, Zah Gilfianaki</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>How to be single</td>
+                <td>2016</td>
+                <td>Christian Ditter</td>
+                <td>Alle</td>
+                <td>1t 49min</td>
+                <td>Dakota Johnson, Rebel Wilson</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h1>Action</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tittel</th>
+                <th>Utgivelser</th>
+                <th>Ressiør</th>
+                <th>Aldersgrense</th>
+                <th>Varighet</th>
+                <th>Medvirkere</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Hobbiten</td>
+                <td>2012</td>
+                <td>Peter Jackson</td>
+                <td>11år</td>
+                <td>2t 49min</td>
+                <td>Martin Freeman, Ian McKellen</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Star Wars: The force awakens</td>
+                <td>2015</td>
+                <td>J.J.Abrams</td>
+                <td>12år</td>
+                <td>2t 18min</td>
+                <td>Harrison Ford, mark Hamill</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The tourist</td>
+                <td>2010</td>
+                <td>Florian Henckel von Donnersmarck </td>
+                <td>11år</td>
+                <td>1t 43min</td>
+                <td>Angelina Jolie, Johnny Deep</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Max Manus</td>
+                <td>2008</td>
+                <td>Joachim Rønning, spen Sanderg</td>
+                <td>15år</td>
+                <td>1t 53min</td>
+                <td>Aksel Hennie, Agnes Kittelsen</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h1>Grøssere</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tittel</th>
+                <th>Utgivelser</th>
+                <th>Ressiør</th>
+                <th>Aldersgrense</th>
+                <th>Varighet</th>
+                <th>Medvirkere</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Hush</td>
+                <td>2016</td>
+                <td>Mike Flangan</td>
+                <td>15år</td>
+                <td>1t 21min</td>
+                <td>John Gallager Jr, Kate Siegel</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Conjuring 2</td>
+                <td>2015</td>
+                <td>James Wan</td>
+                <td>15år</td>
+                <td>2t 13min</td>
+                <td>Patrick Wilson, Vera Farmiga</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>The boy</td>
+                <td>2016</td>
+                <td>William Brent Bell</td>
+                <td>15år</td>
+                <td>1t 37min</td>
+                <td>Lauren Cohan, Rupert Evans</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Halloween</td>
+                <td>2007</td>
+                <td>Rob Zombie</td>
+                <td>15år</td>
+                <td>1t 56min</td>
+                <td>Malcolm Mcdowell, Sherie Moon Zombie</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h1>Dokumentar</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tittel</th>
+                <th>Utgivelser</th>
+                <th>Ressiør</th>
+                <th>Aldersgrense</th>
+                <th>Varighet</th>
+                <th>Medvirkere</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Planeten vår</td>
+                <td>2006</td>
+                <td>Alanstair Fothergill</td>
+                <td>Alle</td>
+                <td>1 sesong</td>
+                <td>David Attenborough</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>What the health</td>
+                <td>2017</td>
+                <td>Kip Andersen, Keegan Kuh</td>
+                <td>Alle</td>
+                <td>1t 32min</td>
+
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Whitney</td>
+                <td>2016</td>
+                <td>Nick Broomfield</td>
+                <td>ikke for barn</td>
+                <td>1t 40min</td>
+                <td>Whitney Houston</td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Captive for 18 years</td>
+                <td>2009</td>
+                <td>Nick London</td>
+                <td>Alle</td>
+                <td>49min</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </article>
+    <article>
+        <h1>Barne filmer</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Tittel</th>
+                <th>Utgivelser</th>
+                <th>Ressiør</th>
+                <th>Aldersgrense</th>
+                <th>Varighet</th>
+                <th>Medvirkere</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Narnia</td>
+                <td>2011</td>
+                <td>Mickael Apted</td>
+                <td>11år</td>
+                <td>1t 53min</td>
+                <td>Georgie Henrley, Skandar Keynes</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nemo</td>
+                <td>2003</td>
+                <td>Andrew Stanton</td>
+                <td>7år</td>
+                <td>t 41min</td>
+                <td>Albret Brooks, Ellen DeGeneres</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>ALice in Wonderland</td>
+                <td>2010</td>
+                <td>Tim Burton</td>
+                <td>12år</td>
+                <td>1t 48min</td>
+                <td>Johnny Deep, Mia Wasiwaska</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Shrek</td>
+                <td>2001</td>
+                <td>Andrew Adamson, Vicky Jenson</td>
+                <td>7år</td>
+                <td>1t og 31min</td>
+                <td>Mike Myres, Eddie Murphy</td>
+            </tr>
+            </tbody>
+        </table>
+    </article>
+
+</main>
+
+
+
+</body>
+</html>
