@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Animasjon</title>
+    <style>
+        body{
+            background-color: blanchedalmond;
+        }
+
+        @keyframes moveright {
+            to{
+                transform: translateX(800px);
+            }
+        }
+
+        @keyframes dogjump {
+            to{
+                background-position: 0 -10000px;
+            }
+        }
+
+        .dog {
+            position: absolute;
+            background-image: url("hund_med_ball.png");
+            height: 500px;
+            width: 500px;
+            animation: dogjump 4s steps(20) infinite;
+        }
+
+        #k1 { animation-delay: 5s; }
+
+    </style>
+
+
+</head>
+<body>
+<h1>Hun som hopper etter ball</h1>
+<div class="right" id="k1">
+    <div class="dog"></div>
+
+
+</body>
+</html>
