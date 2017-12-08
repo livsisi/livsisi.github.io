@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>burgeren</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        header {
+            height: 32px;
+            background-color: black;
+
+        }
+
+        #cb {
+            display: none;
+        }
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+        }
+        #burger > div {
+            background-color: white;
+            height: 2px;
+            transition: 0.5s;
+        }
+        #menu {
+            width: 300px;
+            background-color: #333333;
+            position: absolute;
+            top: 33px;
+            left: 0;
+            min-height: calc(100vh - 33px);
+            transition: 0.8s;
+            text-align: center;
+            box-sizing: border-box;
+
+            padding-top: 40px;
+        }
+
+        #menu > a {
+            display: block;
+            margin-bottom: 25px;
+            text-decoration: none;
+            color: lightslategrey;
+        }
+
+        #menu > a:hover {
+            color: white;
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        .Join {
+            background-color: lightblue;
+            width: 200px;
+            margin: auto;
+            padding: 16px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header></header>
+    <input type="checkbox" id="cb">
+    <label id="burger" for="cb">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    <nav id="menu">
+        <a href="#">Fotball</a>
+        <a href="#">Håndball</a>
+        <a href="#">Tennis</a>
+        <a href="#">Dans</a>
+        <a href="#">Landhockey</a>
+        <a class="Join" href="#">Contact</a>
+    </nav>
+
+
+</body>
+</html>
