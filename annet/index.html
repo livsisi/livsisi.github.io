@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>The Grid</title>
+    <style>
+
+        body{
+            font-family: "Times New Roman", sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto ;
+        }
+
+        header{
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+        }
+
+        main{
+            background-color: #008b8b;
+        }
+
+        footer{
+            background-color: silver;
+        }
+
+        body > header > nav {
+            display: grid;
+            grid-auto-flow: column;
+        }
+
+        body > header > nav > a {
+            text-align: center;
+            padding: 15px ;
+            text-decoration: none;
+            color: #222222;
+        }
+
+        body > main {
+            display: grid;
+            grid-template-rows: 1fr 80px;
+            align-items: center; /*vertikalt midstilling */
+            justify-items: center;
+            text-align: center;
+            background-image: url("city.jpg");
+            background-size: cover;
+            background-position: center top;
+
+        }
+        main h1 {
+            color: white;
+            font-size: 92px;
+        }
+        main h2 {
+            color: white;
+            font-size: 30px;
+        }
+        main a{
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            background-color: #222222;
+        }
+
+        body > footer {
+            display: grid;
+            grid-gap: 20px;
+            padding: 20px;
+            grid-auto-flow: column;
+            text-align: center;
+        }
+
+        body > footer img {
+            width: 80px;
+        }
+
+        @media (max-width: 750px) {
+
+            body > header > nav {
+                grid-auto-flow: row;
+            }
+        }
+
+        .active {
+            background-color: lightsteelblue;
+            color: white;
+        }
+        * {
+            margin: 0;
+        }
+        body{
+            background-color: #eee;
+            font-family: sans-serif;
+        }
+        h1{
+            margin-bottom: 16px;
+            padding-top: 16px;
+            text-align: center;
+        }
+        main{
+            overflow: hidden;
+            background-color: white;
+            max-width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            min-height: 100vh;
+        }
+        .slides{
+            width: 500%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            transition: 1s;
+
+        }
+        .slides > div {
+            text-align: center;
+        }
+        .slides > div > img {
+            width: 80%;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<header>
+    <nav>
+        <a href="#" class="active">WEBSITE</a>
+        <a href="#">HOME</a>
+        <a href="#">AWAY</a>
+        <a href="#">MASTER</a>
+        <a href="#">STUDIES</a>
+        <a href="#">CONTACT</a>
+        <a href="#">ABOUT US</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h1>MODERN WEB DESIGN</h1>
+        <h2>Fresh & Responsive</h2>
+    </section>
+    <footer>
+        <a href="#">Join</a>
+    </footer>
+
+        <h1>SLIDES</h1>
+
+        <div class="slides">
+            <div>
+                <img src="img1.jpg">
+            </div>
+            <div>
+                <img src="img2.jpg">
+            </div>
+            <div>
+                <img src="img3.jpg">
+            </div>
+            <div>
+                <img src="img4.jpg">
+            </div>
+            <div>
+                <img src="img5.jpg">
+            </div>
+        </div>
+
+    <script>
+        let slides= document.querySelector(".slides");
+        let marg = 0;
+
+        function forover() {
+
+
+            if(marg >-400) {
+                marg = marg -100;
+                slides.style.marginLeft = marg + "%";
+            } else {
+                slides.animate ([
+                    {transform: "translateX(20px"},
+                    {transform: "translateX(0"},
+                    {transform: "translateX(15px"},
+                    {transform: "translateX(0"}
+                ], {
+                    duration: 200
+                });
+            }
+
+        }
+
+        function bakover() {
+
+            if (marg < 0) {
+                marg = marg + 100;
+                slides.style.marginLeft = marg + "%";
+            } else {
+                slides.animate ([
+                    {transform: "translateX(20px"},
+                    {transform: "translateX(0"},
+                    {transform: "translateX(15px"},
+                    {transform: "translateX(0"}
+                ], {
+                    duration: 200
+                });
+            }
+        }
+
+        document.onclick = function (klikk) {
+            if(klikk.clientX > innerWidth / 2) {
+                forover();
+            }   else {
+                bakover();
+            }
+        }
+        setInterval(forover, 2000);
+
+
+    </script>
+
+</main>
+
+<footer>
+    <article>
+        <img src="navn.png">
+        <p>Opprett en konto</p>
+    </article>
+    <article>
+        <img src="blyant.png">
+        <p>Skrivetøyet</p>
+    </article>
+    <article>
+        <img src="tavle.png">
+        <p>Tilgang til alle fagene</p>
+    </article>
+</footer>
+
+</body>
+</html>

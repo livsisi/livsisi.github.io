@@ -6,6 +6,32 @@
     <style>
         body {
             margin: 0;
+            min-height: 100vh;
+        }
+
+        main {
+            min-height: calc(100vh - 32px);
+            background-image: url("1.jpg");
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 1s;
+        }
+
+        section {
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS", Verdana, sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        p{
+            font-size: 32px;
         }
 
         header {
@@ -39,7 +65,7 @@
             background-color: #333333;
             position: absolute;
             top: 33px;
-            left: 0;
+            left: -300px;
             min-height: calc(100vh - 33px);
             transition: 0.8s;
             text-align: center;
@@ -50,7 +76,7 @@
 
         #menu > a {
             display: block;
-            margin-bottom: 25px;
+            margin-bottom: 50px;
             text-decoration: none;
             color: lightslategrey;
         }
@@ -80,6 +106,17 @@
             padding: 16px;
             font-size: 14px;
         }
+        h1 {
+            text-align: center;
+            margin-top: 270px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-size: 48px;
+            display: block;
+        }
+
+
 
     </style>
 </head>
@@ -94,13 +131,43 @@
     </label>
 
     <nav id="menu">
-        <a href="#">Fotball</a>
-        <a href="#">Håndball</a>
-        <a href="#">Tennis</a>
-        <a href="#">Dans</a>
-        <a href="#">Landhockey</a>
-        <a class="Join" href="#">Contact</a>
+        <a href="#">Hjem</a>
+        <a href="#">Vinteren</a>
+        <a href="#">Sommeren</a>
+        <a href="#">Østerike</a>
+        <a href="#">Sveits</a>
+        <a href="#">Italia</a>
+
+        <a class="Join" href="#">Join</a>
     </nav>
+
+    <main>
+        <section>
+            <h1>Alpetur</h1>
+
+        </section>
+    </main>
+
+    <script>
+        var main = document.querySelector("main");
+        var bilder = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpeg", "8.jpg"];
+
+        var neste = 1;
+
+        function byttBilde() {
+
+            var bilde = bilder[neste];
+            main.style.backgroundImage = "url(" + bilde + ")";
+            neste++;
+            if(neste >= bilder.length) {
+                neste = 0;
+            }
+
+        }
+
+        setInterval(byttBilde, 4000);
+
+    </script>
 
 
 </body>

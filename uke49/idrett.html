@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>aplene</title>
+    <style>
+
+        body {
+            min-height: 100vh;
+            background-image: url("1.jpg");
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 1s;
+        }
+
+        section {
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS", Verdana, sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        p{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>Alpene</h1>
+    <p></p>
+</section>
+
+<script>
+
+    var bilder = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpeg", "8.jpg"];
+
+    var neste = 1;
+
+    function byttBilde() {
+
+        var bilde = bilder[neste];
+        document.body.style.backgroundImage = "url(" + bilde + ")";
+        neste++;
+        if(neste >= bilder.length) {
+            neste = 0;
+        }
+
+    }
+
+    setInterval(byttBilde, 4000);
+
+</script>
+
+
+</body>
+</html>

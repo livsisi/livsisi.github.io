@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Safari</title>
+    <style>
+        @keyframes slideIt {
+            0% {
+                background-image: url("");
+            }
+            30% {
+                background-image: url("");
+            }
+            45% {
+                background-image: url("løver.jpg");
+            }
+            60% {
+                background-image: url("safarii.jpg");
+            }
+            75% {
+                background-image: url("elefanter.jpg");
+            }
+            95% {
+                background-image: url("løver.jpg");
+            }
+            100% {
+                background-image: url("safarii.jpg");
+            }
+        }
+        body {
+            min-height: 100vh;
+            background-image: url("elefanter.jpg");
+            background-size: cover;
+            background-position: center center;
+            animation: slideIt 10s infinite;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        section {
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS"; Verdana, sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+        }
+        p{
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>Africa</h1>
+    <p>The Safari Exspert</p>
+</section>
+
+</body>
+</html>
