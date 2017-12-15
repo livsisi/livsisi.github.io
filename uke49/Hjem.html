@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hjem</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        main {
+            min-height: calc(100vh - 32px);
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 1s;
+        }
+
+        content {
+            color: lightgray;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS", Verdana, sans-serif;
+            font-size: 24px;
+        }
+        content > p {
+            font-size: 24px;
+            text-transform: none;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        h1 {
+            font-size: 48px;
+        }
+
+
+        header {
+            height: 32px;
+            background-color: black;
+
+        }
+
+        #cb {
+            display: none;
+        }
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+        }
+        #burger > div {
+            background-color: white;
+            height: 2px;
+            transition: 0.5s;
+        }
+        #menu {
+            width: 300px;
+            background-color: #333333;
+            position: absolute;
+            top: 33px;
+            left: -300px;
+            min-height: calc(100vh - 33px);
+            transition: 0.8s;
+            text-align: center;
+            box-sizing: border-box;
+
+            padding-top: 40px;
+        }
+
+        #menu > a {
+            display: block;
+            margin-bottom: 50px;
+            text-decoration: none;
+            color: lightslategrey;
+        }
+
+        #menu > a:hover {
+            color: white;
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 15px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-size: 48px;
+            display: block;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <header></header>
+    <input type="checkbox" id="cb">
+    <label id="burger" for="cb">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    <nav id="menu">
+        <a href="Forsiden.html">Forsiden</a>
+        <a href="Hjem.html">Hjem</a>
+        <a href="Kjente%20steder.html">Kjente steder</a>
+        <a href="Sommer.html">Sommeren</a>
+
+
+    </nav>
+
+    <main>
+        <content>
+            <h1>Alpetur</h1>
+            <img src="kart.jpg">
+            <p>Alpene er Europas største fjellområde. Det høyeste punktet er Mont Blanc på 4808 moh. Alpene er ett av jordens mest besøkte områder overhode: Med over 100 millioner overnattingsreiser – og nærmere en halv milliard gjestedøgn per år – går på verdensbasis om lag hver femte til tiende feriereise til Alpene.
+            Spesielt Øst-Alpene og Sveits har et velutbygd nett med stier og fjellhytter for sommerturister. Vinterturismen er det lagt til rette for med minst 20 000 kilometer alpine skiløyper.</br>
+            De landene som er en avdel av alpene er:</p>
+
+                <br>Italia<br>
+                <br>Frankrike<br>
+                <br>Østerike<br>
+                <br>Sveits<br>
+                <br>Tyskland<br>
+                <br>Liechtenstein<br>
+                <br>Slovenia<br>
+
+        </content>
+
+
+
+    </main>
+
+
+
+
+</body>
+</html>

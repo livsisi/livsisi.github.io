@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kjente steder</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        main {
+            min-height: calc(100vh - 32px);
+            background-size: cover;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: 1s;
+        }
+
+        content {
+            color: lightgray;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS", Verdana, sans-serif;
+            font-size: 24px;
+        }
+        content > p {
+            font-size: 20px;
+            margin-left: 80px;
+            margin-right: 80px;
+            text-transform: none;
+
+        }
+        h2 {
+            font-size: 35px;
+            text-align: center;
+            margin-top: 15px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        header {
+            height: 32px;
+            background-color: black;
+
+        }
+
+        #cb {
+            display: none;
+        }
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+        }
+        #burger > div {
+            background-color: white;
+            height: 2px;
+            transition: 0.5s;
+        }
+        #menu {
+            width: 300px;
+            background-color: #333333;
+            position: absolute;
+            top: 33px;
+            left: -300px;
+            min-height: calc(100vh - 33px);
+            transition: 0.8s;
+            text-align: center;
+            box-sizing: border-box;
+
+            padding-top: 40px;
+        }
+
+        #menu > a {
+            display: block;
+            margin-bottom: 50px;
+            text-decoration: none;
+            color: lightslategrey;
+        }
+
+        #menu > a:hover {
+            color: white;
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 15px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-size: 48px;
+            display: block;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <header></header>
+    <input type="checkbox" id="cb">
+    <label id="burger" for="cb">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+
+    <nav id="menu">
+        <a href="Forsiden.html">Forsiden</a>
+        <a href="Hjem.html">Hjem</a>
+        <a href="Kjente steder.html">Kjente steder</a>
+        <a href="Sommer.html">Sommeren</a>
+
+
+    </nav>
+
+    <main>
+        <content>
+            <h1>De mest populære stedene</h1>
+
+            <h2>Top 5</h2>
+
+            <h3>1. St. Moritz</h3>
+            <p>St. Moritz er en alpelandsby med ca. 5029 innbyggere i den sveitsiske kantonen Graubünden.
+                St. Moritz er kjent for å være et luksuriøst alpinanlegg, i en høyde på ca. 1800 meter over havet. Dette har gjort St. Moritz til er et populært reisemål for overklassen og internasjonale jetsettere. Det er også ansett som det dyreste alpinanlegget i verden.
+                Takket være sin gunstige beliggenhet har St. Moritz over 300 soldager i året. Hver vinter det arrangeres «White Turf» hestesprang på den frosne innsjøen, i likhet med flere andre store arrangementer i St. Mortiz tiltrekker dette seg en mengde turister av den internasjonale overklassen.
+                De mest populære aktivitetene inkluderer ski, snowboard og fotturer, og i nærheten er det også den verdensberømte Cresta Run kjelke kurse</p>
+            <img src="St. Moritz.jpg" height="300" width="660"/>
+
+
+            <h3>2. Sölden</h3>
+            <p>Sölden er et tettsted og en kommune øverst i Ötztal i Tirol, Østerrike. Befolkningen er på 3400 innbyggere, men med 15 000 gjestesenger og over to millioner overnattinger i året, blir Sölden i Østerrike kun slått av Wien i antall gjestedøgn.
+                Selv om det også fins betydelig sommerturisme, er turismen i Sölden overveiende basert på vintersport. Sesongens første verdenscuprenn i alpint foregår vanligvis her. Det er en av de aller mest besøkte stedene i hele Østerrike både vinter og sommer.
+                Sölden er vanligvis utgangspunktet for den årlige verdenscupen i alpint, og er en av de mest kjente skistedene i alpene. Toppstasjonen er på 3 000 moh og Sölden byr på 1 623 m fallhøyde med utfordringer for skikjørere enten du velger nedfart eller offpiste.</p>
+            <img src="solden.jpg" height="300" width="660"/>
+
+            <h3>3. Kitzbühel</h3>
+            <p>Østerrikes mest luksuriøse skisteder, soler seg mellom fjellene Hahnenkamm og Kitzbüheler Horn. Hver vinter er Hahnenkamm-løypa "Die Streif" åsted for et av de hardeste utforrennene i den alpine verdenscupen. Om sommeren ankommer horder av tennisentusiaster tyrolerbyen for å følge Austrian Open.
+                De svingete, brosteinslagte middelaldergatene er fulle av sportsbiler og raffinerte butikker når Europas fiff vagler seg i disse helligholdte fjellsidene. Kitzbühel er en middelalderby i østlige Nord-Tirol i Østerrike med skianlegg i verdensklasse.
+                Den ”Best of the Alps”-erklærte byen ligger kort vei fra Innsbrück og Salzburg, og er blant Østerrikes kanskje mest kjente – og mest luksuriøse – vintersportstettsteder. Allerede i 1894 ble byens første skirenn arrangert, og området har siden den gang gjort seg bemerket innen ski- og snøsportarrangementer.
+                Blant annet arrangeres årlige World Cup-renn ved Hahnenkamm, cirka 8 km sørvest for Kitzbühel – hvor alpinister fra hele verden prøver seg på utfordrende bakker og konkurranser.</p>
+            <img src="kirchberg.jpg" height="300" width="660"/>
+
+            <h3>5. Val d'Isère</h3>
+            <p>Val d'Isère er et av Frankrikes klassiske skisteder, de franske Alpenes ledende diva. Byen er over 300 år gammel, og historien har satt sine spor. Over hele byen hviler nasjonalhelten Jean-Claude Killys ånd, skiområdet er til og med døpt etter ham. Her er det skikjørere fra hele verden, noe som gir byen en fin,
+                internasjonal atmosfære med et stort utvalg av afterskisteder, vinbarer og restauranter.Val d`Isère går for å være et svært hyggelig sted, lite, smalt og langstrakt av fasong.Det går  for å være et av verdens beste skisteder med over 300 km løype og 94 heiser.</p>
+            <img src="val .jpg" height="300" width="660"/>
+
+
+            <h3>6. Groeden</h3>
+            <p>Groeden er en alpedal i Dolomittene i Syd-Tirol.Dalen har stor turisttrafikk både sommer og vinter. Om sommeren er det fjelltur som lokker turister til dalen.
+                I 1970 ble alpin-VM arrangert her, og det blir årlig arrangert verdenscup i alpint. Skistedet Val Gardena er kjent for å være en av de viktigste skistedene i Syd-Tyrol. Skistedet Val Gardena er kjent for sine lange flotte bakker, og er kjent for publikum fra løp i world cupen i alpint.
+                Val Gardena, med sine 175 km med flotte løyper tilbyr en rekke mer eller mindre bratte bakker, urørte fjellsider, og 115 kilometer med oppkjørte langrensspor. Området er virkelig tilrettelagt for skiferie i alpene med ulike ting å finne på på ettermiddagen, blant annet fjellklatring, tennis, squash og alt annet du kan ønske deg.</p>
+            <img src="val gardena.jpg" height="300" width="660"/>
+
+
+            <content>
+    </main>
+
+
+</body>
+</html>
