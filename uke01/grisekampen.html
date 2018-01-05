@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grisekampen</title>
+    <style>
+        #astropig {
+            position: absolute;
+            left: 400px;
+            top: 100px;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="astropig" src="astropig.png">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCgvgd27HW_1TqRYe4Mdq806EO6plmLBMk",
+            authDomain: "it1fredag-fdb57.firebaseapp.com",
+            databaseURL: "https://it1fredag-fdb57.firebaseio.com",
+            projectId: "it1fredag-fdb57",
+            storageBucket: "it1fredag-fdb57.appspot.com",
+            messagingSenderId: "556591807154"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        let astropig = document.getElementById("astropig");
+        let db = firebase.database();
+        let grisepos= db.ref("grisepos");
+
+
+        function settPosisjon(klikk){
+            grisepos.set({
+                x: klikk.clientX,
+                y:klikk.clientY
+            })
+        }
+
+        function flyttGrisen(snap) {
+           let pos = snap.val();
+           astropig.style.left = pos.x + "px";
+           astropig.style.top = pos.y + "px";
+        }
+
+        document.onclick = settPosisjon;
+        grisepos.on("value", flyttGrisen);
+
+
+    </script>
+
+</body>
+</html>

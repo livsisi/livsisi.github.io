@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fargekampen</title>
+    <style>
+        body{
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="velgFarge">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCgvgd27HW_1TqRYe4Mdq806EO6plmLBMk",
+            authDomain: "it1fredag-fdb57.firebaseapp.com",
+            databaseURL: "https://it1fredag-fdb57.firebaseio.com",
+            projectId: "it1fredag-fdb57",
+            storageBucket: "it1fredag-fdb57.appspot.com",
+            messagingSenderId: "556591807154"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+
+        let db = firebase.database();
+        let farge= db.ref("farge");
+        let velgFarge = document.getElementById("velgFarge");
+
+        function settFarge() {
+            farge.set(velgFarge.value);
+        }
+
+        function byttFarge(snapshot) {
+            document.body.style.backgroundColor = snapshot.val();
+
+        }
+
+        velgFarge.onchange = settFarge;
+        //Når fargen endres i databasen
+        //skal vi bytte farge på nettsiden
+        farge.on("value", byttFarge);
+
+
+    </script>
+</body>
+</html>
