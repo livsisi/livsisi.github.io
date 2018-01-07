@@ -110,7 +110,16 @@
             font-size: 48px;
             display: block;
         }
-
+        body > footer {
+            display: grid;
+            grid-auto-flow: column;
+            grid-gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+        body > footer img {
+            width: 80px;
+        }
 
 
 
@@ -143,7 +152,7 @@
 
     <script>
         var main = document.querySelector("main");
-        var bilder = ["1.jpg", "3.jpg", "4.jpg", "9.jpg", "5.jpg", "10.jpg", "7.jpeg", "8.jpg"];
+        var bilder = ["1.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg"];
 
         var neste = 1;
 
@@ -161,6 +170,20 @@
         setInterval(byttBilde, 4000);
 
     </script>
+    <footer>
+        <article>
+            <a href="Fakta.html"><img src="globus_2.jpg"></a>
+        </article>
+        <article>
+            <a href="Kjente%20vinter%20steder.html"><img src="sk_2.jpg"></a>
+        </article>
+        <article>
+            <a href="Kjente%20sommer%20steder.html"><img src="bicycle_2.jpg"></a>
+        </article>
+
+    </footer>
+
+
 
 
 </body>

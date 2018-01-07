@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hjem</title>
+    <title>Kjente vinter steder</title>
     <style>
         body {
             margin: 0;
@@ -14,12 +14,13 @@
             min-height: calc(100vh - 32px);
             background-size: cover;
             background-position: center center;
-            display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             transition: 1s;
+            display: grid;
         }
+
 
         content {
             color: lightgray;
@@ -28,13 +29,20 @@
             font-size: 24px;
         }
         content > p {
-            font-size: 24px;
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
+            text-transform: none;
+
         }
-        h1 {
-            font-size: 48px;
-        }
-        p{
-            font-size: 32px;
+        h2 {
+            font-size: 35px;
+            text-align: center;
+            margin-top: 15px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            display: block;
         }
 
         header {
@@ -113,41 +121,136 @@
             display: block;
         }
 
+        .wrapper {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 10px;
 
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
 
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            border-radius: 5px;
+            background-color: rgba(140, 143, 145, 0.5);
+            padding: 1em;
+            color: #222222;
+        }
+        #Bilde {
+            width: 100%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <header></header>
-    <input type="checkbox" id="cb">
-    <label id="burger" for="cb">
-        <div></div>
-        <div></div>
-        <div></div>
-    </label>
+<header></header>
+<input type="checkbox" id="cb">
+<label id="burger" for="cb">
+    <div></div>
+    <div></div>
+    <div></div>
+</label>
 
-    <nav id="menu">
-        <a href="Forsiden.html">Forsiden</a>
-        <a href="Fakta.html">Fakta</a>
-        <a href="Kjente%20vinter%20steder.html">Kjente vinter steder</a>
-        <a href="Kjente sommer steder.html">Kjente sommer steder</a>
-
-
-    </nav>
-
-    <main>
-        <content>
+<nav id="menu">
+    <a href="Forsiden.html">Forsiden</a>
+    <a href="Fakta.html">Fakta</a>
+    <a href="Kjente vinter steder.html">Kjente vinter steder</a>
+    <a href="Kjente%20sommer%20steder.html">Kjente sommer steder</a>
 
 
+</nav>
 
-        </content>
+<section>
+    <h1>De mest populære sommer stedene</h1>
+
+    <h2>Top 5</h2>
+</section>
+
+<main>
+
+    <div class="wrapper">
+
+        <div class="one">
+            <h1>1. Bad Gastein</h1>
+            <p>I Alpenes største nasjonalpark, Hohe Tauern, kan vi love deg en uforglemmelig naturopplevelse. Den enkleste er
+                stavgangsvandring er vi går på veier og stier nede i Gasteinerdalen. Med sin sentrale beliggenhet er Bad Gastein
+                et perfekt utgangspunkt for dagsutflukter til noen av verdens fremste severdigheter, som verdensarv-byen Venezia
+                og Salzburg. Solen står høyt på himmelen om sommeren, og sammen med den store
+                høyden får man et meget behagelig klima.</p>
+        </div>
+
+        <div class="two">
+            <img src="Bad%20Gastein.jpg" id="Bilde">
+        </div>
 
 
+        <div class="three">
+            <img src="Cervinia.jpg" id="Bilde"  >
+        </div>
 
-    </main>
+        <div class="four">
+            <h1>2. Cervinia</h1>
+            <p>Cervinia ligger i den vakre Aostadalen (Valle d’Aosta) som er kjent for sine spektakulære fjellkulisser,
+                rike naturliv og imponerende alpelandskap. Naturen inviterer til fantastiske vandringer langs krystallklare
+                alpeinnsjøer og stille skoger med variert terreng som passer både nybegynnere og proffer. Med over 200
+                kilometer naturskjønne vandringsstier, fantastisk fjellutsikt, sommerskikjøring og et stort utvalg av
+                aktiviteter har Cervinia blitt en feriefavoritt også om sommeren.</p>
+        </div>
 
 
+        <div class="five">
+            <h1>3. Chamonix</h1>
+            <p>Denne berømte byen i Alpene er kjent for sin nydelig natur, men besøkende tilbys i tillegg butikker, spa,
+                restauranter og aktiviteter om sommeren her. Du kan spasere langs fjell- og dalstier og lære å paraglide,
+                spille golf og klatre opp på fjelltopper.Om sommeren er dalene varme og solfylte, mens det er kjøligere høyere opp
+                i fjellet</p>
+        </div>
+
+        <div class="six">
+            <img src="Chamonix.JPG" id="Bilde" >
+        </div>
+
+
+        <div class="seven">
+            <img src="Zermatt.jpg" id="Bilde" >
+        </div>
+
+        <div class="eight">
+
+            <h1>4. Zermatt </h1>
+            <p>Omgitt av 38 fjelltopper over 4000 m, er destinasjonen til Zermatt - Matterhorn et fjellsykkelparadis ved
+                foten av Matterhorn. Ideelt for barn og nybegynnere å lære terrengsykling - perfekt for avanserte ryttere
+                å forfine sin teknikk.Med sine høyder mellom 1 400 m og 3 100 m tilbyr fjellene rundt Zermatt et bredt
+                spekter av stier. Med mye flyt eller bratt og teknisk eller naturlig eller gradert.Kombinasjonen av ridning
+                og Alpins unike fjelllandskap garanterer en uforglemmelig sykkelopplevelse.</p>
+        </div>
+
+
+        <div class="nine">
+            <h1>5. Innsbruck</h1>
+            <p> Fotturer og klatring, svømming og sykling, turgåing, ridning og golf: idrettsmulighetene om sommeren i
+                Innsbruck er nesten ubegrensede. Gå gjennom det alpine landskapet eller klatre bratte bergarter,
+                mens det vakre landskapet langs Inn-dalen avslører seg til syklister. En terrengsyklingstur på Nordkette
+                eller til en av de mange hyttene på de omkringliggende fjellene vil alltid ende med et utmerket panorama,
+                og det er mange stier som passer perfekt for den uformelle vandreren.</p>
+        </div>
+
+        <div class="ten">
+            <img src="innsbruck.jpg" id="Bilde">
+        </div>
+
+    </div>
+
+</main>
 
 
 </body>
