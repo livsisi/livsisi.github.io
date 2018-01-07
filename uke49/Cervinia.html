@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fakta</title>
+    <title>Cerviania</title>
     <style>
         body {
             margin: 0;
             min-height: 100vh;
+        }
+        section {
+            padding-top: 10px;
         }
 
         main {
             min-height: calc(100vh - 32px);
             background-size: cover;
             background-position: center center;
-            display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             transition: 1s;
+            display: grid;
+            max-width: 800px;
+            margin:auto;
+            padding: 8px;
         }
+
 
         content {
             color: lightgray;
@@ -28,15 +35,21 @@
             font-size: 24px;
         }
         content > p {
-            font-size: 24px;
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
             text-transform: none;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-        h1 {
-            font-size: 48px;
-        }
 
+        }
+        h2 {
+            font-size: 35px;
+            text-align: center;
+            margin-top: 15px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            display: block;
+        }
 
         header {
             height: 32px;
@@ -113,14 +126,9 @@
             font-size: 48px;
             display: block;
         }
-        
-        @media (max-width: 600px) {
-            #kart {
-                max-width: 90%;
-            }
+        main > img {
+            margin-left: 100px;
         }
-
-
 
     </style>
 </head>
@@ -143,32 +151,19 @@
 
     </nav>
 
+    <section>
+        <h1>2. Cervinia</h1>
+    </section>
+
     <main>
-        <content>
-            <h1>Alpetur</h1>
-            <img src="kart.jpg" id="kart">
-            <p>Alpene er Europas største fjellområde. Det høyeste punktet er Mont Blanc på 4808 moh. Alpene er ett av
-                jordens mest besøkte områder overhode: Med over 100 millioner overnattingsreiser – og nærmere en halv
-                milliard gjestedøgn per år – går på verdensbasis om lag hver femte til tiende feriereise til Alpene.
-                Spesielt Øst-Alpene og Sveits har et velutbygd nett med stier og fjellhytter for sommerturister.
-                Vinterturismen er det lagt til rette for med minst 20 000 kilometer alpine skiløyper.</br>
-                De landene som er en avdel av alpene er:</p>
-
-                <br>Italia<br>
-                <br>Frankrike<br>
-                <br>Østerike<br>
-                <br>Sveits<br>
-                <br>Tyskland<br>
-                <br>Liechtenstein<br>
-                <br>Slovenia<br>
-
-        </content>
-
-
+        <p>Cervinia ligger i den vakre Aostadalen (Valle d’Aosta) som er kjent for sine spektakulære fjellkulisser,
+                    rike naturliv og imponerende alpelandskap. Naturen inviterer til fantastiske vandringer langs krystallklare
+                    alpeinnsjøer og stille skoger med variert terreng som passer både nybegynnere og proffer. Med over 200
+                    kilometer naturskjønne vandringsstier, fantastisk fjellutsikt, sommerskikjøring og et stort utvalg av
+                    aktiviteter har Cervinia blitt en feriefavoritt også om sommeren.</p>
+        <img src="Cervinia.jpg" height="290" width="600"/>
 
     </main>
-
-
 
 
 </body>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fakta</title>
+    <title>Kjente sommer steder</title>
     <style>
         body {
             margin: 0;
@@ -14,12 +14,15 @@
             min-height: calc(100vh - 32px);
             background-size: cover;
             background-position: center center;
-            display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             transition: 1s;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
         }
+
 
         content {
             color: lightgray;
@@ -28,15 +31,21 @@
             font-size: 24px;
         }
         content > p {
-            font-size: 24px;
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
             text-transform: none;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-        h1 {
-            font-size: 48px;
-        }
 
+        }
+        h2 {
+            font-size: 35px;
+            text-align: center;
+            margin-top: 15px;
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            display: block;
+        }
 
         header {
             height: 32px;
@@ -113,15 +122,18 @@
             font-size: 48px;
             display: block;
         }
-        
-        @media (max-width: 600px) {
-            #kart {
-                max-width: 90%;
-            }
+
+        #tokoloner img{
+            width: 40%;
         }
-
-
-
+        #tokoloner article {
+        text-align: center;
+        }
+        }
+        a:-webkit-any-link {
+            color: -webkit-link;
+            cursor: pointer;
+            text-decoration: underline;
     </style>
 </head>
 <body>
@@ -143,32 +155,32 @@
 
     </nav>
 
-    <main>
-        <content>
-            <h1>Alpetur</h1>
-            <img src="kart.jpg" id="kart">
-            <p>Alpene er Europas største fjellområde. Det høyeste punktet er Mont Blanc på 4808 moh. Alpene er ett av
-                jordens mest besøkte områder overhode: Med over 100 millioner overnattingsreiser – og nærmere en halv
-                milliard gjestedøgn per år – går på verdensbasis om lag hver femte til tiende feriereise til Alpene.
-                Spesielt Øst-Alpene og Sveits har et velutbygd nett med stier og fjellhytter for sommerturister.
-                Vinterturismen er det lagt til rette for med minst 20 000 kilometer alpine skiløyper.</br>
-                De landene som er en avdel av alpene er:</p>
+    <section>
+        <h1>De mest populære sommer stedene</h1>
+    </section>
 
-                <br>Italia<br>
-                <br>Frankrike<br>
-                <br>Østerike<br>
-                <br>Sveits<br>
-                <br>Tyskland<br>
-                <br>Liechtenstein<br>
-                <br>Slovenia<br>
-
-        </content>
-
-
+    <main id="tokoloner">
+        <section>
+            <article>
+                <img src="Bad_Gastein.jpg"> <a href="Bad_Gastein.html">Bad Gastein</a>
+            </article>
+            <article>
+                <img src="Chamonix.JPG"> <a href="Chamonix.html">Chamonix</a>
+            </article>
+            <article>
+                <img src="innsbruck.jpg"> <a href="Innsbruck.html">Innsbruck</a>
+            </article>
+        </section>    
+        <section>
+            <article>
+                <img src="Cervinia.jpg"> <a href="Cervinia.html">Cervinia</a>
+            </article>
+            <article>
+                <img src="Zermatt.jpg"> <a href="Zermatt.html">Zermatt</a>
+            </article>
+        </section>
 
     </main>
-
-
 
 
 </body>

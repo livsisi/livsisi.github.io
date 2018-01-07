@@ -3,23 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fakta</title>
+    <title>Chamonix</title>
     <style>
         body {
             margin: 0;
             min-height: 100vh;
+        }
+        section {
+            padding-top: 10px;
         }
 
         main {
             min-height: calc(100vh - 32px);
             background-size: cover;
             background-position: center center;
-            display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
             transition: 1s;
+            display: grid;
+            max-width: 800px;
+            margin:auto;
+            padding: 8px;
         }
+
 
         content {
             color: lightgray;
@@ -28,15 +35,12 @@
             font-size: 24px;
         }
         content > p {
-            font-size: 24px;
+            font-size: 20px;
+            margin-left: 200px;
+            margin-right: 200px;
             text-transform: none;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-        h1 {
-            font-size: 48px;
-        }
 
+        }
 
         header {
             height: 32px;
@@ -113,18 +117,10 @@
             font-size: 48px;
             display: block;
         }
-        
-        @media (max-width: 600px) {
-            #kart {
-                max-width: 90%;
-            }
-        }
-
-
 
     </style>
 </head>
-<body>
+    <body>
 
     <header></header>
     <input type="checkbox" id="cb">
@@ -143,32 +139,19 @@
 
     </nav>
 
+    <section>
+        <h1>3. Chamonix</h1>
+    </section>
+
     <main>
-        <content>
-            <h1>Alpetur</h1>
-            <img src="kart.jpg" id="kart">
-            <p>Alpene er Europas største fjellområde. Det høyeste punktet er Mont Blanc på 4808 moh. Alpene er ett av
-                jordens mest besøkte områder overhode: Med over 100 millioner overnattingsreiser – og nærmere en halv
-                milliard gjestedøgn per år – går på verdensbasis om lag hver femte til tiende feriereise til Alpene.
-                Spesielt Øst-Alpene og Sveits har et velutbygd nett med stier og fjellhytter for sommerturister.
-                Vinterturismen er det lagt til rette for med minst 20 000 kilometer alpine skiløyper.</br>
-                De landene som er en avdel av alpene er:</p>
+        <p>Denne berømte byen i Alpene er kjent for sin nydelig natur, men besøkende tilbys i tillegg butikker, spa,
+                    restauranter og aktiviteter om sommeren her. Du kan spasere langs fjell- og dalstier og lære å paraglide,
+                    spille golf og klatre opp på fjelltopper.Om sommeren er dalene varme og solfylte, mens det er kjøligere høyere opp
+                    i fjellet</p>
 
-                <br>Italia<br>
-                <br>Frankrike<br>
-                <br>Østerike<br>
-                <br>Sveits<br>
-                <br>Tyskland<br>
-                <br>Liechtenstein<br>
-                <br>Slovenia<br>
-
-        </content>
-
-
+        <img src="Chamonix.JPG" id="Bilde" >
 
     </main>
-
-
 
 
 </body>
