@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hjem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fakta</title>
     <style>
         body {
             margin: 0;
@@ -112,6 +113,12 @@
             font-size: 48px;
             display: block;
         }
+        
+        @media (max-width: 600px) {
+            #kart {
+                max-width: 90%;
+            }
+        }
 
 
 
@@ -129,9 +136,9 @@
 
     <nav id="menu">
         <a href="Forsiden.html">Forsiden</a>
-        <a href="Hjem.html">Hjem</a>
-        <a href="Kjente%20steder.html">Kjente steder</a>
-        <a href="Sommer.html">Sommeren</a>
+        <a href="Fakta.html">Fakta</a>
+        <a href="Kjente%20vinter%20steder.html">Kjente vinter steder</a>
+        <a href="Kjente%20sommer%20steder.html">Kjente sommer steder</a>
 
 
     </nav>
@@ -139,10 +146,13 @@
     <main>
         <content>
             <h1>Alpetur</h1>
-            <img src="kart.jpg">
-            <p>Alpene er Europas største fjellområde. Det høyeste punktet er Mont Blanc på 4808 moh. Alpene er ett av jordens mest besøkte områder overhode: Med over 100 millioner overnattingsreiser – og nærmere en halv milliard gjestedøgn per år – går på verdensbasis om lag hver femte til tiende feriereise til Alpene.
-            Spesielt Øst-Alpene og Sveits har et velutbygd nett med stier og fjellhytter for sommerturister. Vinterturismen er det lagt til rette for med minst 20 000 kilometer alpine skiløyper.</br>
-            De landene som er en avdel av alpene er:</p>
+            <img src="kart.jpg" id="kart">
+            <p>Alpene er Europas største fjellområde. Det høyeste punktet er Mont Blanc på 4808 moh. Alpene er ett av
+                jordens mest besøkte områder overhode: Med over 100 millioner overnattingsreiser – og nærmere en halv
+                milliard gjestedøgn per år – går på verdensbasis om lag hver femte til tiende feriereise til Alpene.
+                Spesielt Øst-Alpene og Sveits har et velutbygd nett med stier og fjellhytter for sommerturister.
+                Vinterturismen er det lagt til rette for med minst 20 000 kilometer alpine skiløyper.</br>
+                De landene som er en avdel av alpene er:</p>
 
                 <br>Italia<br>
                 <br>Frankrike<br>

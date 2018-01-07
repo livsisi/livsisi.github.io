@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Burgeren</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            margin: 0px;
+            font-family: "Roboto", sans-serif, "Comic Sans MS";
+            font-size: 16px;
+            background-color: white;
+
+
+        }
+        header {
+            height: 32px;
+            background-color: black;
+        }
+        main {
+            max-width: 970px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #222222;
+        }
+
+
+        #cb {
+            display: none;
+        }
+
+
+        #burger {
+            display: flex;
+            width: 16px;
+            height: 16px;
+            flex-direction: column;  /*bortover*/
+            justify-content: space-between;
+            cursor: pointer;
+            position: absolute;
+            left: 8px;
+            top: 8px;
+
+        }
+        #burger > div {
+            background-color: white;
+            height: 2px;
+            transition: 0.5s;
+        }
+
+        #menu {
+            width: 200px;
+            background-color: gray;
+            position: absolute;
+            top: 33px;
+            left: -200px;
+            min-height: calc(100vh - 33x);
+            transition: 0.8s;
+            text-align: center;
+            padding-top: 40px;
+            box-sizing: border-box;
+            height: 100%;
+        }
+
+        #menu > a {
+            display: block;
+            margin-bottom: 30px;
+            text-decoration: none;
+            color: black;
+        }
+        #menu > a:hover {
+            color: white;
+        }
+        .join {
+            background-color: silver;
+            width: 100px;
+            margin: auto;
+            padding: 5px;
+        }
+
+        #cb:checked ~ #menu {
+            left: 0;
+        }
+        #cb:checked ~ #burger > div:first-child {
+            transform: translateY(7px) rotate(45deg);
+        }
+        #cb:checked ~ #burger > div:nth-child(2) {
+            opacity: 0;
+        }
+        #cb:checked ~ #burger > div:last-child {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        section {
+            color: snow;
+            text-shadow: 2px 2px 2px black;
+            text-transform: uppercase;
+            font-family: "Trebuchet MS"; Verdana, sans-serif;
+        }
+        * {box-sizing: border-box;}
+
+
+
+        .wrapper {
+            max-width: 940px;
+            margin: 0 auto;
+            padding: 10px;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+
+        }
+
+        .wrapper > div {
+            border: 2px solid black(233,171,88);
+            border-radius: 5px;
+            background-color: rgba(233, 171, 88, .5);
+            padding: 1em;
+            color: #222222;
+        }
+
+
+
+
+        h1{
+            text-align: center;
+            font-size: 48px;
+
+        }
+        h2{
+            text-align: center;
+            font-size: 32px;
+
+        }
+        h3{
+            text-align: center;
+            font-size: 28px;
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+
+        }
+        #Bilde {
+            width: 100%;
+        }
+
+        @media (max-width: 720px) {
+            .wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<header></header>
+
+<input type="checkbox" id="cb">
+<label id="burger" for="cb">
+    <div></div>
+    <div></div>
+    <div></div>
+</label>
+<nav id="menu">
+    <a href="burgeren.html">HOME</a>
+    <a href="side1_Europe.html">Travel to Europa</a>
+    <a href="side2_Asia.html">Travel to Asia</a>
+    <a href="side3_USA.html">Travel to USA</a>
+    <a href="#">ABOUT</a>
+    <a class="join" href="about.html">CONTACT</a>
+
+</nav>
+<section>
+    <h1>Travel to Europe</h1>
+    <h2>Top 5</h2>
+
+</section>
+
+<main>
+    <div class="wrapper">
+
+        <div class="one">
+            <h1>1. London</h1>
+            <p>London is one of the world's top tourist destinations, attracting upward of 15 million visitors each and every year.
+                Britain's capital city is a vibrant arts and entertainment center (its theaters are always busy), and 50 years after
+                the Beatles, the country's music scene still rocks.
+                London also boasts one of the planet's greatest concentrations of cultural attractions. From royal palaces to
+                the people's parliament, from Roman ruins to castles and cathedrals, you could spend endless days exploring
+                London's sites without ever running out of unique things to see and do</p>
+
+        </div>
+
+        <div class="two"> <img src="London.jpg" id="Bilde"> </div>
+
+
+
+        <div class="three">
+            <img src="venice.jpg" id="Bilde"  >
+        </div>
+        <div class="four">
+            <h1>2.Venezia</h1>
+            <p>With a city as filled with tourist attractions as Venice, it's hard to know where to begin. Perhaps the best way
+                is to simply get lost for a few hours wandering through its enchanting little streets and passageways, strolling
+                beside its canals, and finding its secret corners. At every turn, you'll see something worth remembering with a
+                photo. No matter where this exploration takes you, it's easy to find your way back to Piazza San Marco and the
+                Grand Canal. Most of the best sights you'll want to visit lie around these two landmarks</p>
+        </div>
+
+
+        <div class="five">
+            <h1>3. Paris</h1>
+            <p> As the capital city of France, Paris has endured as an important city for more than 2,000 years.
+                Often called by nicknames like the “city of love” and “city of lights,” Paris is today one of the world’s
+                leading centers for business, fashion, entertainment, art and culture. Just the mere mention of Paris conjures
+                up images of the city’s world famous landmarks, museums and cathedrals.
+
+                Also called the Capital of Fashion, Paris is home to some of the world’s finest designer names including
+                Yves Saint-Laurent, Lancôme, L’Oréal and Christian Dior. The city’s shopping scene ranges from shopping
+                centers to open-air markets, boutiques and flea markets.</p>
+        </div>
+
+        <div class="six">
+            <img src="Paris.jpg" id="Bilde" >
+        </div>
+
+
+
+        <div class="seven">
+            <h1>4. Barcelona</h1>
+            <p>London is one of the world's top tourist destinations, attracting upward of 15 million visitors each and every year.
+                Britain's capital city is a vibrant arts and entertainment center (its theaters are always busy), and 50 years after
+                the Beatles, the country's music scene still rocks.
+                London also boasts one of the planet's greatest concentrations of cultural attractions. From royal palaces to
+                the people's parliament, from Roman ruins to castles and cathedrals, you could spend endless days exploring
+                London's sites without ever running out of unique things to see and do</p>
+
+        </div>
+
+        <div class="eight">
+            <img src="barcelona.jpg" id="Bilde" >
+
+        </div>
+
+
+
+        <div class="nine">
+            <img src="Satorini.jpg" id="Bilde">
+
+        </div>
+
+
+        <div class="ten">
+            <h1>5. santorini</h1>
+            <p> The island of Santorini (Thíra) is most impressive when approached from the sea as you sail into the
+                massive caldera (sea-filled volcanic crater), almost totally enclosed by sheer cliffs ranging in height
+                between 200 and 400 meters. Along the gray-black lava cliff tops, the whitewashed settlements of Firá and
+                Oia are the island's most alluring (and most expensive) destinations. In fact, Santorini lives almost entirely
+                from tourism, attracting visitors with its extraordinary landscape and its ancient archaeological sites.
+                It is generally marketed as a romantic destination - popular with honeymooners, couples, and celebrities.
+                Cruise ships sailing the East Mediterranean make a one-day port of call here.</p>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+</body>
+</html>
