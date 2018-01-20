@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YouTube</title>
+    <style>
+        main {
+            max-width: 700px;
+            margin: auto;
+        }
+        main > video {
+            width: 100%;
+        }
+        #knapper {
+            background-color: #eeeeee;
+            border: 1px solid #333;
+            padding: 10px;
+        }
+        #knapper > span {
+            background-color: rebeccapurple;
+            padding: 6px;
+            color: white;
+            font-family: sans-serif;
+            display: inline-block;
+            margin: 8px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        #knapper > span:hover {
+            background-color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <input type="text" id="inpTittel" placeholder="Hva heter filmen">
+        <input type="file" id="inpVideo">
+    </header>
+
+
+   <main>
+       <video scr="" controls poster="hund.jpg" ></video>
+       <div id="knapper">
+           <span>Et hundeliv</span>
+           <span>Fint å bade</span>
+           <span>Hoppe i havet</span>
+       </div>
+   </main>
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCgvgd27HW_1TqRYe4Mdq806EO6plmLBMk",
+        authDomain: "it1fredag-fdb57.firebaseapp.com",
+        databaseURL: "https://it1fredag-fdb57.firebaseio.com",
+        projectId: "it1fredag-fdb57",
+        storageBucket: "it1fredag-fdb57.appspot.com",
+        messagingSenderId: "556591807154"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <script>
+        const db= firebase.database();
+        const videoer = db.ref("videoer");
+        const storage = firebase.storage ();
+
+        const inpVideo = document.getElementById("inpVideo") ;
+        const knapper = document.getElementById("knapper");
+        const minVideo = document.getElementById("minVideo");
+        const inpTittel = document.getElementById("document");
+
+        function lagreData(info) {
+           vidoer.push({
+               tittel: inpTittel.value,
+               url: info.downloadURL
+           });
+        }
+
+        function lastOppVideo() {
+            const video = inpVideo.files[0];
+            const lagringsplass = storage.ref("videoer/" + new Date());
+            lagringsplass.put(video).then(lagreData);
+            
+
+        }
+        function lagKnapp(snap) {
+            const video = snap.val();
+            knapper.innerHTML += `<span> onclick="spillFilm('${video.url}')"> ${video.tittel}</span> `
+
+        }
+        function spillFilm(url) {
+            minVideo.src = url;
+            minVideo.play();
+
+        }
+
+
+        inpVideo.onchange = lastOppVideo;
+        videoer.on("child_added", lagKnapp);
+
+    </script>
+

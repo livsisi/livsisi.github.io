@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lag lyd</title>
+</head>
+<body>
+    <script>
+        const as = new AudioContext();
+        const osc = ac.createOscillator();
+        osc.connect(ac.destination);
+
+        osc.frequency.value = 880;
+        osc.start(0);
+        osc.stop(0.2)
+
+        function endreTone(evt) {
+
+            osc.frequency.value = evt.clientX;
+
+
+
+        }
+
+        document.onmousemove
+    </script>
+</body>
+</html>
