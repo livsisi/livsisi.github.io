@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+
+    <input type="text" id="minMelding">
+    <div id="alleMeldinger"></div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCgvgd27HW_1TqRYe4Mdq806EO6plmLBMk",
+            authDomain: "it1fredag-fdb57.firebaseapp.com",
+            databaseURL: "https://it1fredag-fdb57.firebaseio.com",
+            projectId: "it1fredag-fdb57",
+            storageBucket: "it1fredag-fdb57.appspot.com",
+            messagingSenderId: "556591807154"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        let db = firebase.database();
+        let meldinger = db.ref("meldinger");
+
+        let minMelding = document.getElementById("minMelding");
+        let alleMeldinger = document.getElementById("alleMeldinger");
+
+        function lagreMelding() {
+            meldinger.push(minMelding.value);
+            minMelding.value= "";
+
+
+        }
+
+        function visMelding(snap) {
+            alleMeldinger.innerHTML += "<p>" +snap.val() + "</p>";
+
+
+        }
+
+        MinMelding.onchange = lagreMelding;
+        meldinger.on("child_added", visMelding);
+
+    </script>
+
+</body>
+</html>
