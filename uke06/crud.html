@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+</head>
+<body>
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCgvgd27HW_1TqRYe4Mdq806EO6plmLBMk",
+            authDomain: "it1fredag-fdb57.firebaseapp.com",
+            databaseURL: "https://it1fredag-fdb57.firebaseio.com",
+            projectId: "it1fredag-fdb57",
+            storageBucket: "it1fredag-fdb57.appspot.com",
+            messagingSenderId: "556591807154"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+
+        const db = firebase.database();
+        const personer = db.ref("bilregister/personer");
+        const bilder = db.ref("bilregister/biler");
+
+        //CREATE
+        // Personnummer blir nå primærnøkkel til Petter Solberg
+        const petter = personer.child("1505200132145");
+        petter.set({
+            fornavn: "Petter",
+            etternavn: "Solberg"
+        });
+
+        const martin = personer.child("12023823456")
+        martin.set({
+            fornavn: "Martin",
+            etternavn: "Skanche"
+        });
+
+        // Setter regisereringsnummer som PK
+        const volvo = biler.child("2213254");
+        volvo.set({
+            merke: "volvo",
+            modell: "V40",
+            eier: "12023823456"
+        });
+
+        const honda = biler.child("FS12345");
+        honda.set({
+            merke: "Honda",
+            modell: "Jazz",
+            eier: "12023823456"
+        });
+
+    </script>
+</body>
+</html>
