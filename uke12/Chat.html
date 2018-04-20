@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+</head>
+<body>
+    <h1>Superchat</h1>
+
+    <article id="txtMeldinger"></article>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCgvgd27HW_1TqRYe4Mdq806EO6plmLBMk",
+            authDomain: "it1fredag-fdb57.firebaseapp.com",
+            databaseURL: "https://it1fredag-fdb57.firebaseio.com",
+            projectId: "it1fredag-fdb57",
+            storageBucket: "it1fredag-fdb57.appspot.com",
+            messagingSenderId: "556591807154"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        let txtMeldinger = document.getElementById("txtMeldinger");
+        let database = firebase.database();
+        let meldinger = database.ref("meldinger");
+        let nyMelding = {
+            "avsender" : "Kari Ku",
+            "tekst" : "Nei, Kari, det jør det langt ifra"
+        };
+
+        meldinger.push(nyMelding);
+        function visMelding(snapshot) {
+            var melding = snapshot.val();
+            txtMeldinger.innerHTML += `<p>${melding.avsender}sier${melding.tekst}</p>`;
+        }
+
+        meldinger.on("child_added",visMelding)
+    </script>
+</body>
+</html>

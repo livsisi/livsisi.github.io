@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sofa</title>
+    <link href="https://fonts.googleapis.com/css?family=Alice|Tajawal" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: #f5f6f7;
+        }
+        header {
+            background-color: white;
+            filter: drop-shadow(0 5px 5px black);
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+        }
+
+        #handlediv {
+            text-align: right;
+            padding-right: 30px;
+        }
+
+        #magnifying-glass{
+            text-align: left;
+        }
+
+        h1 {
+            color: black;
+            font-size: 48px;
+            text-align: center;
+            font-family: 'Alice', serif;
+            margin-bottom: 8px;
+
+        }
+        main {
+            background-size: cover;
+            background-position: center center;
+            text-align: center;
+            transition: 1s;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            font-family: 'Quicksand', sans-serif;
+            overflow: hidden;
+            margin-top: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(145, 145, 145, 0.01);
+        }
+
+        #sideMenu {
+            background-color: white;
+            padding: 20px;
+            margin-left: 20px;
+        }
+
+        #sideMenu a {
+            display: block;
+            font-size: 16px;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        #mainContent {
+            background-color: rgba(145, 145, 145, 0.01);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            width: auto;
+            grid-gap: 5px;
+        }
+
+        #mainContent > article > img {
+            width: 100%;
+        }
+
+        section > h1 {
+            text-decoration: none;
+        }
+
+        @media (max-width: 970px) {
+            #mainContent {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="magnifying-glass">
+            <img src="image/magnifying-glass.png" height="50" width="100"/></div>
+        <a href="Butikk.html"><h1>Nettbutikk</h1></a>
+        <div id="handlediv">
+            <img src="image/handlekurv.png" height="50" width="100">
+        </div>
+
+
+    </header>
+
+    <section>
+        <a href="møbler.html"><h1>Nyheter</h1></a>
+    </section>
+
+    <main>
+
+        <aside id="sideMenu">
+            <nav>
+                <a href="sofa.html">Sofaer</a>
+                <a href="">Bord</a>
+                <a href="">Stoler</a>
+
+            </nav>
+        </aside>
+
+            <section id="mainContent">
+
+                <article>
+                    <img src="image/s1.jpeg">
+                </article>
+                <article>
+                    <img src="image/s4.jpeg">
+                </article>
+                <article>
+                    <img src="image/7.jpeg">
+                </article>
+                <article>
+                    <img src="image/10.jpeg">
+                </article>
+                <article>
+                    <img src="image/s5.jpeg">
+                </article>
+                <article>
+                    <img src="image/11.jpeg">
+                </article>
+
+            </section>
+
+        </main>
+
+
+
+
+    <footer></footer>
+
+
+</body>
+</html>
