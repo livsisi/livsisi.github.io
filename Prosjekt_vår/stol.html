@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sofa</title>
+    <title>Stol</title>
     <link href="https://fonts.googleapis.com/css?family=Alice|Tajawal" rel="stylesheet">
     <style>
         body {
@@ -14,7 +14,7 @@
             background-color: white;
             filter: drop-shadow(0 5px 5px black);
             display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            grid-template-columns: auto 1fr auto 1fr;
         }
 
         #handlediv {
@@ -49,6 +49,7 @@
             background-color: rgba(145, 145, 145, 0.01);
         }
 
+
         #sideMenu {
             background-color: white;
             padding: 20px;
@@ -71,6 +72,27 @@
             grid-gap: 5px;
         }
 
+        #handlekurven {
+            position: absolute;
+            top: 70px;
+            right: 10px;
+            padding: 10px;
+
+            background-color: #eeeeee;
+        }
+
+        #varer td {
+            padding: 7px;
+        }
+
+        #varer td:last-child {
+            cursor: pointer;
+        }
+
+        #varer tr:nth-child(odd) {
+            background-color: salmon;
+        }
+
         #mainContent > article > img {
             width: 100%;
         }
@@ -79,23 +101,32 @@
             text-decoration: none;
         }
 
-        @media (max-width: 1250px) {
+        @media (max-width: 970px) {
             #mainContent {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
+
+
     <header>
+        <img src="Logo.png" height="70" width="90">
         <div id="magnifying-glass">
-            <img src="image/magnifying-glass.png" height="50" width="100"/></div>
-        <a href="Butikk.html"><h1>Nettbutikk</h1></a>
+            <img src="image/magnifying-glass.png" height="50" width="70"/></div>
+        <a href="Butikk.html"><h1>Nilssonsfristelser</h1></a>
         <div id="handlediv">
-            <img src="image/handlekurv.png" height="50" width="100">
+            <img src="image/handlekurv.png" height="50" width="70">
         </div>
 
+        <div style="display: none" id="handlekurven">
+            <table>
+                <tbody id="varer"></tbody>
+            </table>
 
+            <p id="txtPris"></p>
+        </div>
     </header>
 
     <section>
@@ -103,6 +134,8 @@
     </section>
 
     <main>
+
+
 
         <aside id="sideMenu">
             <nav>
@@ -115,42 +148,143 @@
 
             <section id="mainContent">
 
-                <article>
-                    <img src="bilder_møbler/stol2.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol3.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol4.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol5.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol7.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol6.jpg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol8.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol9.jpeg">
-                </article>
-                <article>
-                    <img src="bilder_møbler/stol10.jpeg">
-                </article>
+
 
             </section>
 
         </main>
 
 
-
-
     <footer></footer>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDmLZYkuJSueqtLlf9sItJ0QnkNgbjgoVo",
+            authDomain: "nettside-f9923.firebaseapp.com",
+            databaseURL: "https://nettside-f9923.firebaseio.com",
+            projectId: "nettside-f9923",
+            storageBucket: "nettside-f9923.appspot.com",
+            messagingSenderId: "581386851403"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script>
+        const mainContent = document.getElementById("mainContent");
+        const db = firebase.database();
+        const stoler = db.ref("mobler/stoler");
+        const handlekurv = db.ref("handlekurv");
+        const handlekurven = document.getElementById("handlekurven");
+        const handlediv = document.getElementById("handlediv");
+        const txtPris = document.getElementById("txtPris");
+        const varer = document.getElementById("varer");
+
+
+
+        let sum = 0;
+
+        function leggIKurv(varesnap) {
+
+            let vare = varesnap.val();
+            handlekurv.push({
+                navn: vare.navn,
+                pris: vare.pris,
+                id: varesnap.key
+            });
+
+        }
+
+
+        function kjop(id) {
+
+            let vare = stoler.child(id);
+            vare.on("value", leggIKurv);
+
+        }
+
+        function visBord(bordsnap) {
+            let bord = bordsnap.val();
+
+            mainContent.innerHTML += `
+                <article>
+                    <img src="images_mobler/${bord.bilde}">
+                    <h1>${bord.navn}</h1>
+                    <p>${bord.beskrivelse}</p>
+                    <button onclick="kjop('${bordsnap.key}')">Kjøp for kr ${bord.pris}</button>
+                </article>
+            `;
+
+        }
+
+        function fjern(key) {
+
+            const vare = handlekurv.child(key);
+
+            const tr = document.getElementById(key);
+
+            const td = tr.querySelector("td:nth-child(2)");
+
+            let pris = Number(td.innerHTML);
+            sum -= pris;
+
+            txtPris.innerHTML = `Sum: Kr. ${sum}`;
+
+            if(sum === 0) {
+                txtPris.innerHTML = "";
+                handlekurven.style.display = "none";
+            }
+
+            varer.removeChild(tr);
+
+            vare.remove();
+
+        }
+
+        function visKurv(snap) {
+
+            const vare = snap.val();
+            sum += vare.pris;
+            varer.innerHTML = `
+                <tr id="${snap.key}">
+                    <td>${vare.navn}</td>
+                    <td>${vare.pris}</td>
+                    <td onclick="fjern('${snap.key}')">X</td>
+                </tr>
+
+
+            ` + varer.innerHTML;
+
+            txtPris.innerHTML = "";
+            txtPris.innerHTML = `Sum: Kr. ${sum}`;
+
+        }
+
+        function visKurven() {
+            if(handlekurven.style.display === "none") {
+                handlekurven.style.display = "block";
+            } else {
+                handlekurven.style.display = "none";
+            }
+        }
+
+
+        stoler
+            .on("child_added", visBord);
+
+        handlekurv.on("child_added", visKurv);
+
+        handlediv.onclick = visKurven;
+
+    </script>
+
+
+
+
+
 
 
 </body>

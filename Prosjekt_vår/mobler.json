@@ -1,0 +1,153 @@
+{
+  "bord" : {
+    "bord001" : {
+      "navn" : "Como sofabord 60x60 medium",
+      "beskrivelse" : "Massivt tre / Hvitoljet eik / Praktisk",
+      "pris" : 9979,
+      "bilde" : "bord1.jpg",
+      "new" : true
+    },
+    "bord002" : {
+      "navn" : "Como sofabord 60x60 medium",
+      "beskrivelse" : "Massivt tre / svart / Rustfritt stål",
+      "pris" : 7668,
+      "bilde" : "bord7.jpg"
+    },
+    "bord003" : {
+      "navn" : "Como sofabord 80x80 high",
+      "beskrivelse" : " tre / svart / svartlakkert stål",
+      "pris" : 8598,
+      "bilde" : "bord8.jpg"
+    },
+    "bord004" : {
+      "navn" : "Como sofabord 60x120 Terazzo",
+      "beskrivelse" : "Massivt tre / Hvitoljet eik / Praktisk",
+      "pris" : 9979,
+      "bilde" : "bord4.jpg"
+    },
+    "bord005" : {
+      "navn" : "Como sofabord 60x120 high",
+      "beskrivelse" : "Massivt tre / oljet ask ",
+      "pris" : 6754,
+      "bilde" : "bord9.jpg"
+    },
+    "bord006" : {
+      "navn" : "Como sofabord 60x120 medium",
+      "beskrivelse" : "Massivt tre / Hvitoljet eik / Praktisk",
+      "pris" : 9979,
+      "bilde" : "bord3.jpg"
+    },
+    "bord007" : {
+      "navn" : "Como sofabord 80x240 medium",
+      "beskrivelse" : "Massivt tre / oljet eik / Praktisk",
+      "pris" : 9979,
+      "bilde" : "bord12.jpg"
+    },
+    "bord008" : {
+      "navn" : "Como sofabord 80x240 high",
+      "beskrivelse" : "Massivt tre / Hvitoljet eik / messing lakert",
+      "pris" : 10563,
+      "bilde" : "bord13.jpg"
+    },
+    "bord009" : {
+      "navn" : "Como sofabord 80x240 medium",
+      "beskrivelse" : "Massivt tre / lakert eik / praktisk",
+      "pris" : 7685,
+      "bilde" : "bord14.jpg"
+    }
+  },
+  "stoler" : {
+    "sofa001" : {
+      "navn" : "Palm louge stol",
+      "beskrivelse" : "dark brun / quattro traceable - skinn/ bein i svart stål",
+      "pris" : 7101,
+      "bilde" : "stol2.jpeg"
+    },
+    "sofa002" : {
+      "navn" : "polster lounge stol",
+      "beskrivelse" : "brun / skinn - stoff/ stål bein",
+      "pris" : 5506,
+      "bilde" : "stol3.jpeg"
+    },
+    "sofa003" : {
+      "navn" : "morakk",
+      "beskrivelse" : "oljet tre/ høy krakk",
+      "pris" : 4768,
+      "bilde" : "stol4.jpeg"
+    },
+    "sofa004" : {
+      "navn" : "dubai",
+      "beskrivelse" : "spinkel stol/ eik tre/ hvitoljet",
+      "pris" : 3153,
+      "bilde" : "stol5.jpeg"
+    },
+    "sofa005" : {
+      "navn" : "venezia",
+      "beskrivelse" : "stål stol/ grey/ venur",
+      "pris" : 4768,
+      "bilde" : "stol6.jpeg"
+    },
+    "sofa006" : {
+      "navn" : "napoli",
+      "beskrivelse" : "hvit tre stol/ praktisk",
+      "pris" : 3334,
+      "bilde" : "stol7.jpeg"
+    },
+    "sofa007" : {
+      "navn" : "Barcelona",
+      "beskrivelse" : "lenestol/ baiz - stoff/ beige",
+      "pris" : 8569,
+      "bilde" : "stol8.jpeg"
+    },
+    "sofa008" : {
+      "navn" : "coco",
+      "beskrivelse" : "lenestol/ beige/ silke",
+      "pris" : 9768,
+      "bilde" : "stol9.jpeg"
+    },
+    "sofa0010" : {
+      "navn" : "simba",
+      "beskrivelse" : "lenestol/ bomull",
+      "pris" : 10001,
+      "bilde" : "stol12.jpeg"
+    }
+  },
+  "sofaer" : {
+    "sofa001" : {
+      "navn" : "Fuze modul 250x107",
+      "beskrivelse" : "dark grey / hazel - stoff",
+      "pris" : 34506,
+      "bilde" : "s1.jpeg"
+    },
+    "sofa002" : {
+      "navn" : "persika modul 250x107",
+      "beskrivelse" : "ligh grey / fawn - stoff",
+      "pris" : 39650,
+      "bilde" : "s4.jpeg"
+    },
+    "sofa003" : {
+      "navn" : "fesken modul 250x107",
+      "beskrivelse" : "svart / skinn - stoff",
+      "pris" : 45346,
+      "bilde" : "s7.jpeg"
+    },
+    "sofa004" : {
+      "navn" : "cosy modul 250x107 - hjørnesoffa",
+      "beskrivelse" : " grey / skum - skum",
+      "pris" : 55506,
+      "bilde" : "s10.jpeg"
+    },
+    "sofa005" : {
+      "navn" : "Hibiskus modul 250x107",
+      "beskrivelse" : "quattro Traceable - skinn / brun / dun - dun",
+      "pris" : 61008,
+      "bilde" : "s5.jpeg"
+    },
+    "sofa006" : {
+      "navn" : "Scandivavia remix 250x107",
+      "beskrivelse" : "lys / silke/ skum - skum",
+      "pris" : 34506,
+      "bilde" : "s11.jpeg"
+    }
+  }
+  }

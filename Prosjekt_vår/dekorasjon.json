@@ -1,0 +1,170 @@
+{
+  "lykt": {
+    "lykt001": {
+      "navn": "Thelma",
+      "beskrivelse": "svart/ glass / utelampe",
+      "pris": 202,
+      "bilde": "lykt1.jpeg"
+    },
+    "lykt002": {
+      "navn": "Dal",
+      "beskrivelse": "grå/ glasslampe / med lås",
+      "pris": 160,
+      "bilde": "lykt2.jpeg"
+    },
+    "lykt003": {
+      "navn": "Annabelle",
+      "beskrivelse": "gull lampe/ for store kubbelys",
+      "pris": 398,
+      "bilde": "lykt3.jpeg"
+    },
+    "lykt004": {
+      "navn": "Albertine",
+      "beskrivelse": "svart/ glass / utelampe",
+      "pris": 302,
+      "bilde": "lykt4.jpeg"
+    },
+    "lykt005": {
+      "navn": "Todd",
+      "beskrivelse": "grå/ begie glasslampe / med lås",
+      "pris": 87,
+      "bilde": "lykt5.jpeg"
+    },
+    "lykt006": {
+      "navn": "Mille",
+      "beskrivelse": "grå/ høy/ glasslampe",
+      "pris": 376,
+      "bilde": "lykt7.jpeg"
+    },
+    "lykt007": {
+      "navn": "Emma",
+      "beskrivelse": "stål lampe / med lås",
+      "pris": 254,
+      "bilde": "lykt8.jpeg"
+    },
+    "lykt008": {
+      "navn": "soffe",
+      "beskrivelse": "stål/ bred glasslampe / pratisk",
+      "pris": 176,
+      "bilde": "lykt9.jpeg"
+    },
+    "lykt009": {
+      "navn": "pia",
+      "beskrivelse": "svart/ lampe / kvadratisk",
+      "pris": 198,
+      "bilde": "lykt6.jpeg"
+    }
+  },
+  "kurv": {
+    "kurv001": {
+      "navn": "tia",
+      "beskrivelse": "lys grå kiste/ praktisk/ nøkkel lås",
+      "pris": 546,
+      "bilde": "kiste1.jpeg"
+    },
+    "kurv002": {
+      "navn": "primo",
+      "beskrivelse": "lys grå kiste/ praktisk/ nøkkel lås",
+      "pris": 541,
+      "bilde": "kiste2.jpeg"
+    },
+    "kurv003": {
+      "navn": "abuelo",
+      "beskrivelse": "tre kiste/ praktisk",
+      "pris": 453,
+      "bilde": "kiste3.jpeg"
+    },
+    "kurv004": {
+      "navn": "eple",
+      "beskrivelse": "skinn kurv/ brun/ praktisk ",
+      "pris": 678,
+      "bilde": "skinnkurv.jpeg"
+    },
+    "kurv005": {
+      "navn": "pære",
+      "beskrivelse": "tøy kruv/ hvit og svart/ stor",
+      "pris": 556,
+      "bilde": "tøykurv.jpeg"
+    },
+    "kurv006": {
+      "navn": "plomme",
+      "beskrivelse": "ltøykurv/ beige/ praktisk",
+      "pris": 333,
+      "bilde": "kurv.jpeg"
+    },
+    "kurv007": {
+      "navn": "rose",
+      "beskrivelse": "stor tre kurv/ praktisk",
+      "pris": 432,
+      "bilde": "kurv1.jpeg"
+    },
+    "kurv008": {
+      "navn": "tulipan",
+      "beskrivelse": "trekurv",
+      "pris": 334,
+      "bilde": "kurv2.jpg"
+    },
+    "kurv009": {
+      "navn": "lilje",
+      "beskrivelse": "praktisk kurv",
+      "pris": 324,
+      "bilde": "kurv3.jpg"
+    }
+  },
+  "puter": {
+    "pute001": {
+      "navn": "rombo",
+      "beskrivelse": "fargerik pute",
+      "pris": 334,
+      "bilde": "pute1.jpeg"
+    },
+    "pute002": {
+      "navn": "rombo",
+      "beskrivelse": "beige/ bomull",
+      "pris": 321,
+      "bilde": "pute2.jpeg"
+    },
+    "pute003": {
+      "navn": "rio",
+      "beskrivelse": "mønster",
+      "pris": 325,
+      "bilde": "pute3.jpeg"
+    },
+    "pledd001": {
+      "navn": "puerto rico",
+      "beskrivelse": "stripete/ beige",
+      "pris": 453,
+      "bilde": "pledd1.jpeg"
+    },
+    "pledd002": {
+      "navn": "bogota",
+      "beskrivelse": "blått/ flispledd",
+      "pris": 250,
+      "bilde": "pledd2.jpeg"
+    },
+    "pledd003": {
+      "navn": "chile",
+      "beskrivelse": "svart /ull",
+      "pris": 453,
+      "bilde": "pledd3.jpeg"
+    },
+    "skinn001": {
+      "navn": "ulv",
+      "beskrivelse": "saueteppe/ grå",
+      "pris": 543,
+      "bilde": "skinn3.jpeg"
+    },
+    "skinn002": {
+      "navn": "rev",
+      "beskrivelse": "saueteppe/ rundt / beige",
+      "pris": 513,
+      "bilde": "skinn1.jpeg"
+    },
+    "skinn003": {
+      "navn": "jerv",
+      "beskrivelse": "saueteppe/ beige",
+      "pris": 543,
+      "bilde": "skinn2.jpeg"
+    }
+  }
+}
