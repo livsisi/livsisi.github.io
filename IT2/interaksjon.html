@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hva er IT2?</title>
+    <style>
+
+        #firkant {
+            width: 100px;
+            height: 50px;
+            background-color: steelblue;
+            position: absolute;
+            top: 300px;
+            left: 500px;
+            transition: 1s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <input type="number" id="inpBredde" placeholder="Angi bredde">
+        <input type="number" id="inpRadius" placeholder="Angi radius">
+        <input type="range" id="inpRotasjon" value="0" min="-5" max="5">
+    </header>
+
+    <main>
+        <div id="firkant"></div>
+    </main>
+
+    <script>
+        // HTML-elementer
+        const inpBredde = document.getElementById("inpBredde");
+        const inpRadius = document.getElementById("inpRadius");
+        const firkant = document.getElementById("firkant");
+        const inpRotasjon = document.getElementById("inpRotasjon");
+
+
+        function snurr() {
+            firkant.style.transform = `rotate(${inpRotasjon.value}2turn)`;
+
+        }
+        
+        function endreBredde() {
+            firkant.style.width = inpBredde.value + "px";
+        }
+
+        function endreRadius() {
+            firkant.style.borderRadius = inpRadius.value + "%";
+        }
+
+        function flyttMeg(klikk) {
+            firkant.style.left = klikk.clientX + "px";
+            firkant.style.top = klikk.clientY + "px";
+        }
+
+
+
+        inpBredde.oninput = endreBredde;
+        inpRadius.oninput = endreRadius;
+        document.onclick= flyttMeg;
+        inpRotasjon.onchange = snurr;
+
+
+    </script>
+
+
+</body>
+</html>
