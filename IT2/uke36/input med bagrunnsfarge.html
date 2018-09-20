@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>input med bakgrunnsfarge</title>
+</head>
+<body>
+    <input type="text" id="inpFarge">
+
+    <script>
+       var inpFarge = document.getElementById("inpFarge");
+       
+       inpFarge.onkeyup = function () {
+           document.body.style.backgroundColor = inpFarge.value;
+
+       }
+
+    </script>
+
+</body>
+</html>

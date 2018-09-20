@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>En firkant</title>
+    <style>
+        #minFirkant {
+            background-color: peachpuff;
+            width: 200px;
+            height: 200px;
+            transition: 1s
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <input type="text" id="inpFarge">
+    <input type="range" id="inpStorrelse">
+
+    <div id="minFirkant"></div>
+
+    <script>
+
+        var inpFarge = document.getElementById("inpFarge");
+        var inpStorrelse = document.getElementById("inpStorrelse");
+        var minFirkant = document.getElementById("minFirkant");
+        
+        inpStorrelse.onmousemove = function () {
+            minFirkant.style.width = inpStorrelse.value + "px";
+            minFirkant.style.height = inpStorrelse.value + "px";
+
+        }
+
+        inpFarge.onkeyup = function () {
+            minFirkant.style.backgroundColor = inpFarge.value;
+        }
+
+    </script>
+
+</body>
+</html>

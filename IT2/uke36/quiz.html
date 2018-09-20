@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quiz</title>
+</head>
+<body>
+
+    <p>Hva er hovedstaten i Mongolia?</p>
+    <input type="text" id="inpSvar" placeholder="Skriv inn ditt svar her">
+    <button id="btnSvar">Send inn</button>
+    <div id="divSvar"></div>
+
+    <script>
+
+        // ---- Refererer ----- 
+
+        var inpSvar = document.getElementById("inpSvar"); // variabel som referer
+        var btnSvar = document.getElementById("btnSvar"); //ref til knappen
+        var divSvar = document.getElementById("divSvar"); //ref til divSvar
+
+
+       //---- Else ------
+
+        btnSvar.onclick = function () { // funksjon som kjører hvis knappen trykkes på
+            if(inpSvar.value === "Ulan Bator"|| inpSvar === "Ulanbataar"){ // hvis brukeren skriver Ulan Baltor
+                divSvar.innerHTML = "Gratulerer, det var riktig";
+            }
+            else {  // kode som kjører hvis brukeren ikke skriver Ulan Baltor eller Ulanbataar
+              divSvar.innerHTML = "Det var feil";
+            }
+        }
+
+
+         // ---- Else-if ------
+
+        btnSvar.onclick = function () {
+            if (inpSvar.value === "ulan Bator"){
+                divSvar.innerHTML = "Det var rikig, du skriver på norsk";
+            }
+            else if (inpSvar.value === "Ulanbataar") {
+                divSvar.innerHTML = "det var riktig, du skriver på mongolsk";
+            }
+            else {
+                divSvar.innerHTML = "Feil";
+            }
+         }
+
+
+
+
+        
+    </script>
+
+</body>
+</html>
