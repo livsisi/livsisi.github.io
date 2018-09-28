@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        var fibmin2 =0;
+        var fibmin1 =1;
+        var fib=fibmin2;
+        var txtUt="";
+        for(var i=0; i<10; i++){
+            txtUt+=+fib+", ";
+            fibmin2=fibmin1;
+            fibmin1=fib;
+            fib=fibmin2+fibmin1;
+        }
+        document.write(txtUt);
+    </script>
+a)
+    <script>
+        var canvas = document.getElementById("minCanvas");
+        var ctx = canvas.getContext("2d");
+        var side = 150; //Bredde og høyde
+        var xPosisjon = 0; //Startposisjon x
+        var yPosisjon = 0; //Startposisjon y
+        for(var i=0; i<=10; i++) {
+            ctx.lineTo(xPosisjon+side,yPosisjon);
+            ctx.stroke();
+            yPosisjon = yPosisjon+10;
+            ctx.moveTo(xPosisjon, yPosisjon);
+        }
+    </script>
+b)
+    <canvas id="minCanvas" width="300" height="300"> </canvas>
+    <script>
+        var canvas = document.getElementById("minCanvas");
+        var ctx = canvas.getContext("2d");
+        var side = 10; //Bredde og høyde
+        var xPosisjon = 140; //Startposisjon x
+        var yPosisjon = 140; //Startposisjon y
+        for(var i=1; i<=10; i++){
+            ctx.rect(xPosisjon, yPosisjon, side, side);
+            ctx.stroke();
+            xPosisjon = xPosisjon-10;
+            yPosisjon = yPosisjon-10;
+            side = side+20;
+        }
+</script>
+
+
+</body>
+</html>
