@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <img id="bilde">  <! -- Oppretter en tom bilde-tag -->
+
+    <script>
+        var imgBilde = document.getElementById("bilde"); // Oppretter en variabel som refererer til bilde-elementet
+
+        var bildeArray = ["Aerial01, Aerial02, Aerial03"]; //oppretter en array med alle filene til bildene
+
+        var tilfeldigTall = Math.random()*2 //Oppretter en variabel som er et tall
+
+        var tilfeldigAvrundet = Math.round(tilfeldigTall);
+
+        imgBilde.src = bildeArray[tilfeldigAvrundet];
+
+
+    </script>
+
+
+
+</body>
+</html>

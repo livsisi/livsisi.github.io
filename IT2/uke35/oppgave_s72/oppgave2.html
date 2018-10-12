@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <canvas id="Canvas" width="500" height="400"></canvas>
+    <script>
+        var Canvas = document.getElementById("Canvas");
+        var ctx =  Canvas.getContext("2d"); //oppretter en ny variabel som referer til 2d-inholde
+
+       //ctx.fillStyle = "green"; //Endrer darge til rød
+
+       //ctx.fillRect(30,20,50,50); // Tegner en ny rød firkant
+
+
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 10;
+        ctx.moveTo(20,40);
+        ctx.lineTo(180,140);
+        ctx.moveTo(180,40);
+        ctx.lineTo(20,140);
+        ctx.stroke();
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <canvas id="myCanvas" width="400" height="300"></canvas>
+    <script>
+        var myCanvas = document.getElementById("myCanvas");
+        var ctx = myCanvas.getContext("2d"); //oppretter en ny variabel som referer til 2d-inholde
+
+        ctx.fillStyle = "red"; //Endrer darge til rød
+
+        ctx.fillRect(30,20,50,50); // Tegner en ny rød firkant
+
+
+    </script>
+
+</body>
+</html>
