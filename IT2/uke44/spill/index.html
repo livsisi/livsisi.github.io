@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>spill</title>
+    <style>
+        div{
+            height: 50px;
+            width: 50px;
+            background-color: #28dad3;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <div id="boks"></div>
+
+    <script>
+        let x = 500;
+        let y= 500;
+
+        const boks = document.getElementById("boks");
+        boks.style.marginLeft = x + "px";
+        boks.style.marginRight = y + "px";
+
+
+        window.onkeydown = function (event) {
+            if (event.code === "ArrowLeft"){
+                x = x - 1
+            }
+            else if (event.code === "Arrowright"); {
+                x = x + 1
+            }
+        }
+        boks.style.marginLeft = x
+        boks.style.marginRight = y
+
+    </script>
+
+
+
+
+</body>
+</html>

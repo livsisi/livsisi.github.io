@@ -41,8 +41,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="1" />
-          <entry key="html" value="83" />
+          <entry key="css" value="2" />
+          <entry key="html" value="86" />
           <entry key="jpg" value="1" />
           <entry key="js" value="1" />
         </counts>
@@ -50,7 +50,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="284" />
-          <entry key="html" value="13394" />
+          <entry key="html" value="14843" />
           <entry key="js" value="373" />
           <entry key="txt" value="10" />
         </counts>
@@ -58,15 +58,15 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="284" />
-          <entry key="HTML" value="13394" />
+          <entry key="HTML" value="14843" />
           <entry key="JavaScript" value="373" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="1" />
-          <entry key="HTML" value="83" />
+          <entry key="CSS" value="2" />
+          <entry key="HTML" value="86" />
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="1" />
         </counts>
@@ -78,28 +78,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/trommemaskin/index.html">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/trommemaskin/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="570">
               <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IT2/trommemaskin/script.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/trommemaskin/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="300">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/trommemaskin/stilark.css">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/trommemaskin/stilark.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/sikkerhetsapp/stilark.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/sikkerhetsapp/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/spill/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/IT2/uke44/spill/oppgave_spill.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
@@ -109,9 +145,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -121,11 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IT2/uke37/f.html" />
-        <option value="$PROJECT_DIR$/IT2/uke37/oppgave1a.html" />
-        <option value="$PROJECT_DIR$/IT2/uke37/Oppgave 1b.html" />
-        <option value="$PROJECT_DIR$/IT2/uke37/Oppgave 2.html" />
-        <option value="$PROJECT_DIR$/IT2/uke37/Switch.html" />
         <option value="$PROJECT_DIR$/IT2/uke37/oppsumering.html" />
         <option value="$PROJECT_DIR$/IT2/øving.html" />
         <option value="$PROJECT_DIR$/IT2/uke39/oppgaver_for-løkker.html" />
@@ -172,6 +203,11 @@
         <option value="$PROJECT_DIR$/IT2/trommemaskin/stilark.css" />
         <option value="$PROJECT_DIR$/IT2/trommemaskin/index.html" />
         <option value="$PROJECT_DIR$/IT2/trommemaskin/script.js" />
+        <option value="$PROJECT_DIR$/IT2/sikkerhetsapp/index.html" />
+        <option value="$PROJECT_DIR$/IT2/uke44/oppgave_spill.html" />
+        <option value="$PROJECT_DIR$/IT2/uke44/sikkerhetsapp/stilark.css" />
+        <option value="$PROJECT_DIR$/IT2/uke44/sikkerhetsapp/index.html" />
+        <option value="$PROJECT_DIR$/IT2/uke44/spill/index.html" />
       </list>
     </option>
   </component>
@@ -182,7 +218,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="105" />
+    <option name="x" value="41" />
     <option name="y" value="23" />
     <option name="width" value="1333" />
     <option name="height" value="877" />
@@ -209,7 +245,7 @@
               <item name="livsisi.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="livsisi.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="IT2" type="462c0819:PsiDirectoryNode" />
-              <item name="trommemaskin" type="462c0819:PsiDirectoryNode" />
+              <item name="uke44" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,6 +255,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="trom&#9;FILE&#9;file:///Users/livsnilsson/Desktop/livsisi.github.io/IT2/uke44/sikkerhetsapp/trommemaskin" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -226,11 +263,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IT2/uke44/spill" />
+      <recent name="$PROJECT_DIR$/IT2/uke44" />
+      <recent name="$PROJECT_DIR$/IT2/uke44/sikkerhetsapp" />
       <recent name="$PROJECT_DIR$/IT2/uke41" />
       <recent name="$PROJECT_DIR$/IT2/uke41/oppgaver_5.1" />
-      <recent name="$PROJECT_DIR$/IT2/uke34" />
-      <recent name="$PROJECT_DIR$/IT2/uke39" />
-      <recent name="$PROJECT_DIR$/IT2/uke39/oppgaver_forløkker" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -267,7 +304,7 @@
       <workItem from="1539327983242" duration="9937000" />
       <workItem from="1539943613210" duration="3046000" />
       <workItem from="1541145051797" duration="4041000" />
-      <workItem from="1541150132090" duration="1217000" />
+      <workItem from="1541150132090" duration="5872000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1537442280750</created>
@@ -322,10 +359,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56899000" />
+    <option name="totallyTimeSpent" value="61554000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="105" y="23" width="1333" height="877" extended-state="0" />
+    <frame x="41" y="23" width="1333" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48280254" visible="true" weight="0.16920732" />
@@ -358,30 +395,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="index" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IT1/Prosjekt_vår/Butikk.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke37/Oppgave 2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT1/uke49/Sommer_steder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="61" lean-forward="true" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke37/hendelse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IT2/uke35/oppgave_s64/Oppgave1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -674,24 +687,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/trommemaskin/index.html">
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/trommemaskin/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="300">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/spill/oppgave_spill.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/sikkerhetsapp/stilark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/trommemaskin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
           <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/trommemaskin/stilark.css">
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/trommemaskin/stilark.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/trommemaskin/script.js">
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/sikkerhetsapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+        <state relative-caret-position="40">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke44/spill/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
