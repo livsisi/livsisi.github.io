@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="melding"></div>
+
+    <script>
+
+
+
+
+        var melding = document.getElementById("melding");
+        function sjekkTall(tall) {
+            if(tall>0){
+                return "Tallet er større enn 0";
+            }
+            else if(tall===0){
+                return "Tallet er null";
+            }
+            else{
+                return "Tallet er mindre enn null";
+            }
+        }
+        melding.innerHTML = sjekkTall(2);
+
+    </script>
+
+</body>
+</html>

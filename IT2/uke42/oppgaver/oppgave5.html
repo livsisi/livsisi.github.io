@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Oppgave5</title>
+</head>
+<body>
+    <h1>ABC formel</h1>
+    <p>En generell annengradsfunksjon kan skrives på formen ax^2 + bx +c. Lag et program der en funksjon får inn a, b, c
+        som innparameter. Den skal returnere alle nullpunkter til annengradsfunksjonen hvis de finnes. Hvis det ikke
+        finnes noen nullpunkter skal funksjonen returnere teksten "Ingen løsning!"</p>
+
+
+    <script>
+        function abc(a,b,c) {
+            var roten = b*b - 4*a*c;
+            if (roten < 0){
+                console.log("Ingen løsning");
+                return null; //returnerer en null som er ingenting
+            } else if (roten === 0) {
+                console.log("En løsning");
+                return -b / (2*a);
+            }
+            else {
+                console.log("To løsninger");
+                var x1 = (-b + roten) / (2*a);
+                var x2 = (-b + roten) / (2*a);
+                return [x1,x2];
+            }
+        }
+    </script>
+</body>
+</html>

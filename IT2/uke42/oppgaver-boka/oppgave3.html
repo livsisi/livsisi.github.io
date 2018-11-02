@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <p id="melding"></p>
+
+
+    <script>
+
+        var melding = document.getElementById("melding");
+
+        var saldo = 10000;
+        function uttak(belop) {
+            saldo = saldo - belop;
+            return"Du har tatt ut kr"+belop+".Ny saldo er kr"+saldo;
+
+        }
+
+        melding.innerHTML = uttak(1500);
+
+    </script>
+
+</body>
+</html>
