@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Piano</title>
+    <style>
+        body {
+            font-family: Helvetica, Verdana, sans-serif;
+            max-width: 600px;
+            margin:auto;
+            padding: 10px;
+
+        }
+        h1{
+            background-color: #9dbdd6;
+            color:white;
+            font-style: italic;
+            text-transform: uppercase;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        h2{
+            color: #9dbdd6;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 12px;
+            border: 1px solid #9dbdd6;
+            border-left-width: 10px;
+            font-style: italic;
+            text-transform: uppercase;
+        }
+
+
+        main {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        header {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+
+        img{
+            width: 700px;
+            align-items: center;
+        }
+
+        #wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        video {
+            width: 450px;
+        }
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Piano</h1>
+    </header>
+    <main>
+        <h2>eksempeltekst</h2>
+
+        <div id="wrapper">
+            <div>
+                <video src="video/new_moon.mp4" controls width="550px"></video>
+            </div>
+            <div>
+                <video src="video/videoplayback.mp4" controls width="450px"></video>
+            </div>
+
+        </div>
+
+        <div>
+            <img src="Bilde_piano.png">
+        </div>
+
+
+    </main>
+
+    <audio data-code="KeyA" src="lyd/c.mp3"></audio>
+    <audio data-code="KeyS" src="lyd/d.mp3"></audio>
+    <audio data-code="KeyD" src="lyd/e.mp3"></audio>
+    <audio data-code="KeyF" src="lyd/f.mp3"></audio>
+    <audio data-code="KeyG" src="lyd/g.mp3"></audio>
+    <audio data-code="KeyH" src="lyd/a.mp3"></audio>
+    <audio data-code="KeyJ" src="lyd/b.mp3"></audio>
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

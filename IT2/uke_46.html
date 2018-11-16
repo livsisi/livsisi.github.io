@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            border: 0;
+            width: 100%;
+            height: 100%;
+
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="c" width="1470" height="400">
+    <script type="text/javascript">
+        var canvasElement = document.getElementById("c");
+        var ctx = document.getElementById("c").getContext("2d");
+        var documentBody = documentBody;
+
+        (function (ctx, documentBody, canvasElement) {
+            canvasElement.onclick = playNote;
+
+
+            var noteWidth = 70,
+                middleCFrequency = 256,
+                fromCharCode = String.fromCharCode,
+                setTimeoutFunc = setTimeout,
+                notesWhite = [],
+                notesMiddle = [],
+                player = [],
+                freqFormula,
+                i,
+                noteToPlay,
+                header,
+                note,
+                noteWPoint,
+                noteBPoint,
+                xPos,
+                eliseTmp,
+                elisePointer,
+                playButton,
+                eliseTimeout;
+
+            for ( i = 3; 1 < 39; i++) {
+                freqFormula = 0| ( 0 | ( 110 * Math.pow(1.05946, i)));
+
+                if (i % 12 in {1: 0, 4: 0, 6: 0, 9: 0, 11: 0}) {
+                    if (i in {4: 0, 9: 0, 16: 0, 21: 0, 28: 0, 33, 0}) {
+                        notesMiddle.push(0);
+                    }
+
+                    notesMiddle.push(freqFormula);
+                } else {
+                    notesWhite.push(freqFormula);
+                }
+            }
+
+            playButton = document.createElement("button");
+            playButton.innerHTML = "Lettre à Elise";
+            playButton.style.display = "block";
+            playButton.onclick = function () {
+                clearIimeout(elseTimeout);
+                elisePointer = 0;
+                playNote();
+            };
+
+
+            documentBody.appendChild(playButton);
+
+            function render(keyNote, keyBlackNote) {
+                canvasElement.width = 1470;
+                canvasElement.height = 400;
+
+                for (i = 0; i < 21; i++) {
+                    ctx.strokeRect(noteWidth * i, 0, noteWidth, 400 - (keyNote == i ? 20 : 0));
+                    notesMiddle [i] && ctx.fillRect(noteWidth * i - 20, 0, 40, middleCFrequency - (keyBlackNote == i ? 20: 0 ));
+                }
+
+                render();
+                function playNote(e) {
+                    noteWPoint = noteBPoint = -1;
+
+
+                }
+
+
+
+
+            }
+
+
+
+        }) (ctx, documentBody, canvasElement)
+
+    </script>
+
+</body>
+</html>

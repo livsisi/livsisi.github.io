@@ -1,0 +1,42 @@
+
+body {
+    max-width: 1000px;
+}
+main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 10px;
+    grid-gap: 10px;
+
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+
+
+h1 {
+    text-align: center;
+}
+
+
+.akkord {
+    border: solid 5px black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+}
+
+div > img {
+    width: 800px;
+    align-items: center;
+}
