@@ -1,89 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
-    <title>Piano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oppgave 1 - Blader i vinden</title>
     <style>
-        body {
-            font-family: Helvetica, Verdana, sans-serif;
-            max-width: 600px;
-            margin:auto;
-            padding: 10px;
-
-        }
-        h1{
-            filter: drop-shadow(0 5px 5px blue);
-            text-align: center;
-            color: #9dbdd6;
-            font-size: 60px;
-            font-family: monospace;
-        }
-
-        h2{
-            color: #9dbdd6;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-left: 12px;
-            border: 1px solid #9dbdd6;
-            border-left-width: 10px;
-            font-style: italic;
-            text-transform: uppercase;
-        }
-
-
-        main {
-            display: grid;
-            align-items: center;
-            justify-content: center;
-        }
-
-
-        header {
-            padding-bottom: 20px;
-        }
-
-
-        img{
-            width: 700px;
-            align-items: center;
-        }
-
-        #wrapper {
-            text-align: center;
-        }
-
-        video {
-            width: 450px;
-        }
-        .tagenter {
-            display: grid;
-            grid-template-columns: repeat(16, 1fr);
-            text-align: center;
-        }
-        .spiller{
-            border: solid 7px yellow;
-            transition: 0,2s;
-        }
         .blad {
             position: absolute;
         }
-        #main {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-
     </style>
-
 </head>
 <body>
 
     <main id="main">
-        <button onclick="stop()">Stop</button>
         <button onclick="flauVind()">Flau vind</button>
         <button onclick="kuling()">Kuling</button>
     </main>
+
     <header>
-        <h1>Piano</h1>
+    <h1>Piano</h1>
     </header>
     <main>
         <h2>eksempeltekst</h2>
@@ -172,8 +107,8 @@
 
 
     <script>
-        
-        const header = document.getElementById("header");
+
+        const main = document.getElementById("main");
         let animasjoner = [];
 
         function lagBlader() {
@@ -215,44 +150,7 @@
                 animasjon.playbackRate = 5;
             }
         }
-        function stop() {
-            for(let animasjon of animasjoner) {
-                animasjon.playbackRate = 0;
-            }
-
-        }
-
-
-
-        console.log("Skriptet er lastet");
-
-        window.onkeydown = function(event){
-            console.log(event.code);
-            const lyd = document.querySelector(`audio[data-code=${event.code}]`);
-
-            if(!lyd){
-                return;
-            }
-
-            lyd.currentTime = 0;
-            lyd.play();
-
-            boks.classList.add("spiller");
-
-        }
-        window.onkeyup = function(event){
-            const boks = document.querySelector(`div[data-code=${event.code}]`);
-
-            if(!boks){
-                return;
-            }
-
-            boks.classList.remove("spiller");
-        }
-
-
     </script>
 
 </body>
-
 </html>
