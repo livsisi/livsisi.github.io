@@ -80,7 +80,6 @@
     <main id="main">
         <button onclick="stop()">Stop</button>
         <button onclick="flauVind()">Flau vind</button>
-        <button onclick="kuling()">Kuling</button>
     </main>
     <header>
         <h1>Piano</h1>
@@ -180,7 +179,7 @@
             for(let i=0; i<100; i++) {
 
                 let blad = document.createElement("img");
-                blad.src = "blad.png";
+                blad.src = "snø.jpg";
                 blad.className = "blad";
                 main.appendChild(blad);
                 blad.style.top = `${Math.random() * innerHeight}px`;
@@ -210,11 +209,6 @@
             }
         }
 
-        function kuling() {
-            for(let animasjon of animasjoner){
-                animasjon.playbackRate = 5;
-            }
-        }
         function stop() {
             for(let animasjon of animasjoner) {
                 animasjon.playbackRate = 0;
