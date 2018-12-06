@@ -9,25 +9,28 @@
             max-width: 600px;
             margin:auto;
             padding: 10px;
+            background-clip: padding-box;
 
         }
         h1{
-            filter: drop-shadow(0 5px 5px blue);
+            filter: drop-shadow(0 5px 5px #ff1434);
             text-align: center;
-            color: #9dbdd6;
+            color: #d6575e;
             font-size: 60px;
             font-family: monospace;
+            z-index: 2;
         }
 
         h2{
-            color: #9dbdd6;
+            color: #d6575e;
             padding-top: 5px;
             padding-bottom: 5px;
             padding-left: 12px;
-            border: 1px solid #9dbdd6;
+            border: 1px solid #d6575e;
             border-left-width: 10px;
             font-style: italic;
             text-transform: uppercase;
+            z-index: 1;
         }
 
 
@@ -35,6 +38,7 @@
             display: grid;
             align-items: center;
             justify-content: center;
+            z-index: 1;
         }
 
 
@@ -50,6 +54,7 @@
 
         #wrapper {
             text-align: center;
+            z-index: 1;
         }
 
         video {
@@ -60,93 +65,99 @@
             grid-template-columns: repeat(16, 1fr);
             text-align: center;
         }
-        .spiller{
-            border: solid 7px yellow;
-            transition: 0,2s;
+        .bilde {
+            z-index: 1;
         }
-        .blad {
+        .tagenter {
+            z-index: 1;
+        }
+
+
+
+        #myVideo {
             position: absolute;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            background-size: cover;
+            background: url("snowflakes.mp4");
         }
-        #main {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+        .content {
+            position: fixed;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            width: 100%;
+            padding: 20px;
         }
+
+        #myBtn {
+            width: 200px;
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+
 
     </style>
 
 </head>
 <body>
 
-    <main id="main">
-        <button onclick="stop()">Stop</button>
-        <button onclick="flauVind()">Flau vind</button>
-    </main>
-    <header>
-        <h1>Piano</h1>
-    </header>
     <main>
+        <h1>God Jul</h1>
+
         <h2>eksempeltekst</h2>
 
 
         <div id="wrapper">
             <div>
-                <video src="video/bjørn.mp4" controls width="550px"></video>
+                <video src="gladjul.mp4" controls width="550px"></video>
+                <img src="Bilde_piano.png">
+
             </div>
 
         </div>
 
-        <div>
-            <img src="Bilde_piano.png">
+
+
             <div class="tagenter">
-                <div class="piano" data-code="keyA">
-                    <div class="bokstav">C</div>
+                <div class="piano" data-code="keyA"></div>
+                <div class="piano" data-code="keyS"></div>
+                <div class="piano" data-code="keyD"></div>
+                <div class="piano" data-code="keyF"></div>
+                <div class="piano" data-code="keyG"></div>
+                <div class="piano" data-code="keyH"></div>
+                <div class="piano" data-code="keyJ"></div>
+                <div class="piano" data-code="keyK"></div>
+                <div class="piano" data-code="keyL"></div>
+                <div class="piano" data-code="keyØ"></div>
+                <div class="piano" data-code="keyÆ"></div>
+                <div class="piano" data-code="keyZ"></div>
+                <div class="piano" data-code="keyX"></div>
+                <div class="piano" data-code="keyC"></div>
+                <div class="piano" data-code="keyV"></div>
+                <div class="piano" data-code="keyB"></div>
                 </div>
-                <div class="piano" data-code="keyS">
-                    <div class="bokstav">D</div>
-                </div>
-                <div class="piano" data-code="keyD">
-                    <div class="bokstav">E</div>
-                </div>
-                <div class="piano" data-code="keyF">
-                    <div class="bokstav">F</div>
-                </div>
-                <div class="piano" data-code="keyG">
-                    <div class="bokstav">G</div>
-                </div>
-                <div class="piano" data-code="keyH">
-                    <div class="bokstav">A</div>
-                </div>
-                <div class="piano" data-code="keyJ">
-                    <div class="bokstav">B</div>
-                </div>
-                <div class="piano" data-code="keyK">
-                    <div class="bokstav">C</div>
-                </div>
-                <div class="piano" data-code="keyL">
-                    <div class="bokstav">D</div>
-                </div>
-                <div class="piano" data-code="keyØ">
-                    <div class="bokstav">E</div>
-                </div>
-                <div class="piano" data-code="keyÆ">
-                    <div class="bokstav">F</div>
-                </div>
-                <div class="piano" data-code="keyZ">
-                    <div class="bokstav">G</div>
-                </div>
-                <div class="piano" data-code="keyX">
-                    <div class="bokstav">A</div>
-                </div>
-                <div class="piano" data-code="keyC">
-                    <div class="bokstav">B</div>
-                </div>
-                <div class="piano" data-code="keyV">
-                    <div class="bokstav">C</div>
-                </div>
-                <div class="piano" data-code="keyB">
-                    <div class="bokstav">D</div>
-                </div>
-            </div>
+        </div>
+
+
+        <video autoplay muted loop id="myVideo">
+            <source src="snowflakes.mp4" type="video/mp4">
+        </video>
+
+        <div class="content">
+            <button id="myBtn" onclick="myFunction()">Pause</button>
         </div>
 
 
@@ -171,51 +182,19 @@
 
 
     <script>
-        
-        const header = document.getElementById("header");
-        let animasjoner = [];
 
-        function lagBlader() {
-            for(let i=0; i<100; i++) {
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
 
-                let blad = document.createElement("img");
-                blad.src = "snø.jpg";
-                blad.className = "blad";
-                main.appendChild(blad);
-                blad.style.top = `${Math.random() * innerHeight}px`;
-                blad.style.transformOrigin = `${50 - Math.random() * 100}px ${50 - Math.random() * 100}px`;
-                // Skal bladet gå med eller mot klokka?
-                let retning = 1;
-                if(Math.random() > 0.5) {
-                    retning = -1;
-                }
-                let keyframes = [
-                    {left: "-100px", transform: `rotate(0)`},
-                    {left: `${innerWidth + 100}px`, transform: `rotate(${retning}turn)`}
-                ];
-                let settings = {
-                    duration: 5000 + Math.random() * 5000,
-                    iterations: Infinity
-                };
-                let animasjon = blad.animate(keyframes, settings);
-                animasjoner.push(animasjon);
-                animasjon.currentTime = Math.random() * 5000;
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "Pause";
+            } else {
+                video.pause();
+                btn.innerHTML = "Play";
             }
         }
-        lagBlader();
-        function flauVind() {
-            for(let animasjon of animasjoner){
-                animasjon.playbackRate = 0.3;
-            }
-        }
-
-        function stop() {
-            for(let animasjon of animasjoner) {
-                animasjon.playbackRate = 0;
-            }
-
-        }
-
 
 
         console.log("Skriptet er lastet");
@@ -246,6 +225,7 @@
 
 
     </script>
+
 
 </body>
 

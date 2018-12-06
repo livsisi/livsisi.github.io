@@ -14,3 +14,52 @@
 
 </body>
 </html>
+
+
+    <script>
+
+        const header = document.getElementById("header");
+        let animasjoner = [];
+
+        function lagBlader() {
+            for(let i=0; i<100; i++) {
+
+                let blad = document.createElement("img");
+                blad.src = ".jpg";
+                blad.className = "blad";
+                main.appendChild(blad);
+                blad.style.top = `${Math.random() * innerHeight}px`;
+                blad.style.transformOrigin = `${50 - Math.random() * 100}px ${50 - Math.random() * 100}px`;
+                // Skal bladet gå med eller mot klokka?
+                let retning = 1;
+                if(Math.random() > 0.5) {
+                    retning = -1;
+                }
+                let keyframes = [
+                    {left: "-100px", transform: `rotate(0)`},
+                    {left: `${innerWidth + 100}px`, transform: `rotate(${retning}turn)`}
+                ];
+                let settings = {
+                    duration: 5000 + Math.random() * 5000,
+                    iterations: Infinity
+                };
+                let animasjon = blad.animate(keyframes, settings);
+                animasjoner.push(animasjon);
+                animasjon.currentTime = Math.random() * 5000;
+            }
+        }
+        lagBlader();
+        function flauVind() {
+            for(let animasjon of animasjoner){
+                animasjon.playbackRate = 0.3;
+            }
+        }
+
+        function stop() {
+            for(let animasjon of animasjoner) {
+                animasjon.playbackRate = 0;
+            }
+
+        }
+
+    </script>
