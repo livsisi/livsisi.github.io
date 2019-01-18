@@ -1,0 +1,79 @@
+<html>
+<head>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: "Serif";
+            background-color: lightblue;
+        }
+
+        h1 {
+            text - align: center;
+            font-family: "Serif";
+            font-size: 500%
+            color: black;
+        }
+        .container {
+            margin-top: 20px;
+            overflow: hidde;
+
+        }
+        .btn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color; #f1f1f1;
+            cursor: pointer;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+<h1>Nettbank</h1>
+
+<p>Sparekonto: 170 000</p>
+
+<div id="myBtnContainer">
+    <button class= "btn active" onclick="filterSelection('all')"> kontooversikt</button>
+    <button class = "btn" onclick="filterSelection('betal')">betal</button>
+
+</div>
+
+<h2>Her betaler</h2>
+
+<div class="container">
+    <div id="balance"></div>
+    <input type="number" id="input">
+    <button id="Sett Inn">Sett Inn</button>
+
+    <input type="number" id="input2">
+    <button id="betal">Betal</button>
+
+    <script> //gir en funksjon til container
+
+    let balance = document.getElementById("balance");
+    let input = document.getElementById("input");
+    let SettInn = document.getElementById("Sett inn");
+    let saldo = 0;
+
+    SettInn.onclick = function (){
+        saldo = saldo + Number(input.value);
+        balance.innerHTML = saldo;
+    }
+
+
+    betal.onclick = function (){
+        saldo = saldo - Number(input2.value);
+        balace.innerHTML = saldo;
+
+    }
+
+    </script>
+
+
+</body>
+</html>

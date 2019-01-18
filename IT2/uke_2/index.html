@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Her betaler </h1>
+
+<div class="container">
+    <div id="balance"></div>
+    <input type="number" id="input" >
+    <button id="Sett inn">Sett inn</button>
+
+
+    <input type="number" id="input2">
+    <button id="betal">betal</button>
+
+
+
+    <script>
+        let balance = document.getElementById("balance");
+        let input = document.getElementById("input");
+        let settInn = document.getElementById("Sett inn");
+        let saldo = 0;
+
+        settInn.onclick = function () {
+            saldo = saldo + Number(input.value);
+            balance.innerHTML = saldo;
+        }
+
+        betal.onclick = function () {
+            saldo = saldo - Number(input2.value);
+            balance.innerHTML = saldo;
+        }
+
+    </script>
+
+
+
+
+</div>
+
+</body>
+</html>

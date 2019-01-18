@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <select id="velgFarge">
+        <option>Grå</option>
+        <option>Blå</option>
+        <option>Rosa</option>
+        <option>Grønn</option>
+    </select>
+
+    <button id="btn">Velg farge</button>
+    <p id="txtVis"></p>
+
+    <script>
+        var velgFarge = document.getElementById("velgFarge");
+        var btn = document.getElementById(btn);
+        var txtVis = document.getElementById("txtVis");
+        var sko = [];
+        btn.onclick = function () {
+            sko.push(velgFarge);
+            txtVis.innerHTML = "Du har valgt farge" + sko.join(",");
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

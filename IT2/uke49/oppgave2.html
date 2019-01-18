@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>øving heldagsprøve</title>
+</head>
+<body>
+
+    <h2>A</h2>
+
+    <p>
+        Datatypen array brukes når vi vil lagre flere verdier i en variabel. Vi kan definere en variabel
+        med datatypen array slik: var navn = ["Gunnhild","Per","Jens","Nina"];
+        a. Definer variabelen over, navn, i koden din, og bruk document.write(..) for å skrive ut Jens
+        på nettsiden.
+        b. Legg til "Karsten" i arrayen navn
+    </p>
+
+
+    <script>
+        var navn = ["Gunnhild", "Per", "Jens", "Nina"];
+        document.write(navn[2]);
+
+        navn.push("Karsten");
+        document.write(navn);
+    </script>
+
+    <h2>B</h2>
+
+    <p>
+        Datatypen objekt brukes når man ønsker å samle flere verdier eller egenskaper som hører
+        naturlig sammen i en variabel.
+        a. Definer tre objekter bruker1, bruker2 og bruker3, med egenskapene brukernavn og
+        passord. (Finn på brukernavn og passord selv).
+        b. Endre verdien brukernavn på bruker2 til et nytt brukernavn.
+    </p>
+
+
+    <script>
+        var bruker1 = {bukernavn:"Nora", passsord:"hei"};
+        var bruker2 = {bukernavn:"Anmool", passsord:"hade"};
+        var bruker3 = {bukernavn:"Liv", passsord:"takk"};
+
+        bruker2.bukernavn = "Lisa";
+
+    </script>
+
+
+
+
+
+</body>
+</html>

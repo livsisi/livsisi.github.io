@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bøker</title>
+</head>
+<body>
+    <ul id="listeBøker">
+
+    </ul>
+
+    <script>
+        var listeBøker = document.getElementById("listeBøker");
+        var bøker = ["Markensgrøde", "Victoria", "Sult", "Doppler"];
+
+        bøker.sort(sortereAlfabetisk);
+
+        for (var bok of bøker) {
+            listeBøker.innerHTML += "<li>" + bok + "</li>";
+
+        }
+
+        function sortereAlfabetisk(string1,string2) {
+            string1 = string1.toLowerCase();
+            string2 = string2.toLowerCase();
+            if (string1 <=string2) {
+                return -1;
+            }
+        }
+
+    </script>
+
+</body>
+</html>

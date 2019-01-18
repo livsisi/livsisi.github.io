@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="Bilder">
+        <button id="btnTilbake">Tilbake</button>
+        <button id="btnFram">Fram</button>
+    </div>
+    <img src="" alt="" id="imgBilde">
+
+    <script>
+        var immBilde = document.getElementById("imgBilde");
+        var btnTilbake = document.getElementById("btnTilbake");
+        var btnFram = document.getElementById("btnFram");
+
+        var feriebilder = ["1.jpg", "2.jpg", "3.jpg","4.jpg"];
+        var i = 0;
+        immBilde.src = feriebilder[i];
+        btnFram.onclick = function () {
+            i++;
+            console.log(i);
+            if (i === feriebilder.length) {
+                console.log("if");
+                i=0;
+            }
+
+        immBilde.src = feriebilder[i];
+            console.log(i);
+
+        }
+
+        btnTilbake.onclick = function () {
+            i--;
+            console.log(i);
+            if (i < 0) {
+                i = feriebilder.length -1;
+            }
+
+
+            immBilde.src = feriebilder[i];
+            console.log(i);
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>

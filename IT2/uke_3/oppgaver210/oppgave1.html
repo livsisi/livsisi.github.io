@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>handleliste</title>
+</head>
+<body>
+    <ul id="listeMat">
+
+    </ul>
+
+    <script>
+        var listeMat = document.getElementById("listeMat");
+        var matvarer = ["ost", "brod", "paprika", "kaviar"];
+     
+
+        for (var varer of matvarer) {
+            listeMat.innerHTML += "<li>" + varer + "</li>";
+            
+        }
+
+        for(var i=0; i<matvarer.length; i++) { 
+            listMat.innerHTML += "<li>" + matvarer[i] + "</li>"; 
+        }
+
+    </script>
+
+</body>
+</html>

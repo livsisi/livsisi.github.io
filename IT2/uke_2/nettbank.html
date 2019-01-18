@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nettbank</title>
+    <style>
+        #balance {
+            margin: auto;
+
+        }
+        h1 {
+            text-align: center;
+            font-family: "Serif";
+            font-size: 500%;
+            color: black;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Nettbank</h1>
+
+    <h2>Kontooversikt:</h2>
+    <p>Sparekonto</p>
+    <p>170000</p>
+
+    <p>Lonnskonto</p>
+    <p>400</p>
+
+
+
+    <select id="kontoFra">
+        <option value="" id="sparekontoFra">Sparekonto</option>
+        <option value="" id="lonnskontoFra">Brukskonto</option>
+    </select>
+
+    <select id="kontoTil">
+        <option value="" id="sparekontoTil">Sparekonto</option>
+        <option value="" id="lonnskontoTil">Brukskonto</option>
+    </select>
+
+    <input type="number" id="input">
+    <button id="Sett inn">Sett inn</button>
+
+
+    <input type="number" id="input2">
+    <button id="betal">Betal</button>
+    <div id="balance">Saldo</div>
+
+    <div id="divSaldoLonn">
+        Salodo lønn kommer her
+    </div>
+
+
+    <div id="divSaldoSpare">
+    Salodo lønn kommer her
+    </div>
+
+
+    <script>
+
+        // Variabler til HTLM-elementer
+        var input = document.getElementById("input");
+        var lonnkontoFra = document.getElementById("brukskontoFra");
+        var sparekontoFra = document.getElementById("sparekontoFra");
+        var lonnkontoTil = document.getElementById("brukskontoTil");
+        var sparekontoTil = document.getElementById("sparekontoTil");
+        var divSaldoLonn = document.getElementById("divSaldoBruk");
+        var divSaldoSpare = document.getElementById("divSaldoSpare");
+        var betal = document.getElementById("betal");
+
+        var saldoSpare = 170000;
+        var saldoLonn = 400;
+
+
+        betal.onclick = function () {
+            let belop = Number(input.value); // lager en variabel som er belop
+            if (lonnkontoFra.selected && sparekontoTil.selected) {
+                saldoLonn = saldoLonn - belop; // oppdaterer saldo på lønnskonto
+                saldoSpare = saldoSpare + belop; // oppdaterer saldo på spare
+                divSaldoLonn.innerHTML = saldoLonn; // skriver saldo lønn ut i en div
+                divSaldoSpare.innerHTML = saldoSpare; // skriver saldo spare ut i en div
+            }
+
+
+            else if (sparekontoFra.selected && lonnkontoTil.selected) {
+                saldoLonn = saldoLonn + belop; // oppdaterer saldo på lønnskonto
+                saldoSpare = saldoSpare - belop; // oppdaterer saldo på spare
+                divSaldoLonn.innerHTML = saldoLonn; // skriver saldo lønn ut i en div
+                divSaldoSpare.innerHTML = saldoSpare; // skriver saldo spare ut i en div
+            }
+
+
+            else {
+                divSaldoSpare.innerHTML = "Dette ble feil";
+            }
+
+        }
+
+
+        let balance = document.getElementById("balance");
+        let input = document.getElementById("input");
+        let settInn = document.getElementById("Sett inn");
+        let spareSaldo = 170000;
+        let bruksSaldo = 400;
+
+        settInn.onclick = function () {
+            if(sparekontoOpt.selected) {
+                saldoSpare
+            }
+
+            saldo = saldo + Number(input.value);
+            balance.innerHTML = saldo;
+        }
+
+        betal.onclick = function () {
+            saldo = saldo - Number(input2.value);
+            balance.innerHTML = saldo;
+        }
+
+
+        let sparekontoOpt = document.getElementById("sparekonto");
+        let brukskontoOpt = document.getElementById("brukskonto");
+
+
+
+    </script>
+
+</body>
+</html>
