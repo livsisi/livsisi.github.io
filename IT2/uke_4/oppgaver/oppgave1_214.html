@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prov selv</title>
+</head>
+<body>
+
+    <script>
+    let land = ["Panama", "Marokko", "Vietman", "Frankrike"];
+    let landSet = new Set(land);
+
+    let islandIset = land.has("Island"); // Lager en variabel som er true hvis danmark er i settet, og false hvis ikke danmark er i settet
+
+    if(islandIset){ // Sjekker om variabelen danmarkIset er true
+        document.write(`Danmark er i settet`); // hvis danmarkIset er true skrives dette
+    }
+
+    else {
+        document.write(`Danmark er ikke i settet`);// hvis danmarkIset er false skrives dette
+    }
+
+
+    </script>
+
+</body>
+</html>

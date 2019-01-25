@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Huskeliste</title>
+    <style>
+
+        body {
+            background-color: #eee;
+            max-width: 700px;
+            margin: auto;
+            padding: 10px;
+        }
+        main{
+            background-color: white;
+        }
+        h1 {
+            color: salmon;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>HUSKELISTE</h1>
+        <form id="skjema">
+            <input id="inpTing" type="text" placeholder="Ting jegmå huske på" required>
+            <button type="submit">OK</button>
+        </form>
+
+        <ul id="huskeliste"></ul>
+
+        <script>
+            var skjema = document.getElementById("skjema");
+            var inpTing = document.getElementById("inpTing");
+            var huskeliste = document.getElementById("huskeliste");
+            skjema.onsubmit = function (evt) {
+                evt.preventDefault();
+                huskeliste.innerHTML += "<li>" + inpTing.value + "</li>";
+                inpTing.value = "";
+
+            }
+
+
+        </script>
+
+    </main>
+
+
+</body>
+</html>

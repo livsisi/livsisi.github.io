@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hjelpeliste</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+        main {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: salmon;
+        }
+        #skjema {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+        }
+        #knapp{
+            position: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <main>
+
+        <h1>HJELPELISTE</h1>
+
+        <form id="skjema">
+            <input id="navnliste" type="text" placeholder="Navn">
+            <input id="inpTing" type="text" placeholder="Hjelp">
+            <button id="knapp" type="submit">Send inn</button>
+        </form>
+
+        <div id="info"></div>
+
+        <script>
+
+            var skjema = document.getElementById("skjema");
+            var navnliste = document.getElementById("navnliste");
+            var inpTing = document.getElementById("inpTing");
+            var info = document.getElementById("info")
+            skjema.onsubmit = function (evt) {
+                evt.preventDefault();
+                info.innerHTML = "Navnliste;" + navnliste.value + "<br";
+                info.innerHTML = "inpTing;" + inpTing.value;
+
+
+            }
+
+
+
+        </script>
+    </main>
+
+
+</body>
+</html>

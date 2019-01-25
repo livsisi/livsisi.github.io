@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set og Map</title>
+</head>
+<body>
+
+
+    <script>
+        let presidentArray = ["Barack Obama", "Donald Trump", "Ronald Regan"];
+
+        let presidenter = new set();
+        presidenter.add ("Barack Obama");
+        presidenter.add ("Donald Trump");
+        presidenter.add ("Ronald Regan");
+
+        console.log(presidenter.has("Barack Obama"));
+
+        for (let president of presidentArray) {
+            if (president === "Barack Obama") {
+                alert (true);
+            }
+        }
+
+        for (let president of presidenter) {
+            document.write(president);
+        }
+
+        let innbyggere = new Map();
+        innbyggere.set("001", "Heath Ledger");
+        innbyggere.set("002", "Batman");
+        innbyggere.set("003", "Barack Obama");
+
+        innbyggere.get("001");
+
+
+
+
+    </script>
+
+</body>
+</html>
