@@ -1,0 +1,57 @@
+<html lang="no"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="boks">
+    <input id="NOK" type="text" placeholder="NOK" required="">
+
+    <input id="SEK" type="radio">
+    <label> SEK </label>
+
+    <input id="GBP" type="radio">
+    <label> GBP </label>
+
+    <input id="USD" type="radio">
+    <label> USD </label>
+
+    <button id="btnRegnOm"> Regn om </button>
+</div>
+<div id="kalkulator"></div>
+
+<script>
+    const NOK = document.querySelector("#NOK");
+    const SEK = document.querySelector("#SEK");
+    const GBP = document.querySelector("#GBP");
+    const USD = document.querySelector("#USD");
+    const btnRegnOm = document.querySelector("#btnRegnOm");
+    const kalkulator = document.querySelector("kalkulator");
+
+    btnRegnOm.onclick = function () {
+        let valutta = 1;
+        if(SEK.checked){
+            valutta = Number(NOK.value)*1.07;
+            //kalkulator.innerHTML = "<p>" + Number(NOK.value) + "tilsvarer" + valutta + "SEK" + "</p>";
+            console(valutta);
+        }
+        else if(GBP.checked){
+            valutta = Number(NOK.value)*0.089;
+            console.log(valutta);
+
+        }
+        else if(USD.checked){
+            valutta = Number(NOK.value)*0.11;
+            console.log(valutta);
+        }
+        else{
+            kalkulator.innerHTML = "Du må huske av hva du vil omregne valuttaen til!"
+        }
+
+    }
+
+</script>
+
+
+</body></html>

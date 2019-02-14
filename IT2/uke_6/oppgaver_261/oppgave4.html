@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input id="inpGrader" type="text">
+
+    <div id="planke"></div>
+
+    <script>
+        let planke = document.querySelector("#planke");
+        let inpGrader = document.querySelector("#inpGrader");
+
+        planke.style.width = "200px";
+        planke.style.height = "50px";
+        planke.style.backgroundColor = "brown";
+        planke.style.marginTop = "100px";
+        planke.style.marginLeft = "auto";
+        planke.style.marginRight = "auto";
+
+        inpGrader.oninput = function () {
+            planke.style.transform = `rotate(${inpGrader.value}deg)`;
+
+        }
+
+    </script>
+</body>
+</html>

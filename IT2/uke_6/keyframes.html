@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <style>
+        body{
+            background-image: url("stjerner.jpg");
+        }
+
+        @keyframes fly {
+            0%{
+                left: 10%;
+                bottom: 0;
+                transform: rotate(90deg);
+            }
+            40%{
+                transform: rotate(-45deg);
+            }
+            50%{
+                left: 80%;
+
+            }
+            100%{
+                left: 90%;
+                bottom: 200%;
+            }
+        }
+
+        #spacex{
+            position: absolute;
+            animation: fly 5s forwards;
+            width: 100px;
+            height:400px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <img id="spacex" src="spacex.png" alt="">
+
+</body>
+</html>

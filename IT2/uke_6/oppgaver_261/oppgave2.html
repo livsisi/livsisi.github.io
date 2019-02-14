@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{position: absolute;}
+    </style>
+</head>
+<body>
+    <h1 id="overskrift">Dette er en overskrift.</h1>
+    <script>
+        var overskrift = document.getElementById("overskrift");
+        overskrift.onmouseover=function(){
+            overskrift.style.transform = "scale(3)";
+            overskrift.style.transition="3s";
+        }
+        overskrift.onmouseout=function(){
+            overskrift.style.transform="scale(1)";
+            overskrift.style.transition="3s";
+        }
+    </script>
+</body>
+</html>

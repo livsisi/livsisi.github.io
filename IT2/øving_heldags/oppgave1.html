@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transformere p-elementer</title>
+    <style>
+        .firkant{
+            margin-left: 50px;
+            width: 70px;
+            height: 70px;
+            text-align: center;
+            background-color: #52c1cc;
+            transition: 3s;
+        }
+
+        #boks1:hover{
+            transform-origin: left bottom;
+            transform: rotate(90deg);
+
+        }
+
+        #boks2:hover{
+            transform-origin: center bottom;
+            transform: rotate(60deg);
+
+        }
+
+        #boks3:hover{
+            transform: scale(2);
+
+        }
+
+        #boks4:hover{
+            transform: translateX(70px);
+
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <div class="firkant" id="boks1">vipp 90 grader</div>
+    <div class="firkant" id="boks2">roter 60 grader</div>
+    <div class="firkant" id="boks3">dobbel så stor</div>
+    <div class="firkant" id="boks4">flytt til høyre</div>
+
+    <script>
+        const boks1 = document.querySelector("#boks1");
+        const boks2 = document.querySelector("#boks2");
+        const boks3 = document.querySelector("#boks3");
+        const boks4 = document.querySelector("#boks4");
+
+    </script>
+
+
+
+</body>
+</html>
