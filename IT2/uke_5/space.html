@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-image: url("../øving_heldags/bilder/earth.png");
+
+        }
+        /*
+               @keyframes fly{
+                   0%{
+                       left:10%;
+                       bottom: 0;
+
+                   }
+                   50%{
+                       left: 80%;
+                       bottom: 0;
+
+                   }
+
+                   100%{
+                       left: 90%;
+                       bottom: 200%;
+                       transition: 10s;
+                   }
+               }
+               */
+
+        #space{
+            position: absolute;
+            animation: fly 2s infinite;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btn">Stop</button>
+<button id="btn2">Start</button>
+
+<img src="../øving_heldags/bilder/spaceX.png" alt="" id="space">
+
+
+
+<script>
+
+
+
+    const space= document.querySelector("img");
+
+    let  stopBtn= document.querySelector("#btn");
+
+    let startBtn=document.querySelector("#btn2");
+
+    aniCS = [
+        {
+            left:"10%",
+            bottom:"0"
+
+        },
+        {
+            left:"80%",
+            bottom:"0",
+
+        },
+        {
+            left:"90%",
+            bottom:"20%",
+        }
+    ];
+
+    aniEgenskaper = {
+        duration:2000,
+        iterations:Infinity,
+        easing:"ease-in-out",
+
+    };
+
+    let  animasjon = space.animate(aniCS, aniEgenskaper);
+
+    stopBtn.onclick= function () {
+        animasjon.pause();
+    };
+
+    startBtn.onclick = function () {
+        animasjon.play();
+    }
+
+
+</script>
+
+</body>
+</html>

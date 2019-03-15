@@ -1,0 +1,87 @@
+<html lang="nb"><head>
+    <meta charset="UTF-8">
+    <title>Animasjoner i Javascript</title>
+
+    <style>
+        body {
+            background-color: #9dbdd6;
+        }
+        img{
+            position: absolute;
+            width: 150px;
+            top:100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <img id="molle" src="bilder/rotere.png" alt="Bilde av en vindmølle">
+
+    <button id="stille">stille</button>
+    <button id="bris">bris</button>
+    <button id="kuling">kuling</button>
+    <input type="range" id="slider" min="13.9" max="17" step="0.1">
+
+
+
+    <img id="bjork" src="bilder/Bjork.png">
+
+    <img id="blad" src="bilder/blad.png">
+
+
+
+
+    <script>
+        const molle = document.querySelector("#molle");
+        const stille = document.querySelector("#stille");
+        const bris = document.querySelector("#bris");
+        const kuling = document.querySelector("#kuling");
+        const slider = document.querySelector("#slider");
+
+        let molleCSS = [
+            {
+                left:"0px",
+                opacity:"1",
+                top:"100px",
+                transform:"rotate(0deg)"
+            },
+            {
+                left:"0px",
+                opacity:"1",
+                top:"100px",
+                transform:"rotate(360deg)"
+            }
+        ];
+
+        let molleEgenskaper = {
+            duration: 2000,
+            easing: "ease-in-out",
+            iterations: Infinity,
+            direction: "alternate",
+            fill: "forwards",
+            delay: 1000
+        };
+
+        let molleAni = molle.animate(molleCSS,molleEgenskaper);
+
+
+        stille.onclick = function () {
+            molleAni.pause();
+        };
+        bris.onclick = function () {
+           molleAni.play(min="0.2", maks="5");
+        };
+        kuling.onclick = function () {
+            molleAni.play(min="13.9", maks="17.1");
+        };
+
+        slider.onchange = function () {
+            molleAni.playbackRate = slider.value;
+        }
+
+
+    </script>
+
+
+</body></html>

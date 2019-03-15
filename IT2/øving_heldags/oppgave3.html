@@ -1,10 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>romraket</title>
+    <style>
+        body {
+            background-image: url("bilder/earth.png");
+            background-size: 100% auto;
+
+        }
+
+        @keyframes lande {
+            0% {
+                left: -20%;
+                bottom: 20%;
+                transform: rotate(90deg);
+
+            }
+            35% {
+                transform: rotate(-15deg);
+
+            }
+            100% {
+                left: 40%;
+                bottom: 5%;
+            }
+
+
+        }
+        @keyframes lette {
+            0% {
+                left: 45%;
+
+                bottom: 38%;
+            }
+            100% {
+                bottom: 500%;
+            }
+
+        }
+
+        #rom {
+            animation: fly 5s infinite;
+            position: absolute;
+            left: 50%;
+        }
+
+
+
+    </style>
 </head>
 <body>
+
+<img id="rom" src="bilder/spaceX.png" alt="" style="animation: lande 5s ease 0s 1 normal forwards running;">
+<button id="btnLette">lette</button>
+<button id="btnLande">lande</button>
+
+
+<script>
+    var rom = document.getElementById("rom");
+    var btnLande = document.getElementById("btnLande");
+    var btnLette = document.getElementById("btnLette");
+
+
+    btnLande.onclick = function () {
+        rom.style.animation = "lande 5s forwards";
+        document.body.style.backgroundImage = "url('bilder/moon.png')";
+
+
+    }
+
+    btnLette.onclick = function () {
+        rom.style.animation = "lette 5s forwards";
+        document.body.style.backgroundImage = "url('bilder/earth.png')";
+
+    }
+
+
+
+</script>
+
 
 </body>
 </html>

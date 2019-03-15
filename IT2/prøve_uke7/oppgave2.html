@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strømproduksjon</title>
+</head>
+<body>
+
+    <h1>Strømproduksjon</h1>
+
+    <div id="boks">
+        <input id="Strom" type="text" placeholder="Strom" required="">
+
+        <input id="Over" type="radio">
+        <label> Over </label>
+
+        <input id="Under" type="radio">
+        <label> Under </label>
+
+
+        <button id="btnRegnOm"> Regn om </button>
+    </div>
+    <div id="kalkulator"></div>
+
+    <script>
+        const Strom = document.querySelector("#Strom");
+        const Over = document.querySelector("#Over");
+        const Under = document.querySelector("#Under");
+        const btnRegnOm = document.querySelector("#btnRegnOm");
+        const kalkulator = document.querySelector("kalkulator");
+
+
+        btnRegnOm.onclick = function () {
+            let Watt  =1;
+            if(Over.checked){
+                Watt = Number(Strom.value)*8;
+                console.log(Watt);
+            }
+            else if(Under.checked){
+                valutta = Number(Strom.value)*14;
+                console.log(Watt);
+
+            }
+
+            else{
+                kalkulator.innerHTML = "Vindmolla gir"
+            }
+
+        }
+
+    </script>
+
+
+
+</body>
+</html>

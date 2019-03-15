@@ -26,34 +26,34 @@
     <session id="728001815">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.10" value="3" />
-          <entry key="project.open.time.11" value="5" />
+          <entry key="project.open.time.11" value="6" />
           <entry key="project.open.time.12" value="4" />
           <entry key="project.open.time.13" value="3" />
           <entry key="project.open.time.14" value="3" />
-          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="2" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="27" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="9" />
-          <entry key="html" value="184" />
+          <entry key="html" value="207" />
           <entry key="jpg" value="6" />
           <entry key="js" value="7" />
-          <entry key="png" value="4" />
+          <entry key="png" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="435" />
-          <entry key="html" value="31761" />
+          <entry key="html" value="37068" />
           <entry key="js" value="407" />
           <entry key="txt" value="10" />
         </counts>
@@ -61,7 +61,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="435" />
-          <entry key="HTML" value="31761" />
+          <entry key="HTML" value="37068" />
           <entry key="JavaScript" value="407" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
@@ -69,8 +69,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="9" />
-          <entry key="HTML" value="184" />
-          <entry key="Image" value="10" />
+          <entry key="HTML" value="207" />
+          <entry key="Image" value="12" />
           <entry key="JavaScript" value="7" />
         </counts>
       </usages-collector>
@@ -80,47 +80,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave2.html">
+        <entry file="file://$PROJECT_DIR$/IT2/spillprosjekt/block.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/uke_6/firkant.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/IT2/uke_6/keyframes.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="537">
+              <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -150,17 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/IT2/anet/annet.html" />
-        <option value="$PROJECT_DIR$/IT2/jul_prosjekt/e.html" />
-        <option value="$PROJECT_DIR$/IT2/jul_prosjekt/Index.html" />
-        <option value="$PROJECT_DIR$/IT2/uke49/Oppgave1.html" />
-        <option value="$PROJECT_DIR$/IT2/uke49/oppgave2.html" />
-        <option value="$PROJECT_DIR$/IT2/uke49/oppgave3.html" />
-        <option value="$PROJECT_DIR$/IT2/uke49/oppgave3b.html" />
-        <option value="$PROJECT_DIR$/IT2/uke49/s.html" />
-        <option value="$PROJECT_DIR$/IT2/uke49/oppgave4.html" />
-        <option value="$PROJECT_DIR$/IT2/uke_2/bank.html" />
-        <option value="$PROJECT_DIR$/IT2/uke_2/nett.html" />
         <option value="$PROJECT_DIR$/IT2/uke_2/nettbank.html" />
         <option value="$PROJECT_DIR$/IT2/uke_2/s.html" />
         <option value="$PROJECT_DIR$/IT2/uke_2/index.html" />
@@ -199,8 +152,19 @@
         <option value="$PROJECT_DIR$/IT2/uke_6/keyframes.html" />
         <option value="$PROJECT_DIR$/IT2/øving_heldags/kaltulator.html" />
         <option value="$PROJECT_DIR$/IT2/øving_heldags/oppgave1.html" />
-        <option value="$PROJECT_DIR$/IT2/øving_heldags/oppgave2.html" />
+        <option value="$PROJECT_DIR$/IT2/øving_heldags/space.html" />
+        <option value="$PROJECT_DIR$/IT2/øving_heldags/rr.html" />
         <option value="$PROJECT_DIR$/IT2/øving_heldags/oppgave3.html" />
+        <option value="$PROJECT_DIR$/IT2/uke_5/space.html" />
+        <option value="$PROJECT_DIR$/IT2/øving_heldags/oppgave2.html" />
+        <option value="$PROJECT_DIR$/IT2/prøve_uke7/oppgave1.html" />
+        <option value="$PROJECT_DIR$/IT2/prøve_uke7/1.html" />
+        <option value="$PROJECT_DIR$/IT2/prøve_uke7/oppgave3.html" />
+        <option value="$PROJECT_DIR$/IT2/prøve_uke7/3.html" />
+        <option value="$PROJECT_DIR$/IT2/prøve_uke7/2.html" />
+        <option value="$PROJECT_DIR$/IT2/prøve_uke7/oppgave2.html" />
+        <option value="$PROJECT_DIR$/IT2/spillprosjekt/spill.html" />
+        <option value="$PROJECT_DIR$/IT2/spillprosjekt/block.html" />
       </list>
     </option>
   </component>
@@ -221,6 +185,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,19 +202,12 @@
               <item name="livsisi.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="livsisi.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="IT2" type="462c0819:PsiDirectoryNode" />
-              <item name="uke_6" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="livsisi.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="livsisi.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="IT2" type="462c0819:PsiDirectoryNode" />
-              <item name="øving_heldags" type="462c0819:PsiDirectoryNode" />
+              <item name="spillprosjekt" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,15 +219,16 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IT2/uke_5" />
+      <recent name="$PROJECT_DIR$/IT2/jul_prosjekt" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/IT2/øving_heldags" />
+      <recent name="$PROJECT_DIR$/IT2/uke_5" />
       <recent name="$PROJECT_DIR$/IT2/uke_6" />
       <recent name="$PROJECT_DIR$/IT2/uke_6/bilder" />
       <recent name="$PROJECT_DIR$/IT2/anet" />
-      <recent name="$PROJECT_DIR$/IT2/uke47" />
-      <recent name="$PROJECT_DIR$/IT2/jul_prosjekt/video" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/IT2/jul_prosjekt" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -318,7 +277,9 @@
       <workItem from="1548402253038" duration="9362000" />
       <workItem from="1549006915299" duration="4997000" />
       <workItem from="1549013114595" duration="2362000" />
-      <workItem from="1550156204488" duration="4925000" />
+      <workItem from="1550156204488" duration="18404000" />
+      <workItem from="1550582994436" duration="196000" />
+      <workItem from="1552636223913" duration="8999000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1537442280750</created>
@@ -373,7 +334,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146495000" />
+    <option name="totallyTimeSpent" value="169169000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1425" height="877" extended-state="0" />
@@ -409,103 +370,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="index" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IT1/uke38/wuthering_heights.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="9" selection-start-line="16" selection-start-column="7" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/jul_prosjekt/Index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1005">
-          <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke49/Oppgave1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke49/oppgave2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" selection-start-line="8" selection-start-column="3" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke49/oppgave3a.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke49/oppgave3b.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke49/oppgave4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke49/oppgave3c.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="12" />
-          <caret line="9" column="63" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="63" />
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="33" />
-          <caret line="11" column="100" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="100" />
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="9" />
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="13" />
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_2/bank.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="135" column="61" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_2/nett.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="148" column="7" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_2/s.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="78" column="7" selection-start-line="78" selection-start-column="7" selection-end-line="78" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/livsisi-cDLDdrtw 4/normalize.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT1/uke02/mineKontakter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IT2/uke_2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -649,17 +513,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/KRF.css">
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/KRF.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/KRF.html">
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/KRF.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="41" column="6" lean-forward="true" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver/oppgave4.html">
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/oppgaver/oppgave4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
@@ -667,63 +531,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver_261/oppgave_2.html" />
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/endreBakgrunn.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver_261/oppgave2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver_261/oppgave3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver_261/oppgave4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/keyframes.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver/oppgave2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/firkant.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="49" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/uke_6/oppgaver/oppgave3.html">
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/oppgaver/oppgave3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
@@ -737,24 +545,151 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/kaltulator.html">
+    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/kaltulator.html" />
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/firkant.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        <state relative-caret-position="195">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/oppgaver_261/oppgave3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/oppgaver_261/oppgave2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/oppgaver_261/oppgave4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/oppgaver/oppgave2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/jul_prosjekt/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1950" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/keyframes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/animasjon_javascript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="61" column="24" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/space.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="34" selection-start-line="42" selection-start-column="34" selection-end-line="42" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/opg1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/prøve_uke7/bilder/rotere.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_46.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/uke_5/endreBakgrunn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/opg3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="52" column="106" selection-start-line="52" selection-start-column="106" selection-end-line="52" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="27" column="10" lean-forward="true" selection-start-line="27" selection-start-column="10" selection-end-line="27" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/prøve_uke7/3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/IT2/øving_heldags/oppgave2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        <state relative-caret-position="630">
+          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/prøve_uke7/oppgave2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/prøve_uke7/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/spillprosjekt/spill.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IT2/spillprosjekt/block.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="82" column="35" selection-start-line="82" selection-start-column="35" selection-end-line="82" selection-end-column="35" />
         </state>
       </provider>
     </entry>

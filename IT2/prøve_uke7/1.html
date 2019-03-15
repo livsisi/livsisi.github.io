@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nb"><head>
+    <meta charset="UTF-8">
+    <title>vandrende bukk</title>
+    <style>
+        #boks{
+            width: 200px;
+            height: 210px;
+            overflow: hidden;
+            position: relative;
+        }
+        img{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Vandrende bukk</h1>
+
+    <div id="boks">
+        <img src="bilder/dyr.png">
+    </div>
+
+    <script>
+        const vandrendebukk = document.querySelector("img");
+
+        let bukkCSS = [
+            {
+                left:"0px"
+            },
+            {
+                left:"-1300px"
+            }
+        ];
+
+        let bukkEgenskaper = {
+            duration: 1500,
+            iterations: Infinity,
+            easing: "steps(6)"
+        };
+
+        vandrendebukk.animate(bukkCSS,bukkEgenskaper);
+    </script>
+
+</body></html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blocks</title>
+</head>
+<body>
+
+    <canvas width="500" height="600" id="minCanvas"></canvas>
+
+    <script>
+        var minCanvas = document.getElementById("minCanvas");
+        var ctx = minCanvas.getContext("2d");
+        var spillILivet = true;
+        function tegnBane() {
+            console.log("Tegner opp banen");
+        }
+        function tegnFirkant() {
+            console.log("Tegner opp firkanten");
+        }
+        function sjekkFirkant() {
+            console.log("Sjekker om firkant treffer bakken");
+
+        }
+
+        function gameLoop() {
+            tegnBane();
+            tegnFirkant();
+            sjekkFirkant();
+            if(spillILivet) {
+                requestAnimationFrame(gameLoop);
+            }
+            fly();
+        }
+
+        var bane = {
+            bredde:minCanvas.width,
+            hoyde:minCanvas.height,
+            bakgrunnfarge: "lightblue",
+        };
+
+
+        var firkant = {
+            "bredde": 50,
+            "hoyde": 30,
+            "farge": "lightpink",
+            "xpos": 180,
+            "ypos": 40,
+            "xfart": 2,
+            "xretning": 1,
+            "yretning": 0,
+            "faller": false
+        };
+
+        var krasjhoyde 
+
+
+        function tegnBane() {
+            ctx.fillStyle = bane.bakgrunnfarge;
+            ctx.fillRect(0,0,bane.bredde,bane.hoyde);
+        }
+
+        function tegnFirkant (){
+            ctx.fillStyle = firkant.farge;
+            ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
+            firkant.xpos = firkant.xpos + (firkant.xretning * firkant.xfart);
+
+             firkant.ypos = firkant.ypos + (firkant.yretning * firkant.xfart);
+
+        }
+       function sjekkFirkant (){
+            if (firkant.xpos <=0){
+                firkant.xretning = 1
+            }
+            if(firkant.xpos + firkant.bredde >= minCanvas.width) {
+                firkant.xretning = -1;
+            }
+       }
+
+        tegnFirkant();
+        gameLoop();
+
+        // hedelsesfunksjon
+
+        minCanvas.onclick = sjekkFall;
+
+
+
+        function sjekkFall(event) {
+                                    
+            if(event.layerX > firkant.xpos && event.layerX < firkant.xpos + firkant.bredde       // hvis hedelsen layer x er større enn x pos og mindre enn xpos + bredden på frikanten skal firkanten falle
+                &&
+                event.layerY > firkant.ypos && event.layerY < firkant.ypos + firkant.hoyde        // hvis hendelsen layer y er strørre en y pos og midnre enn y pos + høyden på firkanten skal firkanten falle
+            ) {
+               console.log("Treff") ;
+               firkant.yretning = 1;   // endrer y bredden til 1
+               firkant.xretning = 0;  // endrer x bredden til 0
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

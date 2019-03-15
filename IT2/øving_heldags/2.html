@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Stromproduksjon</title>
+</head>
+<body>
+
+    <h1>Strømproduksjon</h1>
+
+    <div>
+        <label for="">Type:</label>
+        <input type="radio" name="type" value="Under" id="Under">
+        <label for="lengde">Under</label>
+        <input type="radio" name="type" value="Over" id="Over">
+        <label for="lengde">Over</label>
+    </div>
+    <div>
+        <label for="lengde">Hastighet:</label>
+        <input type="number" name="lengde" id="inpLengde">
+        <label for="pris">Pris:</label>
+        <input type="number" name="pris" id="inpPris">
+    </div>
+    <button type="button" name="button" id="btnRegn">Regn ut</button>
+
+    <div id="divResultat">
+
+    </div>
+
+    <script type="text/javascript">
+        const Under = document.querySelector("#Under");
+        const Over = document.querySelector("#Over");
+        const inpLengde = document.querySelector("#inpLengde");
+        const inpPris = document.querySelector("#inpPris");
+        const btnRegn = document.querySelector("#btnRegn");
+        const divResultat = document.querySelector("#divResultat");
+
+        btnRegn.onclick = function(){
+            let pris = Number(inpPris.value);
+            let lengde = Number(inpLengde.value);
+            let normalbruk = lengde * pris * 2.5;
+
+            if(Under.checked){
+                spart = normalbruk*8;
+            }
+            else{
+                spart = normalbruk*14;
+            }
+            divResultat.innerHTML = `Vindmolla gir ${spart.toFixed(2)}kr`;
+        }
+    </script>
+
+</body>
+</html>

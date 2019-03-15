@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-color: #9dbdd6;
+        }
+
+
+        @keyframes stille {
+            0% {
+                left: -20%;
+                bottom: 20%;
+                transform: rotate(24deg);
+
+            }
+            35% {
+                transform: rotate(-15deg);
+
+            }
+            100% {
+                left: 40%;
+                bottom: 5%;
+            }
+
+
+        }
+        @keyframes bris {
+            0% {
+                left: 45%;
+
+                bottom: 38%;
+            }
+            100% {
+                bottom: 500%;
+            }
+
+        }
+
+        #rom {
+            animation: fly 5s infinite;
+            position: absolute;
+            left: 50%;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <img id="rom" src="../prøve_uke7/bilder/rotere.png" alt="" style="animation: bris 5s ease 0s 1 normal ;">
+    <button id="btnStille">stille</button>
+    <button id="btnBris">bris</button>
+    <button id="btnKuling">kuling</button>
+
+
+    <img id="bjork" src="../prøve_uke7/bilder/Bjork.png">
+
+    <img id="blad" src="../prøve_uke7/bilder/blad.png">
+
+
+
+    <script>
+        var btnStille = document.getElementById("btnStille");
+        var btnBris = document.getElementById("btnBris");
+        var btnKuing = document.getElementById("btnKuling");
+
+
+        btnStille.onclick = function () {
+            rom.style.animation = "";
+
+
+        }
+
+        btnBris.onclick = function () {
+            rom.style.animation = "lette 5s forwards";
+
+        }
+
+        btnKuing.onclick = function () {
+            r
+
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>
