@@ -60,13 +60,13 @@
             tegnFirkant(firkant);
         }
 
-        sjekkFirkantX(firkanter[firkantIndex]); // firkanten av  firkantene i array i
+        sjekkFirkantX(firkanter[firkantIndex]); 
         sjekkFirkantY(firkanter[firkantIndex]);
         if(spillILivet) {
             requestAnimationFrame(gameLoop);// hvis dette er sant skal gameloopen foregå på nytt
         }
 
-        else {
+        else { // hvis det ikke skjer...
             gameOver.innerHTML = "Game over";
             play.innerText = "Reset";
            // play.onclick()=> location.reload(); // starter spillet på nytt
