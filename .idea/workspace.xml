@@ -53,7 +53,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="435" />
-          <entry key="html" value="40909" />
+          <entry key="html" value="41410" />
           <entry key="js" value="407" />
           <entry key="txt" value="10" />
         </counts>
@@ -61,7 +61,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="435" />
-          <entry key="HTML" value="40909" />
+          <entry key="HTML" value="41410" />
           <entry key="JavaScript" value="407" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
@@ -92,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IT2/spillprosjekt/d.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+            <state relative-caret-position="-583">
+              <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -355,7 +355,7 @@
       <workItem from="1550156204488" duration="18404000" />
       <workItem from="1550582994436" duration="196000" />
       <workItem from="1552636223913" duration="9400000" />
-      <workItem from="1553499651704" duration="18552000" />
+      <workItem from="1553499651704" duration="19409000" />
     </task>
     <task id="LOCAL-00001" summary="index">
       <created>1537442280750</created>
@@ -410,7 +410,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188122000" />
+    <option name="totallyTimeSpent" value="188979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1425" height="877" extended-state="0" />
@@ -764,8 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IT2/spillprosjekt/d.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+        <state relative-caret-position="-583">
+          <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
         </state>
       </provider>
     </entry>

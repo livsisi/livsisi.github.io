@@ -34,13 +34,13 @@
         "farge": "lightpink",
         "xpos": 180,
         "ypos": 40,
-        "xfart": 3,
-        "xretning": 1,
+        "xfart": 2, // pikser firkanten flytter seg
+        "xretning": 1, // hvilken vei firkanten beveger seg
         "yretning": 0,
         "faller": false
     };
     var firkanter = []; // lager en variabel med en array med firkanter
-    var firkantIndex = 0; // // lager en varibel
+    var firkantIndex = 0; // // lager en varibel med array 
 
 
     function tegnBane() {
@@ -60,7 +60,7 @@
             tegnFirkant(firkant);
         }
 
-        sjekkFirkantX(firkanter[firkantIndex]); 
+        sjekkFirkantX(firkanter[firkantIndex]); // endrer betingelsene i if setningen slik at man får en ny firkant som er lik den gamle x posisjonen
         sjekkFirkantY(firkanter[firkantIndex]);
         if(spillILivet) {
             requestAnimationFrame(gameLoop);// hvis dette er sant skal gameloopen foregå på nytt
@@ -82,14 +82,14 @@
                                       
 
     function tegnBane() { // tegner banen
-        ctx.fillStyle = bane.bakgrunnfarge;
-        ctx.fillRect(0,0,bane.bredde,bane.hoyde);
+        ctx.fillStyle = bane.bakgrunnfarge; // farge på bagrunnen
+        ctx.fillRect(0,0,bane.bredde,bane.hoyde); // tegner opp banen
     }
     function tegnFirkant(firkant){
         ctx.fillStyle = firkant.farge;
-        ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
-        firkant.xpos = firkant.xpos + (firkant.xretning * firkant.xfart); // endrer
-        firkant.ypos = firkant.ypos + (firkant.yretning * firkant.xfart);
+        ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde); // tegner firkanten
+        firkant.xpos = firkant.xpos + (firkant.xretning * firkant.xfart); // endrer x posisjonen
+        firkant.ypos = firkant.ypos + (firkant.yretning * firkant.xfart); // endrer y posisjonen
     }
     function sjekkFirkantX (firkant){
         if (firkant.xpos <=0){ // hvis firkanten treffer venstre kant
@@ -127,7 +127,6 @@
         }
 
     };
-
 
 
 
