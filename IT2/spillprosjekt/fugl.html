@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #spill {
+            position: relative;
+            background-image: url("background.png");
+            width: 288px;height: 384px;
+        }
+        #fugl {
+            position: absolute;
+            background-image: url("bird.png");
+            width: 34px; height: 24px;
+            left: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="spill">
+        <div id="fugl"></div>
+    </div>
+
+    <script>
+        var spill = document.getElementById("spill");
+        var fugl = document.getElementById("fugl");
+        var krasjhoyde = 360;
+        var fuglpos = 100;
+        var fulgenFlyr: true;
+        var gravitasjon = 0.1;
+        var fallfart = 1;
+        var bgpos = 0;
+        var bgfart = -1;
+
+        function fly() {
+            fallfart += gravitasjon;
+            fuglpos += fallfart;
+            fugl.style.top = fuglpos + "px";
+            if(fuglpos > krasjhoyde){
+                fulgenFlyr = false;
+            }
+        }
+        function bevegBakgrunn() {
+            bgpos += bgfart;
+            spill.style.backgroundPosition = bgpos + "px 0px";
+
+        }
+        function gameLoop() {
+            bevegBakgrunn();
+            fly();
+            if (fuglenFlyr){
+                requestAnimationFrame(gameLoop);
+            }
+
+        }
+        gameLoop();
+        function flaks() {
+            fallfart = -4;
+            spill.onclick = flaks;
+
+        }
+
+    </script>
+
+
+</body>
+</html>

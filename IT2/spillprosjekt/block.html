@@ -1,105 +1,94 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
-    <title>blocks</title>
+    <title>Title</title>
+    <style>
+        #firkant{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: darkgreen;
+        }
+        #hinder{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
+<div id="spill">
+    <div id="firkant"></div>
+    <div id="hinder"></div>
+</div>
 
-    <canvas width="500" height="600" id="minCanvas"></canvas>
+<button id="reload">Reload</button>
 
-    <script>
-        var minCanvas = document.getElementById("minCanvas");
-        var ctx = minCanvas.getContext("2d");
-        var spillILivet = true;
-        function tegnBane() {
-            console.log("Tegner opp banen");
+<script>
+    const firkant = document.querySelector("#firkant");
+    const hinder = document.querySelector("#hinder");
+    const reload = document.querySelector("#reload");
+    let figur = {
+        x:300,
+        y:150,
+        xfart: 5,
+        xretning: -1,
+        yfart: 5,
+        yretning: 0,
+        h: 50,
+        b: 50
+    };
+    let hinderE = {
+        x: 150,
+        y: 150,
+        xfart: 5,
+        xretning: 0,
+        yfart: 5,
+        yretning: 0,
+        h: 50,
+        b: 50
+    };
+    let levende = true;
+    //Hendelser
+    reload.onclick = function(){
+        // Funksjon som laster siden på nytt
+        location.reload();
+    }
+    //Setup
+    gameloop();
+    //Funksjonsdefinisjoner
+    function gameloop(){
+        flytterFigur();
+        flytterHinder();
+        sjekkKollisjon();
+        if(levende){
+            requestAnimationFrame(gameloop);
         }
-        function tegnFirkant() {
-            console.log("Tegner opp firkanten");
+    }
+    function flytterHinder() {
+        // Funksjons som flytter hinder i x- og y-retning
+        hinderE.x = hinderE.x + hinderE.xfart*hinderE.xretning; // Oppdaterer x posisjon til hinderet
+        hinderE.y = hinderE.y + hinderE.yfart*hinderE.yretning;
+        hinder.style.left = hinderE.x + "px"; // setter avstanden fra venstre til å være x-verdien
+        hinder.style.top = hinderE.x + "px";
+    }
+    function flytterFigur() {
+        figur.x = figur.x + figur.xfart*figur.xretning;
+        figur.y = figur.y + figur.yfart*figur.yretning;
+        firkant.style.left = figur.x + "px";
+        firkant.style.top = figur.y + "px";
+    }
+    function sjekkKollisjon(){
+        //Funksjon som sjekker om figuren treffer hinderet
+        if(figur.x + figur.b >= hinderE.x && figur.x <= hinderE.x + hinderE.b
+            && figur.y + figur.h >= hinderE.y && figur.y <= hinderE.y + hinderE.h){
+            levende = false;
         }
-        function sjekkFirkant() {
-            console.log("Sjekker om firkant treffer bakken");
-
-        }
-
-        function gameLoop() {
-            tegnBane();
-            tegnFirkant();
-            sjekkFirkant();
-            if(spillILivet) {
-                requestAnimationFrame(gameLoop);
-            }
-            fly();
-        }
-
-        var bane = {
-            bredde:minCanvas.width,
-            hoyde:minCanvas.height,
-            bakgrunnfarge: "lightblue",
-        };
-
-
-        var firkant = {
-            "bredde": 50,
-            "hoyde": 30,
-            "farge": "lightpink",
-            "xpos": 180,
-            "ypos": 40,
-            "xfart": 2,
-            "xretning": 1,
-            "yretning": 0,
-            "faller": false
-        };
-
-        var krasjhoyde 
-
-
-        function tegnBane() {
-            ctx.fillStyle = bane.bakgrunnfarge;
-            ctx.fillRect(0,0,bane.bredde,bane.hoyde);
-        }
-
-        function tegnFirkant (){
-            ctx.fillStyle = firkant.farge;
-            ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
-            firkant.xpos = firkant.xpos + (firkant.xretning * firkant.xfart);
-
-             firkant.ypos = firkant.ypos + (firkant.yretning * firkant.xfart);
-
-        }
-       function sjekkFirkant (){
-            if (firkant.xpos <=0){
-                firkant.xretning = 1
-            }
-            if(firkant.xpos + firkant.bredde >= minCanvas.width) {
-                firkant.xretning = -1;
-            }
-       }
-
-        tegnFirkant();
-        gameLoop();
-
-        // hedelsesfunksjon
-
-        minCanvas.onclick = sjekkFall;
-
-
-
-        function sjekkFall(event) {
-                                    
-            if(event.layerX > firkant.xpos && event.layerX < firkant.xpos + firkant.bredde       // hvis hedelsen layer x er større enn x pos og mindre enn xpos + bredden på frikanten skal firkanten falle
-                &&
-                event.layerY > firkant.ypos && event.layerY < firkant.ypos + firkant.hoyde        // hvis hendelsen layer y er strørre en y pos og midnre enn y pos + høyden på firkanten skal firkanten falle
-            ) {
-               console.log("Treff") ;
-               firkant.yretning = 1;   // endrer y bredden til 1
-               firkant.xretning = 0;  // endrer x bredden til 0
-            }
-            
-        }
-
-    </script>
-
+    }
+</script>
 </body>
 </html>
+

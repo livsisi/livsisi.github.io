@@ -1,0 +1,83 @@
+<html lang="no"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fritt fall</title>
+    <style>
+
+        body {
+            background-color: lightblue;
+        }
+        #bird {
+            position: absolute;
+            background-image: url("flappy.png");
+            background-size: cover;
+            width: 132px;
+            height: 106px;
+            left: 100px;
+            top: 200px;
+        }
+        .stolpe {
+            width: 30px;
+            height: 200px;
+            background-color: #3adb76;
+            position: absolute;
+            left: calc(100% - 30px);
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="stolpe" id="stolpe" style="left: -2485px;"></div>
+<div id="bird" style="top: 372.304px;"></div>
+
+<script>
+    var fugl = {
+        elem: document.getElementById("bird"),
+        gravity: 0.1,
+        falling_speed: 1,
+        y_pos: 50
+
+    };
+
+    var stolpe = {
+        elem: document.getElementById("stolpe"),
+        left: innerWidth + 30,
+        speed: 4
+    };
+
+    function flyttStolpe() {
+        stolpe.left -= stolpe.speed;
+        stolpe.elem.style.left = stolpe.left + "px";
+    }
+
+    function fly() {
+
+        fugl.elem.style.top = fugl.y_pos + "px";
+        fugl.y_pos += fugl.falling_speed;
+        fugl.falling_speed += fugl.gravity;
+        console.log(fugl.falling_speed);
+
+        // Treffer bakken
+        // Kanskje det er her man bør tape spillet
+        if(fugl.y_pos >= innerHeight - 106){
+            fugl.falling_speed = -(fugl.falling_speed / 1.5);
+        }
+
+        flyttStolpe();
+
+        requestAnimationFrame(fly);
+    }
+
+    function flap() {
+        fugl.falling_speed = -4;
+    }
+
+    document.onclick = flap;
+
+    fly();
+</script>
+
+
+</body></html>

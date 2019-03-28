@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blocks</title>
+</head>
+<body>
+
+<h1>Blocks</h1>
+
+<button id="btnStart">START</button>
+
+<canvas width="500" height="600" id="minCanvas"></canvas>
+
+
+<script>
+    // refererer til HTML- elementene
+    var minCanvas = document.getElementById("minCanvas");
+    var ctx = minCanvas.getContext("2d");
+    var spillILivet = true;
+    var gameOver = document.getElementById("gameOver");
+    let btnStart = document.querySelector("#btnStart");
+    let plasserteBlokker = [];
+
+
+    var bane = { // oppretter et baneobjekt
+        bredde:minCanvas.width,
+        hoyde:minCanvas.height,
+        bakgrunnfarge: "lightblue",
+    };
+    var firkantEgenskaper = { // oppreter en firkantobjekt med egenskaper
+        "bredde": 50,
+        "hoyde": 30,
+        "farge": "lightpink",
+        "xpos": 180,
+        "ypos": 40,
+        "xfart": 3,
+        "xretning": 1,
+        "yretning": 0,
+        "faller": false
+    };
+    var firkanter = []; // lager en variabel med en array med firkanter
+    var firkantIndex = 0; // // lager en varibel
+
+
+    function tegnBane() {
+        console.log("Tegner opp banen");
+    }
+    function tegnFirkant() {
+        console.log("Tegner opp firkanten");
+    }
+    function sjekkFirkant() {
+        console.log("Sjekker om firkant treffer bakken");
+    };
+    function gameLoop() {
+        // funksjondefinisjoner
+
+        tegnBane();
+        for(let firkant of firkanter){
+            tegnFirkant(firkant);
+        }
+
+        sjekkFirkantX(firkanter[firkantIndex]); // firkanten av  firkantene i array i
+        sjekkFirkantY(firkanter[firkantIndex]);
+        if(spillILivet) {
+            requestAnimationFrame(gameLoop);// hvis dette er sant skal gameloopen foregå på nytt
+        }
+
+        else {
+            gameOver.innerHTML = "Game over";
+            play.innerText = "Reset";
+           // play.onclick()=> location.reload(); // starter spillet på nytt
+
+        }
+
+    }
+
+
+    function genererFirkant() {
+        firkanter.push(Object.assign({},firkantEgenskaper)) // lager ny firkant. kopierer den gamle firkanten med firkantens egenskaper
+    }
+                                      
+
+    function tegnBane() { // tegner banen
+        ctx.fillStyle = bane.bakgrunnfarge;
+        ctx.fillRect(0,0,bane.bredde,bane.hoyde);
+    }
+    function tegnFirkant(firkant){
+        ctx.fillStyle = firkant.farge;
+        ctx.fillRect(firkant.xpos,firkant.ypos,firkant.bredde,firkant.hoyde);
+        firkant.xpos = firkant.xpos + (firkant.xretning * firkant.xfart); // endrer
+        firkant.ypos = firkant.ypos + (firkant.yretning * firkant.xfart);
+    }
+    function sjekkFirkantX (firkant){
+        if (firkant.xpos <=0){ // hvis firkanten treffer venstre kant
+            firkant.xretning = 1// snur retningen på firkanten
+        }
+        if(firkant.xpos + firkant.bredde >= minCanvas.width) { //høyre kant
+            firkant.xretning = -1; // snur retningen på firkanten
+
+        }
+
+    }
+
+    function sjekkFirkantY (firkant){
+        if (firkant.ypos <=0){ // hvis firkanten treffer
+            firkant.yretning = 1 // skal retningen snus
+        }
+        if(firkant.ypos + firkant.hoyde >= minCanvas.height) {
+            firkant.yretning = 0; // hvis firkanten er mindre en høyden til boksen skal den stoppe
+            console.log("Hei"); // logge ut Hei i consloen
+            //spillILivet = false;
+            plasserteBlokker.push(firkant); // lager en array med firkantene og pusher opp en ny firkant
+            genererFirkant(); // lager en ny firkant
+            firkantIndex +=1; // gamle firkant pluss en ny firkant
+
+        };
+        for (let blokk of plasserteBlokker) { // ny firkant av arrayen av alle firkantene
+            if(firkant.ypos + firkant.hoyde >= blokk.ypos) { // hvis firkanten sin y pos + firkanten sin høyde er større enn ny firkanten sin skal den stoppe
+                firkant.yretning = 0;
+                console.log("plassert");
+                //spillILivet = false;
+               /* plasserteBlokker.push(firkant);
+                genererFirkant();
+                firkantIndex +=1;*/
+            };
+        }
+
+    };
+
+
+
+
+    btnStart.onclick = function () { // når man trykker på Start knappen vil gameloopen starte
+        startLoop();
+    };
+
+    function startLoop () {
+        genererFirkant(); // lager ny firkant
+        tegnFirkant(firkanter[firkantIndex]); // tegner ny firkant med utgagnspuntket av den før
+        console.log("hei");
+        gameLoop();
+    };
+
+
+
+    // hedelsesfunksjon
+    document.onclick = sjekkFall;
+    function sjekkFall(event) {
+                                                                                     
+        if(event.layerX > firkanter[firkantIndex].xpos && event.layerX < firkanter[firkantIndex].xpos + firkanter[firkantIndex].bredde       // hvis hedelsen layer x er større enn x pos og mindre enn xpos + bredden på frikanten skal firkanten falle
+            &&                                                                           
+            event.layerY > firkanter[firkantIndex].ypos && event.layerY < firkanter[firkantIndex].ypos + firkanter[firkantIndex].hoyde        // hvis hendelsen layer y er strørre en y pos og midnre enn y pos + høyden på firkanten skal firkanten falle
+        ) {                                                                              
+            console.log("Treff") ;
+            firkanter[firkantIndex].yretning = 1;   // endrer y bredden til 1
+            firkanter[firkantIndex].xretning = 0;  // endrer x bredden til 0
+        }                                                                                                                                                              
+
+    }
+
+    
+
+</script>
+
+</body>
+</html>
