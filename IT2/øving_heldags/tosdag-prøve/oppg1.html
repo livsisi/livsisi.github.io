@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        .imgParti {
+            height: 75px;
+            margin: 20px;
+        }
+        #divShowMDG {
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #divShowSP {
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #SPvideo {
+            height: 240px;
+        }
+       
+    
+    
+    </style>
+</head>
+<body>
+    
+    <div id="topMeny">
+        <img src="bilder/ap.png" class="imgParti" alt="">
+        <img class="imgParti" src="bilder/frp.jpg" alt="">
+        <img class="imgParti" src="bilder/hoyre.png" alt="">
+        <img class="imgParti" src="bilder/krf.jpg" alt="">
+        <img class="imgParti" src="bilder/miljopartiet.png" id="imgMDG" alt="">
+        <img class="imgParti" src="bilder/piratpartiet.png" alt="">
+        <img class="imgParti" src="bilder/raudt.png" alt="">
+        <img class="imgParti" src="bilder/sp.png" id="imgSP" alt="">
+        <img class="imgParti" src="bilder/sv.jpg" alt="">
+        <img class="imgParti" src="bilder/venstre.png" alt="">
+    </div>
+
+    <div id="divShowMDG">
+        <img src="bilder/bildegalleri01Edited.jpg" id="imgSlide" alt="">
+        <audio src="piano.mp3" id="MDGaudio" autoplay loop></audio>
+        
+    </div>
+    <div id="divShowSP">
+        <video src="senterpartiet.mp4" id="SPvideo"></video>
+        
+    </div>
+    
+
+    <script>
+
+        let imgMDG = document.querySelector("#imgMDG");
+        let imgSP = document.querySelector("#imgSP");
+        let divShowMDG = document.querySelector("#divShowMDG");
+        let divShowSP = document.querySelector("#divShowSP");
+        let imgSlide = document.querySelector("#imgSlide");
+        let MDGaudio = document.querySelector("#MDGaudio");
+        let SPvideo = document.querySelector("#SPvideo");
+        let antall = 0; //antall sekunder som er gått
+        let bytt = 0; //holder styr på hvilket bilde som synes
+        let vis = 0; //holder styr på om hvem sitt innhold som synes mdg/sp
+
+
+        let bildeSlide = ["bildegalleri01Edited.jpg", "bildegalleri02Edited.jpg", "bildegalleri03Edited.jpg"];
+
+
+        imgMDG.onclick = function() { //når mdg sitt logo blir klikket på
+            tid(); //kjører tidfunkjsonen
+            MDGaudio.play(); //starter lyden til mdg
+            divShowMDG.style.opacity = 1; //viser bildesliden
+            vis = 1;
+            SPvideo.pause(); //setter evt. videoen til sp på pause
+            divShowSP.style.opacity = 0; //fjerner videoen
+   
+        };
+
+        imgSP.onclick = function () { //når sp sitt logo blir klikket på
+            SPvideo.play(); //spillav video
+            divShowSP.style.opacity = 1; //vis video
+            vis = 2; 
+            MDGaudio.pause(); //sett mdg sin lyd på pause hvis den spilles
+            divShowMDG.style.opacity = 0; //fjern mdg sine bilder hvis de er synlige
+            
+        };
+        
+        
+
+        function tid () { //passer på at det går to sekund mellom hvert bildeskifte 
+            setInterval (CS, 2000); //kjører cs funkjsonen hvert 2000'ende millisekund
+            async function CS() {
+                byttBilde(); //bytter bilde når funksjonen kjøres
+            };
+        };
+        function byttBilde () {
+            if (bytt < bildeSlide.length - 1) { //så lenge bytt er innenfor arrayen, bytt bilde
+                bytt += 1;
+                imgSlide.src = bildeSlide[bytt]; //bytter bilde
+                
+            } else { //hvis den ikke er innnenfor arrayen, start på nytt og bytt bilde til første bilde igjen
+                bytt = 0; 
+                imgSlide.src = bildeSlide[bytt]; //bytter bilde
+            }
+        };
+
+
+    </script>
+
+
+</body>
+</html>

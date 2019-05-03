@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input id="inpVare" type="text" placeholder="skriv inn vare">
+
+    <input id="inpPris" type="number" placeholder="skriv ut pris">
+
+    <div id="ut"></div>
+
+
+    <script>
+        var inpVare = document.getElementById("inpVare");
+        var inpPris = document.getElementById("inpPris");
+        var ut = document.getElementById("ut");
+
+        var sum = 0;
+        var vare = [];
+        var pris = [];
+
+        inpPris.onchange = function(){
+            sum = 0;
+            vare.push(inpVare.value);
+            pris.push(Number(inpPris.value));
+
+            ut.innerHTML = "Handleliste:<br>";
+
+            for (var i=0;i<vare.length;i++){
+                ut.innerHTML += (i+1) + ". " +  vare[i] + " - kr " + pris[i] + "<br>";
+                sum = sum + pris[i];
+            }
+
+            ut.innerHTML += "<br>Sum: kr " + sum;
+        }
+
+    </script>
+
+</body>
+</html>

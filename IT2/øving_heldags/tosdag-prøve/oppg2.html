@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+        .partiPros {
+            margin: 5px;
+        }
+        #btnVis {
+            margin: 5px;
+        }
+        #wholeThing {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+    
+    
+    </style>
+
+</head>
+<body>
+
+    
+    <div id="wholeThing">
+        <h1>Skolevalg - Storting</h1>
+        <input type="number" class="partiPros" name="" id="inpRodt">Rødt<br> 
+        <input type="number" class="partiPros" name="" id="inpSV">Sosialistisk venstreparti<br>
+        <input type="number" class="partiPros" name="" id="inpA">Arbeiderparti<br>
+        <input type="number" class="partiPros" name="" id="inpSP">Senterparti<br>
+        <input type="number" class="partiPros" name="" id="inpMDG">Miljøpartiet det grønne<br>
+        <input type="number" class="partiPros" name="" id="inpKRF">Kristelig folkeparti<br>
+        <input type="number" class="partiPros" name="" id="inpV">Venstre<br>
+        <input type="number" class="partiPros" name="" id="inpH">Høyre<br>
+        <input type="number" class="partiPros" name="" id="inpFRP">Fremskrittspartiet<br>
+        <input type="number" class="partiPros" name="" id="inpPIR">Piratpartiet<br>
+
+        <button id="btnVis">Vis</button>
+        <p id="regAlt"></p>
+
+        
+
+    </div>
+
+    <script>
+        let partiPros = document.querySelectorAll(".partiPros");
+        let btnVis = document.querySelector("#btnVis");
+        let regAlt = document.querySelector("#regAlt");
+        let bB = 0; //blå-blokk
+        let rB = 0; //rød-blokk
+
+        let borgBlokk = ["inpH", "inpFRP", "inpKRF", "inpV"];
+        let rodBlokk = ["inpA", "inpSV", "inpSP"];      
+
+        btnVis.onclick = function () {
+            for (let p = 0; p < partiPros.length; p++) { //kjører gjennom input feltet
+                for (let b = 0; b < borgBlokk.length; b++) { //sammenligner inputfeltet med de gjeldene partiene i blå blokk
+                    if (borgBlokk[b] === partiPros[p].id) { //når den finner noen som passer
+                        bB += Number(partiPros[p].value); // så summerer den opp prosentandelen 
+                    }
+                }
+                for (let r = 0; r < rodBlokk.length; r++) { //sammenligner inputfeltet med de gjeldene partiene i rød-grønn blokk
+                    if (rodBlokk[r] === partiPros[p].id) { //når den finner noen som passer
+                        rB += Number(partiPros[p].value); // så smmerer den opp prosentandelen
+                    } 
+                }
+            }
+            if (rB < bB) { //hvis blå er større en rød: kjør
+                regAlt.innerHTML = `Blå: ${bB}%, Rød-grønne: ${rB}%. Den blå blokken vinner`; //skriver ut hvem som vinner, med riktig prosentandel
+                nullstill();
+            } else if (bB < rB) { //hvis rød er større enn blå: kjør
+                regAlt.innerHTML = `Blå: ${bB}%, Rød-grønne: ${rB}%. Den rød-grønne blokken vinner`;
+                nullstill();
+            } else if (bB === rB) { //hvis det er lik prosentandel: kjør
+                regAlt.innerHTML = `Blå: ${bB}%, Rød-grønne: ${rB}%. Det ble likt`;
+                nullstill();
+            }
+        };
+
+        function nullstill () { // fjerner summen, så de kan forandre på det i inputfeltet og kjøre det en gang til uten at det blir dobbelt. 
+            rB = 0;
+            bB = 0;
+        };
+
+
+        
+    
+    
+    
+    
+    
+    
+    </script>
+</body>
+</html>

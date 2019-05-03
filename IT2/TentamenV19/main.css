@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-family: 'Alice', serif;
+    color: #333;
+}
+header > nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    border-bottom: 3px solid #ddd;
+    align-items: center;
+}
+
+header > nav img {
+    width: 90%;
+}
+
+main {
+    text-align: center;
+    padding-top: 80px;
+}
+
+#slideshow {
+    background-image: url("Vedlegg/1.jpg");
+    width: 320px;
+    height: 240px;
+    margin: auto;
+    border: 4px solid #eee;
+    transition: 0.3s;
+}
+h1 {
+    color: black;
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Alice', serif;
+    margin-bottom: 8px;
+
+}

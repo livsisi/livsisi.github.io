@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-float.css">
+    <title>Innlogging</title>
+    <style>
+        body {
+            max-width: 700px;
+            padding: 10px;
+            margin: auto;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        #skjemaStem {
+            margin-top: 30px;
+        }
+        #secStemming {
+            display: none;
+        }
+        #secFeilPassord {
+            display: none;
+        }
+        #btnStem {
+            display: none;
+        }
+        #info {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<button id="btnOversikt" class="button" onclick="visResultat()">
+    TELL OPP STEMMENE
+</button>
+
+<section id="secLoggInn">
+    <form id="skjemaLoggInn">
+        <input type="password" id="inpPassord" placeholder="passord" required>
+        <button type="submit" class="button success">Logg Inn</button>
+    </form>
+</section>
+
+<section id="secFeilPassord">
+    <h1>Du har skrevet inn feil passord. Prøv igjen!</h1>
+</section>
+
+<section id="secStemming">
+
+    <h1>Du er nå logget inn og kan avgi din stemme</h1>
+    <p>Velg parti</p>
+    <form id="skjemaStem">
+
+        <input type="radio" name="rb" value="Rødt" data-indeks="0" id="rbRødt"> <label for="rbRødt">Rødt</label>
+        <input type="radio" name="rb" value="SV" data-indeks="1" id="rbSV"> <label for="rbSV">SV</label>
+        <input type="radio" name="rb" value="AP" data-indeks="2" id="rbAP"> <label for="rbAP">AP</label>
+        <input type="radio" name="rb" value="SP" data-indeks="3" id="rbSP"> <label for="rbSP">SP</label>
+        <input type="radio" name="rb" value="MDG" data-indeks="4" id="rbMDG"> <label for="rbMDG">MDG</label>
+        <input type="radio" name="rb" value="KrF" data-indeks="5" id="rbKrF"> <label for="rbKrF">KRF</label>
+        <input type="radio" name="rb" value="V" data-indeks="6" id="rbV"> <label for="rbV">V</label>
+        <input type="radio" name="rb" value="H" data-indeks="7" id="rbH"> <label for="rbH">H</label>
+        <input type="radio" name="rb" value="FrP" data-indeks="8" id="rbFrP"> <label for="rbFrP">FrP</label>
+        <input type="radio" name="rb" value="PIR" data-indeks="9" id="rbPIR"> <label for="rbPIR">Piratpartiet</label>
+
+        <div id="info"></div>
+
+        <div style="text-align: center">
+            <button id="btnStem" class="button">Avgi din stemme</button>
+        </div>
+
+    </form>
+
+</section>
+
+<table style="margin-top: 20px">
+    <thead>
+    <tr>
+        <th>Parti</th>
+        <th>Prosent 2013</th>
+        <th>Prosent 2017</th>
+        <th>Forandring</th>
+    </tr>
+    </thead>
+    <tbody id="tb">
+
+    </tbody>
+</table>
+
+<script>
+    const secLoggInn = document.getElementById("secLoggInn");
+    const info = document.getElementById("info");
+    const secStemming = document.getElementById("secStemming");
+    const secFeilPassord = document.getElementById("secFeilPassord");
+    const btnStem = document.getElementById("btnStem");
+    const rbuttons = document.querySelectorAll("#skjemaStem input[type=radio]");
+    const skjemaStem = document.getElementById("skjemaStem");
+    const tb = document.getElementById("tb");
+    const skjemaLoggInn = document.getElementById("skjemaLoggInn");
+    const inpPassord = document.getElementById("inpPassord");
+    let valgtIndeks = 0;
+    let passordene = [
+        "Passord001",
+        "Passord002",
+        "Passord003",
+        "Passord004",
+        "Passord005",
+        "Passord006",
+        "Passord007",
+        "Passord008",
+        "Passord009",
+        "Passord010",
+    ];
+    let partier = [
+        { "navn" : "Rødt", p2013: 3.7, p2017: 0, prosent: 0 },
+        { "navn" : "SV", p2013: 5, p2017: 0, prosent: 0 },
+        { "navn" : "AP", p2013: 23, p2017: 0, prosent: 0 },
+        { "navn" : "SP", p2013: 4.2, p2017: 0, prosent: 0 },
+        { "navn" : "MDG", p2013: 3.8, p2017: 0, prosent: 0 },
+        { "navn" : "KrF", p2013: 2.8, p2017: 0, prosent: 0 },
+        { "navn" : "V", p2013: 6.7, p2017: 0, prosent: 0 },
+        { "navn" : "H", p2013: 28.2, p2017: 0, prosent: 0 },
+        { "navn" : "FrP", p2013: 15.6, p2017: 0, prosent: 0 },
+        { "navn" : "PIR", p2013: 4.3, p2017: 0 , prosent: 0}
+    ];
+    function loggInn(evt) {
+        evt.preventDefault();
+        let passord = inpPassord.value;
+        let indeks = passordene.indexOf(passord);
+        console.log(indeks);
+        if(indeks >= 0) {
+            // Passordet er riktig
+            // Skal nå fjerne dette passordet
+            passordene.splice(indeks, 1);
+            console.log(passordene);
+            secLoggInn.style.display = "none";
+            secFeilPassord.style.display = "none";
+            secStemming.style.display = "block";
+        } else {
+            // Passordet er feil
+            secFeilPassord.style.display = "block";
+        }
+    }
+    function visResultat() {
+        tb.innerHTML = "";
+        let antallStemmer = 0;
+        for(let parti of partier) {
+            antallStemmer += parti.p2017;
+        }
+        for(let parti of partier){
+            if(antallStemmer === 0) {
+                alert("Ingen stemmer er avgitt");
+                return;
+            }
+            parti.prosent = parti.p2017 / antallStemmer * 100;
+            tb.innerHTML += `
+                    <tr>
+                        <td>${parti.navn}</td>
+                        <td>${parti.p2013}</td>
+                        <td>${parti.prosent}</td>
+                        <td>${parti.prosent - parti.p2013}</td>
+                    </tr>
+                `;
+        }
+    }
+    function bekreftStemme(evt) {
+        evt.preventDefault();
+        let parti = partier[valgtIndeks];
+        parti.p2017++;
+        alert("Takk for stemmen din!");
+        inpPassord.value = "";
+        secStemming.style.display = "none";
+        secLoggInn.style.display = "block";
+        // Sjekker om det er flere passord igjen
+        if(passordene.length === 0){
+            visResultat();
+        }
+    }
+    skjemaLoggInn.onsubmit = loggInn;
+    skjemaStem.onsubmit = bekreftStemme;
+    function stem() {
+        var indeks = this.getAttribute("data-indeks");
+        valgtIndeks = indeks;
+        var navn = this.value;
+        btnStem.style.display = "inline-block";
+        info.innerHTML = "Du har stemt på partiet " + navn + ". Klikk på knappen for å bekrefte!";
+    }
+    for(var rb of rbuttons) {
+        rb.onclick = stem;
+    }
+</script>
+
+</body>
+</html>

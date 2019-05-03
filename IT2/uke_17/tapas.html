@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <input  type="checkbox" name="meny" value="Focaccia og alioli"> Focaccia og alioli<br>
+    <input  type="checkbox" name="meny" value="Manchego med chiliolje"> Manchego med chiliolje<br>
+    <input  type="checkbox" name="meny" value="Sobrasada"> Sobrasada<br>
+    <input  type="checkbox" name="meny" value="Jamón Ibérico"> Jamón Ibéricoe<br>
+    <input  type="checkbox" name="meny" value="Fuet Ibérico"> Fuet Ibérico<br>
+    <input  type="checkbox" name="meny" value="Gazapcho og gordal-oliven"> Gazapcho og gordal-oliven<br>
+
+    <button id="btnSjekk" type="button">Sjekk pris</button>
+
+    <div id="ut"></div>
+
+    <script>
+
+        var meny = document.getElementsByName("meny");
+        var btnSjekk = document.getElementById("btnSjekk");
+        var ut = document.getElementById("ut");
+
+        var sum = 0;
+        var pris = [37,58,46,35,43,55];
+
+        btnSjekk.onclick = function () {
+            ut.innerHTML = "<h3>Ditt menyvalg:<h3>";
+            var menyValg = document.getElementsByName("meny"); //Finner alle checkboxene som er valgt og legger de i arrayet menyValg
+
+            for (var i=0;i<pris.length;i++){
+                if (menyValg[i].checked){   //Finner om checboxen er valgt
+                    sum = sum + pris[i];   //Summerer prisene
+                    ut.innerHTML += menyValg[i].value + " - kr " + pris[i] + "<br>";
+                }
+            }
+            ut.innerHTML += "<br>Sum: kr " + sum;
+            }
+
+
+    </script>
+
+</body>
+</html>

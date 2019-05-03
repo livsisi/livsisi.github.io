@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultathåndering</title>
+    <style>
+        body {
+            background-color: #eee;
+        }
+        main {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: salmon;
+        }
+        #skjema {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+        }
+        #knapp{
+            position: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<main>
+
+    <h1>Resultathåndtering</h1>
+
+    <h3>Semifinale</h3>
+    <form id="skjema"> <!-- start på skjemaet -->
+        <input id="deltager" type="text" placeholder="Deltager">
+        <input id="kastelengde" type="number" placeholder="Kastelengde">
+        <button id="knapp" type="submit">Send inn</button> <!-- knapp med type submit -->
+    </form> <!-- Slutt på skjemaet -->
+
+    <ul id="info"></ul>
+
+    <h3>Finale</h3>
+    <form id="oversikt"> <!-- start på skjemaet -->
+        <input id="kastere" type="text" placeholder="Kastere">
+        <input id="lengde" type="number" placeholder="Lengde">
+        <button id="button" type="submit">Send inn</button> <!-- knapp med type submit -->
+    </form> <!-- Slutt på skjemaet -->
+
+    <ul id="fakta"></ul>
+
+    <h3>Vinner</h3>
+    <form id="register"> <!-- start på skjemaet -->
+        <input id="vinner" type="text" placeholder="Vinner">
+        <input id="spydlengde" type="number" placeholder="Spydlengde">
+        <button id="Svar" type="submit">Send inn</button> <!-- knapp med type submit -->
+    </form> <!-- Slutt på skjemaet -->
+
+    <ul id="ting"></ul>
+
+    <script>
+
+        var skjema = document.getElementById("skjema"); // referer til skjemaet
+        var deltager = document.getElementById("deltager");
+        var kastelengde = document.getElementById("kastelengde");
+        var info = document.getElementById("info");
+        skjema.onsubmit = function (evt) { // forhindrer at data sendes til en annen side
+            evt.preventDefault();
+            info.innerHTML = "Deltager:" + deltager.value;
+            info.innerHTML = "Kastelengde:" + kastelengde.value;
+
+        }
+
+        var oversikt = document.getElementById("oversikt");
+        var kastere = document.getElementById("kastere");
+        var lengde = document.getElementById("lengde");
+        var fakta = document.getElementById("fakta");
+        oversikt.onsubmit = function (evt) {
+            fakta.innerHTML = "Kastere" + kastere.value;
+            fakta.innerHTML = "Lengde" + lengde.value;
+
+
+        }
+
+        var register = document.getElementById("register"); // referer til skjemaet
+        var vinner = document.getElementById("vinner");
+        var spydlengde = document.getElementById("spydlengde");
+        var ting = document.getElementById("ting");
+        register.onsubmit = function (evt) { // forhindrer at data sendes til en annen side
+            evt.preventDefault();
+            ting.innerHTML = "Vinner:" + vinner.value;
+            info.innerHTML = "Spydlengde:" + spydlengde.value;
+
+        }
+
+
+
+    </script>
+</main>
+
+
+</body>
+</html>

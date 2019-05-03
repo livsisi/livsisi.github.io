@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skolevalg</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        #slideshow {
+            background-image: url("bilder/slide01.png");
+            width: 320px;
+            height: 240px;
+            margin: auto;
+            border: 4px solid #eee;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+<img src="bilder/slide02.png" style="display: none">
+<img src="bilder/slide03.png" style="display: none">
+<audio src="lyder/piano.mp3" loop autoplay></audio>
+
+<header>
+    <nav>
+        <a href="senterpartiet.html"><img src="bilder/senterlogo.png"></a>
+        <a href="mpg.html"><img src="bilder/mpglogo.png"></a>
+
+    </nav>
+</header>
+
+<main>
+    <div id="slideshow"></div>
+</main>
+
+<script>
+    const slideshow = document.getElementById("slideshow");
+    const bilder = ["slide01.png", "slide02.png", "slide03.png"];
+    let neste = 1;
+    function byttBilde() {
+        slideshow.style.backgroundImage = "url(bilder/" + bilder[neste] + ")";
+        neste++;
+        if(neste === bilder.length) {
+            neste = 0;
+        }
+    }
+    setInterval(byttBilde, 2000);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

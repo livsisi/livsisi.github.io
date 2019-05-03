@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <p><b>Vitaminer i grønnsaker</b></p>
+
+    <select id="lstGronnsaker">
+        <option>Nypotet</option>
+<option>Gulrot</option>
+<option>Blomkål</option>
+<option>Linser</option>
+<option>Spinat</option>
+</select>
+
+<p id="ut"> </p>
+
+<script>
+    var lstGronnsaker = document.getElementById("lstGronnsaker");
+    var ut = document.getElementById("ut");
+
+    var gronnsak = ["Nypotet","Gulrot","Blomkål","Linser","Spinat"];
+    var vitamin = ["C-vitamin","A-vitamin","C-vitamin","B-vitamin","K-vitamin"];
+
+    lstGronnsaker.onchange = function(){
+        var indeks = lstGronnsaker.selectedIndex;
+        ut.innerHTML = gronnsak[indeks] + " inneholder " + vitamin[indeks];
+    }
+</script>
+
+
+
+</body>
+</html>

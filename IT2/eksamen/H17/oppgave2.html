@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Oppgave 2B</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #eee;
+        }
+        main {
+            background-color: white;
+            max-width: 900px;
+            margin: auto;
+            padding: 10px;
+        }
+        #secStemmer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+        #secStemmer > div {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-gap: 10px;
+            align-items: center;
+        }
+        #secStemmer input[type=text] {
+            padding: 5px;
+        }
+        #blokker {
+            display: flex;
+            margin-top: 30px;
+            color: white;
+            line-height: 80px;
+            text-align: center;
+        }
+        #borgerligBlokk {
+            background-color: blueviolet;
+            height: 80px;
+            flex: 0.3;
+            transition: 0.4s;
+        }
+        #rodgronnBlokk {
+            background-color: red;
+            height: 80px;
+            flex: 0.7;
+            transition: 0.4s;
+        }
+    </style>
+</head>
+<body>
+
+<main>
+    <h1>Hvem får makta?</h1>
+    <section id="secStemmer">
+        <div id="borg">
+            <label>Høyre</label>
+            <input type="text" data-blokk="borgerlig" value="28.2">
+            <label>Frp</label>
+            <input type="text" data-blokk="borgerlig" value="15.6">
+            <label>Venstre</label>
+            <input type="text" data-blokk="borgerlig" value="6.7">
+            <label>KrF</label>
+            <input type="text" data-blokk="borgerlig" value="2.8">
+        </div>
+        <div id="rod">
+            <label>Ap</label>
+            <input type="text" data-blokk="rodgronn" value="23">
+            <label>SV</label>
+            <input type="text" data-blokk="rodgronn" value="5">
+            <label>SP</label>
+            <input type="text" data-blokk="rodgronn" value="4.2">
+        </div>
+    </section>
+    <div id="blokker">
+        <div id="borgerligBlokk">30%</div>
+        <div id="rodgronnBlokk">70%</div>
+    </div>
+</main>
+
+<script>
+    const inputfelter = document.querySelectorAll("#secStemmer input[type=text]");
+    const borgerligBlokk = document.getElementById("borgerligBlokk");
+    const rodgronnBlokk = document.getElementById("rodgronnBlokk");
+    function init() {
+        for(let inputfelt of inputfelter){
+            inputfelt.onchange = visProsenter;
+        }
+    }
+    function visProsenter() {
+        let bp = 0;
+        let rg = 0;
+        for(let inputfelt of inputfelter) {
+            let blokk = inputfelt.getAttribute("data-blokk");
+            let prosent = Number(inputfelt.value);
+            if(blokk === "rodgronn") {
+                rg += prosent;
+            } else {
+                bp += prosent;
+            }
+        }
+        let total = bp + rg;
+        bprosent = bp / total;
+        rgprosent = rg / total;
+        borgerligBlokk.innerHTML = (bprosent * 100).toFixed(2) + "%";
+        rodgronnBlokk.innerHTML = (rgprosent * 100).toFixed(2) + "%";
+        borgerligBlokk.style.flex = bprosent;
+        rodgronnBlokk.style.flex = rgprosent;
+    }
+    visProsenter();
+    init();
+</script>
+
+
+</body>
+</html>

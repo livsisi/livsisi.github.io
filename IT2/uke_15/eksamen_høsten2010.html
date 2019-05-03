@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="container">
+    <select name="" id="velgHotell">
+        <option value="Spidsbergseter">Spidsbergseter</option>
+        <option value="Rondablikk">Rondablikk</option>
+        <option value="Rondane SPA">Rondane SPA</option>
+        <option value="Brekkeseter">Brekkeseter</option>
+        <option value="Hjernkinn">Hjernkinn</option>
+
+    </select>
+</div>
+
+
+</body>
+
+
+<script>
+
+    // Refererer til HTML- elementene
+    const velgHotell = document.querySelector("#velgHotell");
+
+
+    // klassedefinisjon
+    class Hotell
+
+    velgHotell.onchange = byttHotell;
+
+    function byttHotell() {
+        console.log(velgHotell.value);
+    }
+
+</script>
+
+</html>

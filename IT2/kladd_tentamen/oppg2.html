@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gjett lengden</title>
+    <style>
+        #ThorVideo {
+            height: 240px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gjett lengden</h1>
+
+
+    <main>
+         <video src="../TentamenV19/Vedlegg/thorkildsen.mp4" id="ThorVideo" type="video/mp4"></video>
+
+         <div>
+            <button id="btnPlay">Play</button>
+            <button id="btnPause">Pause</button>
+         </div>
+
+
+        <h3>Hvor langt tror du Thor Kildsen kastet?</h3>
+        Skriv inn lengden:         <input type="number" id="lengde" style= "margin-left:61px" > <br>
+
+        <button id="btn" onclick = "sjekksvar()">Sjekk svaret</button>
+
+        <p id="svaret" style="font-size: 26px;"></p>
+
+         <script>
+             var ThorVideo = document.getElementById("ThorVideo");
+             var btnPlay = document.getElementById("btnPlay");
+             var btnPause = document.getElementById("btnPause");
+             btnPlay.onclick = function() {    // hendelsesstyrt funksjon
+                 ThorVideo.play(); // starter fimen med play()
+             }
+
+             btnPause.onclick = function () {
+                 ThorVideo.pause(); // stopper filmen med pause()
+
+             }
+
+             function sjekksvar() {
+                 var lengde = document.getElementById("lengde");
+                 var svaret = 90.57;
+
+                 if (Number(poengkrav.value) === 90.57) {
+                     document.getElementById("svaret").innerHTML = "Du gjettet riktig";
+                 } else {
+                     document.getElementById("svaret").innerHTML = "prøv igjen";
+                 }
+
+             }
+
+
+         </script>
+    </main>
+
+</body>
+</html>

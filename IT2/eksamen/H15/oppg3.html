@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta name="author" content="delmatte.no">
+    <title>Oppgave 3: Finn din poengsum</title>
+</head>
+<body>
+<h1>Oppgave 3: Finn din poengsum</h1>
+<span id="fagNavn">Engelsk</span>
+<select id='karakterselect'><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option></select>
+<button id="knapp" type="button" onclick="leggtilkarakter()">Legg til karakter</button><br><br><br>
+
+<div id="fagListe"></div><br>
+Tilleggspoeng: <select id='tilleggspoeng'><option value=0>0</option><option value=1>1</option><option value=2>2</option><option value=3>3</option><option value=4>4</option><option value=5>5</option><option value=6>6</option><option value=7>7</option><option value=8>8</option><option value=9>9</option></select>
+<p id="p1"></p>
+<p id="p2" style="text-decoration: underline"></p>
+
+
+<script>
+    var fagnavn = ["Engelsk" , "Geografi" , "Historie Vg3", "Kroppsøving Vg3", "Naturfag", "Matematikk Vg1", "Matematikk Vg2", "Norsk hovedmål, skriftlig", "Norsk sidemål, skriftlig","Norsk, muntlig Vg3", "Religion og etikk", "Samfunnsfag", "Programfag1", "Programfag2", "Programfag3", "Programfag4", "Programfag5", "Programfag6","Eksamen1", "Eksamen2", "Eksamen3", "Eksamen4", "Eksamen5"]
+    var fag =[];
+    var k= 0;
+
+    function leggtilkarakter() {
+        if (k<fagnavn.length) {
+            fag[k] = { navn: fagnavn[k], karakter: karakterselect.value};  // Legger til fagnavn og valgt karakter i fag[].
+            leggtilFagliste (k);
+
+            k=k+1;
+            // Bytter neste fagnavn, eller knappfunksjon hvis det ikke er noen fag igjen.
+            if (k<fagnavn.length) {
+                document.getElementById("fagNavn").innerHTML = fagnavn[k];
+            } else {
+                document.getElementById("knapp").innerHTML = "Sorter karakterene og regn ut poeng";
+                document.getElementById("knapp").onclick = sorterKarakterer;  //Tar ikke med parantesen fordi at det gjør at vi kaller funksjonen
+            }
+        }}
+    // funksjon for å sortere etter karakter
+    function sorterKarakterer() {
+        fag.sort(function (x, y) {
+            var n = x.karakter - y.karakter;
+            if (n != 0) {
+                return n;
+            }
+
+            return x.navn - y.navn;
+        });
+
+
+// Brukes til å regne ut snittpoenget, samt at vi tegner lista på nytt i sortert rekkefølge
+        var sumKar = 0;
+        fagListe.innerHTML = "";							//Sletter lista
+        for (var i = 0; i < fag.length; i++) {
+            sumKar = (+fag[i].karakter) + sumKar;			// Finner summen av alle karakterene. Skrivemåten (+fag[i].karakter) tvinger en string til å bli et tall.
+            leggtilFagliste (i);
+        }
+        var karakterpoeng = (sumKar/fag.length*10).toFixed (2);	// Finner hvor mange karakterpoeng eleven har, med to desimaler etter komma.
+        document.getElementById("p1").innerHTML = "Karakterpoeng: " + karakterpoeng;
+        var totalPoeng = (+karakterpoeng )+ (+tilleggspoeng.value);
+        document.getElementById("p2").innerHTML = "Total poengsum: " + totalPoeng;
+    }
+
+
+
+    function endreKarakter(k) {
+        // Lager et select element for å kunne endre karakteren
+        var selectElem = document.createElement("select");
+        for (var i = 1; i < 7; i++) {
+            var option = document.createElement("option");
+            option.value = i;
+            option.innerHTML = i;
+            selectElem.appendChild(option);
+        }
+
+        var x = document.getElementById("sted" + k + ""); 	// Gjør at select boksen dukker opp på rett plass.
+        x.appendChild(selectElem);						// Gjør at select boksen dukker opp på rett plass.
+        x.onclick = regenererListe;		    			// Når select elementet blir endret tegnes lista på nytt.
+
+        function regenererListe() {
+            // Slett hele listen
+            fagListe.innerHTML = "";
+            var valgtVerdi = selectElem.children[selectElem.selectedIndex].getAttribute("value");	// Finner valgt verdi i select elementet
+
+            // Legger inn ny karakter og tegner lista på nytt
+            fag[k].karakter = valgtVerdi;
+            for (var i = 0; i < fag.length; i++) {
+                leggtilFagliste (i)
+            }
+        }
+    }
+
+    // Legger inn fagene i fagListe, med onclick muligheter. Legges i egen funksjon fordi at denne delen blir brukt flere ganger.
+    function leggtilFagliste (index) {
+        var div = document.createElement("div");
+        div.setAttribute("onclick", "endreKarakter(" + index + ")");
+        div.setAttribute("id", "sted" + index);
+        div.innerHTML = fag[index].navn + ": " + fag[index].karakter;
+        fagListe.appendChild(div);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta name="author" content="delmatte.no">
+    <title>Oppgave 2: Har du nok poeng til studiet ditt?</title>
+</head>
+<body>
+
+<h1>Oppgave 2: Har du nok poeng til studiet ditt?</h1>
+
+Programmet under finner ut om du ville kommet inn på ditt studie i fjor. <br><br>
+Skriv inn snittet ditt:         <input type="number" id="elevsnitt" style= "margin-left:61px" > <br>
+Skriv inn antall tilleggspoeng: <input type="number" id="tillegg"> <br>
+Skriv inn poengkrav i fjor:		<input type="number" id="poengkrav" style= "margin-left:22px"> <br>
+
+<button id="btn" onclick = "sjekksvar()">Sjekk svaret</button>
+
+<p id="svaret" style="font-size: 26px;"></p>
+
+<script>
+    function sjekksvar() {
+        var karakterpoeng = elevsnitt.value*10;
+        var elevpoeng = karakterpoeng + Number(tillegg.value);
+
+        if (Number(poengkrav.value) > elevpoeng) {
+            document.getElementById("svaret").innerHTML = "Du ville ikke kommet inn med disse karakterene i fjor";
+        } else {
+            document.getElementById("svaret").innerHTML = "Du kommer inn";
+        }
+
+    }
+</script>
+</body>
+</html>

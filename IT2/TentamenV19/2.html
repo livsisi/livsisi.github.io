@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gjett lengden</title>
+
+    <style>
+        #ThorVideo {
+            height: 240px;
+        }
+        body{
+            font-family: sans-serif;
+            text-align: center;
+
+        }
+        #radioKnappLag{
+            top: 368px;
+            height: auto;
+            width: 500px;
+            text-align: center;
+        }
+
+        #spm{
+            top: 350px;
+            height: auto;
+            text-align: center;
+        }
+        section {
+            text-align: center;
+        }
+        #svar{
+            top: 1000px;
+            height: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+        btnSjekk {
+            text-align: center;
+            position: absolute;
+        }
+        h1{
+            background-color: #e1ffdb;
+            color:white;
+            font-style: italic;
+            text-transform: uppercase;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <div>
+            <h1>Gjett lengden</h1>
+
+            <video src="Vedlegg/thorkildsen.mp4" id="ThorVideo" type="video/mp4"></video>
+            <div>
+                <button id="btnPlay">Play</button>
+                <button id="btnPause">Pause</button>
+            </div>
+        </div>
+
+        <div id="radioKnappLag">
+            <label><input id="inpEngelsk" name="spraak" type="radio" checked >Start</label>
+        </div>
+
+        <div id="btnSjekk">
+            <button id="btnSvar" type="button">Svar</button>
+
+        </div>
+
+
+        <div id="spm"> </div>
+        <div id="svar"> </div>
+
+
+        <script>
+            var ThorVideo = document.getElementById("ThorVideo");
+            var btnPlay = document.getElementById("btnPlay");
+            var btnPause = document.getElementById("btnPause");
+            btnPlay.onclick = function() {    // hendelsesstyrt funksjon
+                ThorVideo.play(); // starter fimen med play()
+            }
+
+            btnPause.onclick = function () {
+                ThorVideo.pause(); // stopper filmen med pause()
+
+            }
+
+
+            var spm = document.getElementById("spm");
+
+
+            inpEngelsk.checked = true;
+
+            //Map for spørsmål
+
+            var spmEngelsk= new Map();
+            spmEngelsk.set(1,{nr:1,spm:"Hvor langt kastet Andreas Thorkildsen spydet under OL 2008?"});
+
+            //Array for svaralternativ
+
+            var svarEngelsk = [];
+            svarEngelsk[0] = [85.4, 102.43, 97.56, 92.59, 107.3];
+            // Array med riktig poeng
+
+            var poeng = [];
+            poeng[0] = [0,0,1,0,0];
+
+
+
+            sporsmal(spmEngelsk,svarEngelsk); //Kaller opp funskjonen sporsmal med parameterverdier for spørsmål/svar på engelsk
+
+            //Funksjon for å skrive ut spørsmål og svaralternativ fra MAP og ARRAY --
+            function sporsmal(spmMap,svar){
+                var indeks = 0;
+                spm.innerHTML = "";
+
+                //En løkke skriver ut alle spørsmålene
+                for (var element of spmMap.values()){
+                    spm.innerHTML +="<br><br><strong>Spørsmål nr " + element.nr + ": " + element.spm + "</strong>";
+
+                    spm.innerHTML +="<br><br>";
+
+                    //En løkke skriver ut svaralternativer (checkbox)
+                    for (var i=0;i<svar[indeks].length;i++){
+                        //Sjekker om svarlaternativet har 1 poeng (riktig svar) og gir checkbox riktig value
+                        if (poeng[indeks][i] == 1){
+                            var verdi = 1;
+                        }
+                        else{
+                            var verdi = 0;
+                        }
+                        spm.innerHTML +='<input type="checkbox" value="' + verdi + '">' + svar[indeks][i] + "<br>";
+                    }
+                    indeks++;
+                }
+            }
+
+            //En hendelsesfunskjon for knappen btnSjekk som finner hvilke valg som er gjort
+
+            btnSjekk.onclick = function(){
+                var sumPoeng = 0;
+                var svarene = spm.querySelectorAll("input:checked"); // Finner de checkedboksene som er checked
+                svarene = Array.from(svarene);
+
+                //Summerer poengene som ligger i value
+                for (var i=0;i<svarene.length;i++){
+                    sumPoeng = sumPoeng + Number(svarene[i].value);
+                }
+
+                svar.innerHTML = "Poeng: " + sumPoeng + "<br>";
+
+                // poengsummen og gir kommentar
+                if (poeng === 1 ){
+                    svar.innerHTML += "Helt rett!Dette kan du!";
+                }
+                else if (poeng>1){
+                    svar.innerHTML += "Meget godt tippet!?";
+                }
+                else{
+                    svar.innerHTML += "Prøve på nytt";
+                }
+            }
+
+
+            inpEngelsk.onclick = velgTest;
+
+        </script>
+
+    </main>
+</body>
+</html>

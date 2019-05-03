@@ -1,0 +1,23 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+header > nav {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+    border-bottom: 3px solid #ddd;
+    align-items: center;
+}
+
+header > nav img {
+    width: 100%;
+}
+
+main {
+    text-align: center;
+    padding-top: 80px;
+}
